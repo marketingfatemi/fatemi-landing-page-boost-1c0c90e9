@@ -9,44 +9,49 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-blue-800 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-black/30"></div>
-      <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse opacity-60"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-5xl mx-auto text-center text-white">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in">
-            <Star className="w-5 h-5 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium">28 anos de experiência</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in">
+            <Star className="w-5 h-5 text-white fill-current" />
+            <span className="text-sm font-medium">28 anos transformando vidas</span>
           </div>
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            O maior e melhor<br />
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              Curso Livre de Teologia Ministerial
+            Transforme sua vida através do<br />
+            <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              maior Curso de Teologia Ministerial
             </span><br />
-            do Brasil!
+            do Brasil
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed animate-fade-in max-w-3xl mx-auto" style={{ animationDelay: '0.4s' }}>
-            Cresça no conhecimento na Palavra de Deus e viva uma transformação completa em sua vida. 
-            Seja capacitado a viver o chamado de Deus para sua vida!
+          <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.4s' }}>
+            <strong>Mais de 10 mil alunos já descobriram seu propósito.</strong><br />
+            Cresça no conhecimento da Palavra de Deus e seja capacitado para viver o chamado que Ele tem para sua vida.
           </p>
 
           {/* CTA Button */}
           <Button 
             onClick={scrollToContact}
             size="lg"
-            className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in"
+            className="bg-white text-black hover:bg-gray-100 font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 animate-fade-in"
             style={{ animationDelay: '0.6s' }}
           >
-            Quero conhecer o curso!
+            Quero transformar minha vida agora!
           </Button>
+
+          {/* Trust indicator */}
+          <p className="text-sm text-gray-400 mt-6 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            ✓ Certificado reconhecido ✓ Pagamento facilitado ✓ Acesso imediato
+          </p>
         </div>
       </div>
     </section>
