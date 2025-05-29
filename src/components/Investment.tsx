@@ -1,9 +1,6 @@
-
 import { Button } from "@/components/ui/button";
-
 const Investment = () => {
-  return (
-    <section id="pricing" className="py-32 bg-gray-900">
+  return <section id="pricing" className="bg-gray-900 py-[70px]">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -32,17 +29,12 @@ const Investment = () => {
               </p>
             </div>
 
-            <Button 
-              size="lg"
-              className="bg-white hover:bg-gray-100 text-black font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
+            <Button size="lg" className="bg-white hover:bg-gray-100 text-black font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Quero ser o próximo!
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Investment;
