@@ -1,37 +1,28 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
-
 const Testimonials = () => {
-  const testimonials = [
-    {
-      name: "Maria Silva",
-      text: "Não foi apenas um curso - foi uma revolução na minha vida! Hoje entendo meu propósito e vivo cada dia com significado real.",
-      rating: 5,
-      role: "Formada em 2023"
-    },
-    {
-      name: "João Santos",
-      text: "28 anos depois, a FATEMI continua transformando vidas. O ensino prático me capacitou para liderar com sabedoria e amor.",
-      rating: 5,
-      role: "Formado em 2022"
-    },
-    {
-      name: "Ana Costa",
-      text: "Antes eu só 'ia à igreja'. Hoje eu VIVO a Palavra todos os dias. A diferença é gigantesca!",
-      rating: 5,
-      role: "Formada em 2023"
-    },
-    {
-      name: "Pedro Oliveira",
-      text: "Estudar na FATEMI foi o melhor investimento da minha vida. Minha família, meu trabalho, tudo mudou para melhor.",
-      rating: 5,
-      role: "Formado em 2022"
-    }
-  ];
-
-  return (
-    <section className="py-20 bg-gray-900">
+  const testimonials = [{
+    name: "Maria Silva",
+    text: "Não foi apenas um curso - foi uma revolução na minha vida! Hoje entendo meu propósito e vivo cada dia com significado real.",
+    rating: 5,
+    role: "Formada em 2023"
+  }, {
+    name: "João Santos",
+    text: "28 anos depois, a FATEMI continua transformando vidas. O ensino prático me capacitou para liderar com sabedoria e amor.",
+    rating: 5,
+    role: "Formado em 2022"
+  }, {
+    name: "Ana Costa",
+    text: "Antes eu só 'ia à igreja'. Hoje eu VIVO a Palavra todos os dias. A diferença é gigantesca!",
+    rating: 5,
+    role: "Formada em 2023"
+  }, {
+    name: "Pedro Oliveira",
+    text: "Estudar na FATEMI foi o melhor investimento da minha vida. Minha família, meu trabalho, tudo mudou para melhor.",
+    rating: 5,
+    role: "Formado em 2022"
+  }];
+  return <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -47,13 +38,10 @@ const Testimonials = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
+            {testimonials.map((testimonial, index) => <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-white fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-white fill-current" />)}
                   </div>
                   
                   <Quote className="w-8 h-8 text-gray-600 mb-4" />
@@ -74,20 +62,12 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
-          <div className="mt-12 text-center bg-white text-black p-8 rounded-lg">
-            <p className="text-xl font-medium">
-              <strong>E se a próxima história de transformação fosse a sua?</strong><br />
-              Não deixe mais um dia passar vivendo abaixo do que Deus preparou para você.
-            </p>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Testimonials;
