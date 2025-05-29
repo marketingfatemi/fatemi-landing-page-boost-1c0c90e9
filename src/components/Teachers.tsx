@@ -36,18 +36,15 @@ const Teachers = () => {
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-32 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Aprenda com os <span className="text-gray-400">melhores professores</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
-              <strong className="text-white">Não são apenas professores - são mentores</strong> que vão te guiar em uma jornada de crescimento real.
-            </p>
-            <p className="text-gray-400 max-w-3xl mx-auto">
-              Cada um com décadas de experiência prática, prontos para te capacitar e inspirar a viver a Verdade em todas as áreas da sua vida.
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Durante o curso, você terá aulas com grandes professores, dedicados ao ensino da Palavra de forma prática. Seja capacitado e inspirado a viver a Verdade em todas as áreas da sua vida! Conheça alguns de seus professores:
             </p>
           </div>
 
@@ -71,13 +68,6 @@ const Teachers = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="mt-12 text-center bg-gray-900 p-8 rounded-lg border border-gray-700">
-            <p className="text-lg text-gray-300">
-              <strong className="text-white">Cada professor foi escolhido não apenas pelo conhecimento,</strong><br />
-              mas pela capacidade de <strong className="text-white">transformar vidas através do ensino prático da Palavra.</strong>
-            </p>
           </div>
         </div>
       </div>

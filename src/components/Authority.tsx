@@ -1,5 +1,5 @@
 
-import { Users, Book, Star } from "lucide-react";
+import { Users, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Authority = () => {
@@ -7,22 +7,17 @@ const Authority = () => {
     {
       icon: <Users className="w-8 h-8 text-white" />,
       number: "+10 mil",
-      label: "vidas transformadas"
+      label: "alunos formados"
     },
     {
       icon: <Star className="w-8 h-8 text-white" />,
-      number: "11+",
+      number: "+11",
       label: "países alcançados"
-    },
-    {
-      icon: <Book className="w-8 h-8 text-white" />,
-      number: "Certificado",
-      label: "reconhecido"
     }
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-32 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -34,19 +29,11 @@ const Authority = () => {
               </h2>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                Não é apenas um curso - é uma <strong className="text-white">jornada de transformação completa</strong>. 
-                Por quase 3 décadas, a FATEMI tem capacitado pessoas comuns a viverem de forma extraordinária, 
-                aplicando os princípios bíblicos em cada área da vida.
+                Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
 
-              <div className="bg-white text-black p-6 rounded-lg">
-                <p className="text-lg font-medium">
-                  "Você não vai apenas aprender teoria - você vai <strong>viver a transformação</strong> que a Palavra de Deus produz."
-                </p>
-              </div>
-
               {/* Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6">
                 {stats.map((stat, index) => (
                   <Card key={index} className="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <CardContent className="p-6 text-center">

@@ -27,8 +27,8 @@ const WhatYouLearn = () => {
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Aliança de Sangue",
-      description: "Compreenda os princípios da aliança com Deus e seus reflexos em sua vida."
+      title: "Panorama da Lei e da Graça",
+      description: "Estude detalhadamente o Antigo e o Novo Testamento"
     },
     {
       icon: <Heart className="w-6 h-6" />,
@@ -38,28 +38,24 @@ const WhatYouLearn = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-32 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Uma jornada que vai <span className="text-gray-400">mudar tudo</span>
+              O que você <span className="text-gray-400">aprenderá</span>
             </h2>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
-              <strong className="text-white">Não é apenas teoria - é transformação real.</strong> Durante 2 anos, você vai passar por um currículo 
-              completo que vai desde os fundamentos da fé até a aplicação prática da Palavra de Deus em cada área da sua vida.
-            </p>
-            <p className="text-gray-400 max-w-3xl mx-auto">
-              Cada módulo foi desenvolvido para te levar a um novo nível de maturidade espiritual e liderança.
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. Conheça alguns dos módulos:
             </p>
           </div>
 
           {/* Modules Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {modules.map((module, index) => (
-              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardHeader className="pb-4">
-                  <div className="bg-gray-800 w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                  <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
                     <div className="text-white">
                       {module.icon}
                     </div>

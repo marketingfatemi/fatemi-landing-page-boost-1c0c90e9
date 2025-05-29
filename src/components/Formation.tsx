@@ -6,8 +6,8 @@ const Formation = () => {
   const features = [
     {
       icon: <Star className="w-6 h-6 text-white" />,
-      title: "Certificado Reconhecido",
-      subtitle: "Validado e respeitado em todo Brasil"
+      title: "Certificado de Conclusão",
+      subtitle: "Não reconhecido pelo MEC"
     },
     {
       icon: <Clock className="w-6 h-6 text-white" />,
@@ -31,13 +31,13 @@ const Formation = () => {
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-white" />,
-      title: "Acesso Vitalício",
-      subtitle: "Revise o conteúdo sempre que precisar"
+      title: "Avaliações Formativas",
+      subtitle: "Avalie seu conhecimento e fixe o conteúdo"
     }
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-32 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -45,16 +45,13 @@ const Formation = () => {
               Sua formação do <span className="text-gray-400">jeito certo</span>
             </h2>
             <p className="text-xl text-gray-300 mb-4 font-medium">
-              Desenvolvemos a metodologia perfeita para sua transformação
-            </p>
-            <p className="text-lg text-gray-400">
-              Cada detalhe foi pensado para que você tenha a <strong className="text-white">melhor experiência de aprendizado</strong> possível
+              Estude quando quiser e onde quiser
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8 text-center">
                   <div className="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
                     {feature.icon}
@@ -66,7 +63,7 @@ const Formation = () => {
             ))}
           </div>
 
-          <div className="bg-gray-900 rounded-lg p-8 border border-gray-700">
+          <div className="bg-black rounded-lg p-8 border border-gray-700">
             <div className="max-w-4xl mx-auto text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Plataforma Completa de Ensino
