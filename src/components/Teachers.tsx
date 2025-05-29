@@ -36,24 +36,24 @@ const Teachers = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              Aprenda com os <span className="text-gray-600">melhores professores</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Aprenda com os <span className="text-gray-400">melhores professores</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
-              <strong>Não são apenas professores - são mentores</strong> que vão te guiar em uma jornada de crescimento real.
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-4">
+              <strong className="text-white">Não são apenas professores - são mentores</strong> que vão te guiar em uma jornada de crescimento real.
             </p>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="text-gray-400 max-w-3xl mx-auto">
               Cada um com décadas de experiência prática, prontos para te capacitar e inspirar a viver a Verdade em todas as áreas da sua vida.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teachers.map((teacher, index) => (
-              <Card key={index} className="border-2 border-black shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
+              <Card key={index} className="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
                 <CardContent className="p-0">
                   {/* Photo */}
                   <div className="aspect-square overflow-hidden">
@@ -65,18 +65,18 @@ const Teachers = () => {
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-black mb-3">{teacher.name}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{teacher.bio}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{teacher.name}</h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">{teacher.bio}</p>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="mt-12 text-center bg-gray-50 p-8 rounded-lg border-2 border-black">
-            <p className="text-lg text-gray-700">
-              <strong>Cada professor foi escolhido não apenas pelo conhecimento,</strong><br />
-              mas pela capacidade de <strong>transformar vidas através do ensino prático da Palavra.</strong>
+          <div className="mt-12 text-center bg-gray-900 p-8 rounded-lg border border-gray-700">
+            <p className="text-lg text-gray-300">
+              <strong className="text-white">Cada professor foi escolhido não apenas pelo conhecimento,</strong><br />
+              mas pela capacidade de <strong className="text-white">transformar vidas através do ensino prático da Palavra.</strong>
             </p>
           </div>
         </div>

@@ -9,33 +9,41 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen bg-black flex items-center justify-center relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
       <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60" style={{ animationDelay: '2s' }}></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center text-white">
+          {/* Logo */}
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src="/lovable-uploads/26d73a27-eceb-46e0-8bd8-96af531bf815.png" 
+              alt="FATEMI Logo" 
+              className="w-40 h-40 mx-auto mb-6 filter brightness-0 invert"
+            />
+          </div>
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8 animate-fade-in border border-white/20">
             <Star className="w-5 h-5 text-white fill-current" />
-            <span className="text-sm font-medium">28 anos transformando vidas</span>
+            <span className="text-sm font-medium text-white">28 anos transformando vidas</span>
           </div>
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Transforme sua vida através do<br />
+            Pare de viver uma vida<br />
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              maior Curso de Teologia Ministerial
-            </span><br />
-            do Brasil
+              comum e medíocre
+            </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.4s' }}>
-            <strong>Mais de 10 mil alunos já descobriram seu propósito.</strong><br />
-            Cresça no conhecimento da Palavra de Deus e seja capacitado para viver o chamado que Ele tem para sua vida.
+          <p className="text-xl md:text-2xl mb-8 text-gray-300 leading-relaxed animate-fade-in max-w-4xl mx-auto" style={{ animationDelay: '0.4s' }}>
+            <strong>Mais de 10 mil pessoas já descobriram seu verdadeiro propósito.</strong><br />
+            Transforme sua vida através do maior Curso de Teologia Ministerial do Brasil
           </p>
 
           {/* CTA Button */}

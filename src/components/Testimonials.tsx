@@ -31,46 +31,46 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-              <span className="text-gray-600">Mais de 10 mil</span> vidas transformadas
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="text-gray-400">Mais de 10 mil</span> vidas transformadas
             </h2>
-            <p className="text-xl text-gray-700 mb-4 font-medium">
+            <p className="text-xl text-gray-300 mb-4 font-medium">
               Veja o que acontece quando você decide investir em sua transformação
             </p>
-            <p className="text-lg text-gray-600">
-              Estas são apenas algumas das <strong>milhares de histórias reais</strong> de quem ousou mudar
+            <p className="text-lg text-gray-400">
+              Estas são apenas algumas das <strong className="text-white">milhares de histórias reais</strong> de quem ousou mudar
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-2 border-black shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-black fill-current" />
+                      <Star key={i} className="w-5 h-5 text-white fill-current" />
                     ))}
                   </div>
                   
-                  <Quote className="w-8 h-8 text-gray-300 mb-4" />
+                  <Quote className="w-8 h-8 text-gray-600 mb-4" />
                   
-                  <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                    <strong>"{testimonial.text}"</strong>
+                  <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+                    <strong className="text-white">"{testimonial.text}"</strong>
                   </p>
                   
                   <div className="flex items-center gap-3">
-                    <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">
+                    <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+                      <span className="text-black font-bold text-lg">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <div className="font-bold text-black">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.role}</div>
+                      <div className="font-bold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -78,7 +78,7 @@ const Testimonials = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center bg-black text-white p-8 rounded-lg">
+          <div className="mt-12 text-center bg-white text-black p-8 rounded-lg">
             <p className="text-xl font-medium">
               <strong>E se a próxima história de transformação fosse a sua?</strong><br />
               Não deixe mais um dia passar vivendo abaixo do que Deus preparou para você.
