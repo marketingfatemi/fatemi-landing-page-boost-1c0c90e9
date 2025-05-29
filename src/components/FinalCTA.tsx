@@ -12,6 +12,15 @@ const FinalCTA = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
+          {/* Logo */}
+          <div className="mb-8">
+            <img 
+              src="/lovable-uploads/0c43f472-d0bc-4691-a328-d3ddf86a0429.png" 
+              alt="FATEMI Logo" 
+              className="w-32 h-32 mx-auto mb-6"
+            />
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
             <Star className="w-5 h-5 text-white fill-current" />

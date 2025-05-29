@@ -61,13 +61,13 @@ const Authority = () => {
               </div>
             </div>
 
-            {/* Image placeholder */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl h-96 flex items-center justify-center border border-gray-700">
-              <div className="text-center text-gray-300">
-                <Book className="w-24 h-24 mx-auto mb-4 text-white" />
-                <p className="text-lg font-medium text-white">28 anos de excelência</p>
-                <p className="text-sm">FATEMI - Formando líderes</p>
-              </div>
+            {/* Logo placeholder */}
+            <div className="flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/86d90a98-2dbd-4428-8d4a-97c67f9a3d58.png" 
+                alt="FATEMI Logo Horizontal" 
+                className="w-full max-w-md"
+              />
             </div>
           </div>
         </div>

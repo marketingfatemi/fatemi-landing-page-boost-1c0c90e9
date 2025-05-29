@@ -20,9 +20,9 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-8 animate-fade-in">
             <img 
-              src="/lovable-uploads/26d73a27-eceb-46e0-8bd8-96af531bf815.png" 
+              src="/lovable-uploads/0c43f472-d0bc-4691-a328-d3ddf86a0429.png" 
               alt="FATEMI Logo" 
-              className="w-40 h-40 mx-auto mb-6 filter brightness-0 invert"
+              className="w-48 h-48 mx-auto mb-6"
             />
           </div>
 
