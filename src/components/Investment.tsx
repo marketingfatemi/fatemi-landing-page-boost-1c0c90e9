@@ -1,8 +1,15 @@
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, CreditCard, Zap, Shield } from "lucide-react";
+import { CheckCircle, CreditCard, Zap, Shield, ArrowRight, MessageCircle } from "lucide-react";
 
 const Investment = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background elements */}
@@ -80,10 +87,11 @@ const Investment = () => {
 
                 {/* CTA Button */}
                 <Button 
+                  onClick={scrollToContact}
                   size="lg" 
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4"
                 >
-                  Quero ser o próximo!
+                  Quero garantir minha vaga agora!
                 </Button>
 
                 {/* Security badge */}
@@ -95,15 +103,23 @@ const Investment = () => {
             </div>
           </div>
 
-          {/* Urgency element */}
-          <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-600/30 rounded-xl p-6 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-orange-400 mb-2">
-              <Zap className="w-5 h-5" />
-              <span className="font-semibold">Últimas vagas disponíveis</span>
+          {/* Additional CTA section */}
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-600/30 rounded-xl p-6 max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-2 text-blue-400 mb-4">
+              <MessageCircle className="w-5 h-5" />
+              <span className="font-semibold text-lg">Transforme sua vida hoje mesmo</span>
             </div>
-            <p className="text-gray-300 text-sm">
-              Não perca a oportunidade de transformar sua vida. Vagas limitadas para esta turma.
+            <p className="text-gray-300 text-sm mb-4">
+              Mais de 10 mil pessoas já foram capacitadas através do nosso curso. Seja o próximo!
             </p>
+            <Button 
+              onClick={scrollToContact}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              Quero começar agora
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
           </div>
         </div>
       </div>

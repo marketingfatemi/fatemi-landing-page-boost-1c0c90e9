@@ -9,7 +9,8 @@ const Authority = () => {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       number: "+10 mil",
       label: "alunos formados",
-      description: "Vidas transformadas"
+      description: "Vidas transformadas",
+      highlight: true
     },
     {
       icon: <Globe className="w-8 h-8 text-green-400" />,
@@ -58,7 +59,7 @@ const Authority = () => {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text content */}
-            <div className="space-y-8">
+            <div className="space-y-8 order-2 lg:order-1">
               <p className="text-lg text-gray-300 leading-relaxed">
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
@@ -79,55 +80,59 @@ const Authority = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col gap-4 pt-4">
                 <Button 
                   onClick={scrollToContact}
                   size="lg" 
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                 >
-                  Garanta sua vaga agora
+                  Quero conhecer este curso
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                
-                <Button 
-                  onClick={scrollToContact}
-                  variant="outline"
-                  size="lg" 
-                  className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
-                >
-                  <MessageCircle className="w-5 h-5 mr-2" />
-                  Falar com consultor
                 </Button>
               </div>
             </div>
 
             {/* Temple Image */}
-            <div className="flex items-center justify-center">
-              <div className="relative">
+            <div className="flex items-center justify-center order-1 lg:order-2">
+              <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-2xl"></div>
                 <img 
                   src="/lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" 
                   alt="Templo FATEMI" 
-                  className="w-full max-w-md relative z-10 rounded-lg shadow-2xl" 
+                  className="w-full relative z-10 rounded-lg shadow-2xl" 
                 />
               </div>
             </div>
           </div>
 
           {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-gradient-to-br from-gray-900/50 to-black/50 border-gray-800/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 group">
+              <Card key={index} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 group shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wider font-medium mb-1">{stat.label}</div>
-                  <div className="text-xs text-gray-500">{stat.description}</div>
+                  <div className={`text-3xl font-bold mb-1 ${stat.highlight ? 'text-blue-400' : 'text-white'}`}>
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-gray-300 uppercase tracking-wider font-medium mb-1">{stat.label}</div>
+                  <div className="text-xs text-gray-400">{stat.description}</div>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Additional CTA section */}
+          <div className="text-center">
+            <Button 
+              onClick={scrollToContact}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Falar com consultor agora
+            </Button>
           </div>
         </div>
       </div>

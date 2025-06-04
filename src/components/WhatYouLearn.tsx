@@ -1,13 +1,12 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Book, Users, Clock, Heart, MessageCircle, ArrowRight } from "lucide-react";
-import { Cross, House } from "lucide-react";
+import { Book, Users, Clock, Heart, MessageCircle, ArrowRight, Cross, House, BookOpen, Lightbulb } from "lucide-react";
 
 const WhatYouLearn = () => {
   const modules = [
     {
-      icon: <Book className="w-6 h-6" />,
+      icon: <BookOpen className="w-6 h-6" />,
       title: "Verbo e a Fé",
       description: "Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias."
     },
@@ -22,7 +21,7 @@ const WhatYouLearn = () => {
       description: "Descubra como Cristo está presente desde o Antigo Testamento até hoje."
     },
     {
-      icon: <Heart className="w-6 h-6" />,
+      icon: <Lightbulb className="w-6 h-6" />,
       title: "Prática da Palavra",
       description: "Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia."
     },
@@ -60,7 +59,7 @@ const WhatYouLearn = () => {
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Quero me inscrever agora
@@ -87,16 +86,27 @@ const WhatYouLearn = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center">
+          <div className="text-center space-y-6">
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-white hover:bg-gray-100 text-black font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto"
             >
               Quero ver a Grade Curricular Completa
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-gray-400">
+            
+            <div className="mt-6">
+              <Button 
+                onClick={scrollToContact}
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+              >
+                Garantir minha vaga agora
+              </Button>
+            </div>
+            
+            <p className="text-gray-400 mt-4">
               Descubra todos os módulos que vão transformar sua vida
             </p>
           </div>

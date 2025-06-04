@@ -59,7 +59,7 @@ const Formation = () => {
             <Button 
               onClick={scrollToContact}
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12 w-full sm:w-auto"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Começar minha formação
@@ -91,14 +91,24 @@ const Formation = () => {
                 <strong className="text-white">Tudo pensado para acelerar seu crescimento.</strong>
               </p>
               
-              <Button 
-                onClick={scrollToContact}
-                size="lg" 
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                Acessar plataforma agora
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  onClick={scrollToContact}
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Acessar plataforma agora
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                
+                <Button 
+                  onClick={scrollToContact}
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                >
+                  Quero começar hoje
+                </Button>
+              </div>
             </div>
           </div>
         </div>

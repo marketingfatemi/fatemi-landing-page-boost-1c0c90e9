@@ -1,8 +1,15 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Clock, CheckCircle, Star, Shield } from "lucide-react";
+import { MessageCircle, CheckCircle, Star, Shield } from "lucide-react";
 
 const FinalCTA = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section id="final-cta" className="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-24">
       {/* Background elements */}
@@ -30,7 +37,7 @@ const FinalCTA = () => {
 
           {/* Headline */}
           <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-2 bg-yellow-600/10 border border-yellow-600/20 rounded-full text-yellow-400 text-sm font-medium mb-4">
               Transforme Sua Vida
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -64,10 +71,6 @@ const FinalCTA = () => {
               <span className="text-white">Acesso liberado imediatamente</span>
             </div>
             <div className="flex items-center gap-2 text-yellow-400">
-              <Clock className="w-4 h-4" />
-              <span className="text-white">Suporte 24/7</span>
-            </div>
-            <div className="flex items-center gap-2 text-yellow-400">
               <MessageCircle className="w-4 h-4" />
               <span className="text-white">Atendimento personalizado</span>
             </div>
@@ -76,8 +79,9 @@ const FinalCTA = () => {
           {/* CTA Button */}
           <div className="mb-6">
             <Button 
+              onClick={scrollToContact}
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
+              className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-500/20 w-full sm:w-auto"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Quero ser aluno da FATEMI
@@ -86,9 +90,8 @@ const FinalCTA = () => {
 
           {/* Value proposition */}
           <p className="text-sm text-gray-400">
-            <span className="text-yellow-400 font-semibold">✓ Resposta em até 2 minutos</span> • 
-            <span className="text-blue-400 font-semibold"> ✓ Sem compromisso</span> • 
-            <span className="text-purple-400 font-semibold"> ✓ Certificação reconhecida</span>
+            <span className="text-yellow-400 font-semibold">✓ Sem compromisso</span> • 
+            <span className="text-blue-400 font-semibold"> ✓ Certificação reconhecida</span>
           </p>
         </div>
       </div>
