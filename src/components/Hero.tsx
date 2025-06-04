@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle, Users, Globe } from "lucide-react";
+import { Play, CheckCircle, Users, Globe, ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -24,7 +24,32 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Trust badges at top */}
+          {/* Logo */}
+          <div className="mb-8 animate-fade-in">
+            <img 
+              alt="FATEMI Logo" 
+              className="w-32 h-auto mx-auto mb-6" 
+              src="/lovable-uploads/6527ed59-3027-4c3c-a95a-695fa44553d7.png" 
+            />
+          </div>
+
+          {/* Main headline with modern typography */}
+          <div className="mb-8 animate-fade-in">
+            <div className="text-lg md:text-xl font-light text-gray-300 mb-4 tracking-wide">
+              O maior
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                Curso Livre de<br />
+                Teologia Ministerial
+              </span>
+            </h1>
+            <div className="text-xl md:text-2xl lg:text-3xl font-medium text-blue-400 mb-6">
+              do Brasil!
+            </div>
+          </div>
+
+          {/* Trust badges */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-blue-400" />
@@ -37,31 +62,6 @@ const Hero = () => {
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               <span>28 anos de experiência</span>
-            </div>
-          </div>
-
-          {/* Logo */}
-          <div className="mb-8 animate-fade-in">
-            <img 
-              alt="FATEMI Logo" 
-              className="w-20 h-20 mx-auto mb-6" 
-              src="/lovable-uploads/6527ed59-3027-4c3c-a95a-695fa44553d7.png" 
-            />
-          </div>
-
-          {/* Main headline with modern typography */}
-          <div className="mb-8 animate-fade-in">
-            <div className="text-lg md:text-xl font-medium text-blue-400 mb-3 tracking-wide uppercase">
-              O melhor
-            </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 leading-tight">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                Curso Livre de<br />
-                Teologia Ministerial
-              </span>
-            </h1>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300 mb-6">
-              do Brasil!
             </div>
           </div>
 
@@ -84,6 +84,10 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
+                <span>Certificação Reconhecida</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
                 <span>100% Digital</span>
               </div>
             </div>
@@ -98,6 +102,7 @@ const Hero = () => {
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
               >
                 Quero conhecer o curso
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               
               <button className="flex items-center gap-3 text-white hover:text-blue-400 transition-colors group">

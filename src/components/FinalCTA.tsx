@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Clock, CheckCircle } from "lucide-react";
+import { MessageCircle, Clock, CheckCircle, Star, Shield } from "lucide-react";
 
 const FinalCTA = () => {
   return (
@@ -30,15 +30,31 @@ const FinalCTA = () => {
 
           {/* Headline */}
           <div className="mb-8">
-            <div className="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
-              Último Passo
+            <div className="inline-block px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4">
+              Transforme Sua Vida
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Venha estudar conosco!
+              Comece sua jornada ministerial hoje!
             </h3>
             <p className="text-lg text-gray-300">
-              Fale agora com nossa equipe e comece já
+              Junte-se aos milhares de alunos que já transformaram suas vidas
             </p>
+          </div>
+
+          {/* Trust signals */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+            <div className="flex items-center gap-2 text-green-400">
+              <Star className="w-4 h-4" />
+              <span className="text-white">28 anos de experiência</span>
+            </div>
+            <div className="flex items-center gap-2 text-blue-400">
+              <Shield className="w-4 h-4" />
+              <span className="text-white">Certificação reconhecida</span>
+            </div>
+            <div className="flex items-center gap-2 text-purple-400">
+              <CheckCircle className="w-4 h-4" />
+              <span className="text-white">+10 mil alunos formados</span>
+            </div>
           </div>
 
           {/* Benefits */}
@@ -68,7 +84,7 @@ const FinalCTA = () => {
             </Button>
           </div>
 
-          {/* Urgency text */}
+          {/* Value proposition */}
           <p className="text-sm text-gray-400">
             <span className="text-green-400 font-semibold">✓ Resposta em até 2 minutos</span> • 
             <span className="text-blue-400 font-semibold"> ✓ Sem compromisso</span> • 

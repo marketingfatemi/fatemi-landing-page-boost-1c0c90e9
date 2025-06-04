@@ -1,6 +1,7 @@
 
-import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
+import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Authority = () => {
   const stats = [
@@ -29,6 +30,13 @@ const Authority = () => {
       description: "Estude quando quiser"
     }
   ];
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
@@ -68,6 +76,18 @@ const Authority = () => {
                   <CheckCircle className="w-5 h-5" />
                   <span className="text-white">Certificação reconhecida</span>
                 </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-4">
+                <Button 
+                  onClick={scrollToContact}
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Garanta sua vaga agora
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
               </div>
             </div>
 
