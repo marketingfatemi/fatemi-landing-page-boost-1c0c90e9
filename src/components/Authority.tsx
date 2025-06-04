@@ -1,5 +1,5 @@
 
-import { Users, Star, Trophy, Clock } from "lucide-react";
+import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Authority = () => {
