@@ -33,7 +33,7 @@ const Formation = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="py-32 bg-gray-900">
+  return <section className="bg-gray-900 my-0 mx-0 py-[44px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
