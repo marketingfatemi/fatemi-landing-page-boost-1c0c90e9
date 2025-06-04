@@ -1,7 +1,5 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, CreditCard, Zap, Shield, ArrowRight, MessageCircle } from "lucide-react";
-
 const Investment = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('final-cta');
@@ -9,11 +7,9 @@ const Investment = () => {
       behavior: 'smooth'
     });
   };
-
-  return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+  return <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 py-0 px-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
       </div>
@@ -22,10 +18,10 @@ const Investment = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Section header */}
           <div className="mb-12">
-            <div className="inline-block px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4">
+            <div className="inline-block bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4 px-[21px] py-[12px]">
               Investimento
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 py-[8px]">
               Sua transformação começa <span className="text-green-400">hoje</span>
             </h2>
             <p className="text-xl text-gray-300 font-medium">
@@ -86,11 +82,7 @@ const Investment = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button 
-                  onClick={scrollToContact}
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4"
-                >
+                <Button onClick={scrollToContact} size="lg" className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4">
                   Quero garantir minha vaga agora!
                 </Button>
 
@@ -112,19 +104,13 @@ const Investment = () => {
             <p className="text-gray-300 text-sm mb-4">
               Mais de 10 mil pessoas já foram capacitadas através do nosso curso. Seja o próximo!
             </p>
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
+            <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
               Quero começar agora
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Investment;
