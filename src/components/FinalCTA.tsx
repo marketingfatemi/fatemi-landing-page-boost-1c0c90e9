@@ -1,36 +1,83 @@
+
 import { Button } from "@/components/ui/button";
+import { MessageCircle, Clock, CheckCircle } from "lucide-react";
+
 const FinalCTA = () => {
-  return <section id="final-cta" className="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-[80px]">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-black/80 py-0 my-px"></div>
-      <div className="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60"></div>
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-pulse opacity-60" style={{
-      animationDelay: '1.5s'
-    }}></div>
+  return (
+    <section id="final-cta" className="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-24">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      </div>
+      
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
-          <div className="mb-8 py-0">
-            <img src="/lovable-uploads/0c43f472-d0bc-4691-a328-d3ddf86a0429.png" alt="FATEMI Logo" className="w-32 h-32 mx-auto mb-6" />
+          <div className="mb-8">
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
+              <img 
+                src="/lovable-uploads/0c43f472-d0bc-4691-a328-d3ddf86a0429.png" 
+                alt="FATEMI Logo" 
+                className="w-32 h-32 mx-auto relative z-10" 
+              />
+            </div>
           </div>
 
-          {/* Subtitle */}
-          <h3 className="text-2xl md:text-3xl mb-8 text-gray-200 font-medium">
-            Venha estudar conosco!
-          </h3>
+          {/* Headline */}
+          <div className="mb-8">
+            <div className="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+              Último Passo
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Venha estudar conosco!
+            </h3>
+            <p className="text-lg text-gray-300">
+              Fale agora com nossa equipe e comece já
+            </p>
+          </div>
+
+          {/* Benefits */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+            <div className="flex items-center gap-2 text-green-400">
+              <CheckCircle className="w-4 h-4" />
+              <span className="text-white">Acesso liberado imediatamente</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-400">
+              <Clock className="w-4 h-4" />
+              <span className="text-white">Suporte 24/7</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-400">
+              <MessageCircle className="w-4 h-4" />
+              <span className="text-white">Atendimento personalizado</span>
+            </div>
+          </div>
 
           {/* CTA Button */}
-          <Button size="lg" className="bg-white text-black hover:bg-gray-100 font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6">
-            Quero ser aluno da FATEMI
-          </Button>
+          <div className="mb-6">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Quero ser aluno da FATEMI
+            </Button>
+          </div>
 
-          {/* Additional text */}
-          <p className="text-sm text-gray-400 opacity-80">
-            Fale agora com nossa equipe e comece já - Acesso liberado imediatamente
+          {/* Urgency text */}
+          <p className="text-sm text-gray-400">
+            <span className="text-green-400 font-semibold">✓ Resposta em até 2 minutos</span> • 
+            <span className="text-blue-400 font-semibold"> ✓ Sem compromisso</span> • 
+            <span className="text-purple-400 font-semibold"> ✓ Totalmente gratuito</span>
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FinalCTA;
