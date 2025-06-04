@@ -1,5 +1,5 @@
 
-import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight } from "lucide-react";
+import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -52,7 +52,7 @@ const Authority = () => {
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-blue-400">28 anos</span> formando líderes<br />
-              através do <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">ensino prático da Palavra</span>
+              através do <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">ensino prático da Palavra</span>
             </h2>
           </div>
 
@@ -63,7 +63,7 @@ const Authority = () => {
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-green-400">
                   <CheckCircle className="w-5 h-5" />
                   <span className="text-white">Ensino prático e aplicado</span>
@@ -78,8 +78,8 @@ const Authority = () => {
                 </div>
               </div>
 
-              {/* CTA Button */}
-              <div className="pt-4">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   onClick={scrollToContact}
                   size="lg" 
@@ -88,17 +88,27 @@ const Authority = () => {
                   Garanta sua vaga agora
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
+                
+                <Button 
+                  onClick={scrollToContact}
+                  variant="outline"
+                  size="lg" 
+                  className="border-blue-500/50 text-blue-400 hover:bg-blue-500/10 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Falar com consultor
+                </Button>
               </div>
             </div>
 
-            {/* Logo */}
+            {/* Temple Image */}
             <div className="flex items-center justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-2xl"></div>
                 <img 
-                  src="/lovable-uploads/86d90a98-2dbd-4428-8d4a-97c67f9a3d58.png" 
-                  alt="FATEMI Logo Horizontal" 
-                  className="w-full max-w-md relative z-10" 
+                  src="/lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" 
+                  alt="Templo FATEMI" 
+                  className="w-full max-w-md relative z-10 rounded-lg shadow-2xl" 
                 />
               </div>
             </div>

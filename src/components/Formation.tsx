@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Book, Star, Play, Users, CheckCircle } from "lucide-react";
+import { Clock, Book, Star, Play, Users, CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Formation = () => {
   const features = [
@@ -36,17 +37,33 @@ const Formation = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <section className="py-32 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Sua formação do <span className="text-gray-400">jeito certo</span>
+              Sua formação do <span className="text-blue-400">jeito certo</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-4 font-medium">
+            <p className="text-xl text-gray-300 mb-8 font-medium">
               Estude quando quiser e onde quiser
             </p>
+            
+            <Button 
+              onClick={scrollToContact}
+              size="lg" 
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Começar minha formação
+            </Button>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -63,16 +80,25 @@ const Formation = () => {
             ))}
           </div>
 
-          <div className="bg-black rounded-lg p-8 border border-gray-700">
+          <div className="bg-black rounded-lg p-8 border border-gray-700 mb-8">
             <div className="max-w-4xl mx-auto text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Plataforma Completa de Ensino
               </h3>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 <strong className="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
                 baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
                 <strong className="text-white">Tudo pensado para acelerar seu crescimento.</strong>
               </p>
+              
+              <Button 
+                onClick={scrollToContact}
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                Acessar plataforma agora
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
           </div>
         </div>

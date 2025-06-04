@@ -21,7 +21,7 @@ const FinalCTA = () => {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
               <img 
-                src="/lovable-uploads/0c43f472-d0bc-4691-a328-d3ddf86a0429.png" 
+                src="/lovable-uploads/51ab4e1f-4919-443e-a354-5075b8b71ec8.png" 
                 alt="FATEMI Logo" 
                 className="w-32 h-32 mx-auto relative z-10" 
               />
@@ -43,7 +43,7 @@ const FinalCTA = () => {
 
           {/* Trust signals */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
-            <div className="flex items-center gap-2 text-green-400">
+            <div className="flex items-center gap-2 text-yellow-400">
               <Star className="w-4 h-4" />
               <span className="text-white">28 anos de experiência</span>
             </div>
@@ -59,15 +59,15 @@ const FinalCTA = () => {
 
           {/* Benefits */}
           <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
-            <div className="flex items-center gap-2 text-green-400">
+            <div className="flex items-center gap-2 text-yellow-400">
               <CheckCircle className="w-4 h-4" />
               <span className="text-white">Acesso liberado imediatamente</span>
             </div>
-            <div className="flex items-center gap-2 text-green-400">
+            <div className="flex items-center gap-2 text-yellow-400">
               <Clock className="w-4 h-4" />
               <span className="text-white">Suporte 24/7</span>
             </div>
-            <div className="flex items-center gap-2 text-green-400">
+            <div className="flex items-center gap-2 text-yellow-400">
               <MessageCircle className="w-4 h-4" />
               <span className="text-white">Atendimento personalizado</span>
             </div>
@@ -86,9 +86,9 @@ const FinalCTA = () => {
 
           {/* Value proposition */}
           <p className="text-sm text-gray-400">
-            <span className="text-green-400 font-semibold">✓ Resposta em até 2 minutos</span> • 
+            <span className="text-yellow-400 font-semibold">✓ Resposta em até 2 minutos</span> • 
             <span className="text-blue-400 font-semibold"> ✓ Sem compromisso</span> • 
-            <span className="text-purple-400 font-semibold"> ✓ Totalmente gratuito</span>
+            <span className="text-purple-400 font-semibold"> ✓ Certificação reconhecida</span>
           </p>
         </div>
       </div>
