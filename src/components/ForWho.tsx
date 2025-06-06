@@ -1,6 +1,5 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Users, Star, Book, Play } from "lucide-react";
 
 const ForWho = () => {
@@ -27,12 +26,8 @@ const ForWho = () => {
     }
   ];
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de ver os módulos do curso de Teologia da FATEMI', '_blank');
-  };
-
   return (
-    <section className="py-32 bg-blue-950">
+    <section className="py-32 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
@@ -43,7 +38,7 @@ const ForWho = () => {
             Se você se identifica com pelo menos um desses pontos, a FATEMI foi feita para você:
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8">
             {targets.map((target, index) => (
               <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
@@ -65,20 +60,12 @@ const ForWho = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-white text-black p-8 rounded-lg mb-8">
+          <div className="mt-12 bg-white text-black p-8 rounded-lg">
             <p className="text-xl font-medium">
               <strong>Se você respondeu "SIM" para qualquer um desses pontos...</strong><br />
               Você encontrou o curso certo para você!
             </p>
           </div>
-
-          <Button 
-            onClick={openWhatsApp}
-            size="lg" 
-            className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
-          >
-            VER MÓDULOS
-          </Button>
         </div>
       </div>
     </section>

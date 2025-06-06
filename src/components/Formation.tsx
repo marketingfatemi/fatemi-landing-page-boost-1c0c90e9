@@ -1,8 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-import { Clock, Book, Star, Play, Users, CheckCircle } from "lucide-react";
+import { Clock, Book, Star, Play, Users, CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Formation = () => {
   const features = [{
     icon: <Star className="w-6 h-6 text-white" />,
@@ -29,13 +27,13 @@ const Formation = () => {
     title: "Avaliações Formativas",
     subtitle: "Avalie seu conhecimento e fixe o conteúdo"
   }];
-
-  const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Quero me inscrever no curso de Teologia da FATEMI', '_blank');
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="bg-gray-900 my-0 mx-0 py-[44px]">
+  return <section className="bg-gray-900 my-0 mx-0 py-[44px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -45,11 +43,15 @@ const Formation = () => {
             <p className="text-xl text-gray-300 mb-8 font-medium">
               Estude quando quiser e onde quiser
             </p>
+            
+            <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12 w-full sm:w-auto">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Começar minha formação
+            </Button>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {features.map((feature, index) => <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8 text-center">
                   <div className="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
                     {feature.icon}
@@ -57,8 +59,7 @@ const Formation = () => {
                   <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-400 text-sm">{feature.subtitle}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="bg-black rounded-lg p-8 border border-gray-700 mb-8">
@@ -73,20 +74,16 @@ const Formation = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={openWhatsApp} 
-                  size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                >
-                  QUERO ME INSCREVER
+                
+                
+                <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                  Quero começar hoje
                 </Button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Formation;

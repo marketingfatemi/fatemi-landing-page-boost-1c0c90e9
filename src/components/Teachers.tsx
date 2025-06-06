@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -39,8 +40,11 @@ const Teachers = () => {
     }
   ];
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de falar com um atendente sobre o curso de Teologia da FATEMI', '_blank');
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -56,11 +60,12 @@ const Teachers = () => {
             </p>
             
             <Button 
-              onClick={openWhatsApp}
+              onClick={scrollToContact}
               size="lg" 
               className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              FALAR COM ATENDENTE
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Conheça todos os professores
             </Button>
           </div>
 
