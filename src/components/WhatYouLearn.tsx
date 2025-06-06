@@ -33,7 +33,7 @@ const WhatYouLearn = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="bg-black overflow-hidden py-[128px]">
+  return <section className="bg-black overflow-hidden py-[68px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -75,9 +75,7 @@ const WhatYouLearn = () => {
             </Button>
             
             <div className="mt-6">
-              <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                Garantir minha vaga agora
-              </Button>
+              
             </div>
             
             <p className="text-gray-400 mt-4">
