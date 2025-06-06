@@ -100,7 +100,7 @@ const Investment = () => {
             </div>
           </div>
 
-          {/* Additional CTA section - Updated content */}
+          {/* Updated section - Fixed button positioning */}
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-600/30 rounded-xl p-6 max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-2 text-blue-400 mb-4">
               <Users className="w-5 h-5" />
@@ -111,13 +111,15 @@ const Investment = () => {
             <p className="text-white text-sm mb-4">
               Não perca a oportunidade de transformar sua vida. Seja o próximo!
             </p>
-            <Button 
-              onClick={handleWhatsAppClick} 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              QUERO ME INSCREVER AGORA!
-            </Button>
+            <div className="w-full">
+              <Button 
+                onClick={handleWhatsAppClick} 
+                size="lg" 
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
+                QUERO ME INSCREVER AGORA!
+              </Button>
+            </div>
           </div>
         </div>
       </div>

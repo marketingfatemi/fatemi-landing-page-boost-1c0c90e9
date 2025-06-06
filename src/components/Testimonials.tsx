@@ -1,33 +1,52 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+
 const Testimonials = () => {
-  const testimonials = [{
-    name: "Maria Silva",
-    text: "Não foi apenas um curso - foi uma revolução na minha vida! Hoje entendo meu propósito e vivo cada dia com significado real.",
-    rating: 5,
-    role: "Formada em 2023"
-  }, {
-    name: "João Santos",
-    text: "28 anos depois, a FATEMI continua transformando vidas. O ensino prático me capacitou para liderar com sabedoria e amor.",
-    rating: 5,
-    role: "Formado em 2022"
-  }, {
-    name: "Ana Costa",
-    text: "Antes eu só 'ia à igreja'. Hoje eu VIVO a Palavra todos os dias. A diferença é gigantesca!",
-    rating: 5,
-    role: "Formada em 2023"
-  }, {
-    name: "Pedro Oliveira",
-    text: "Estudar na FATEMI foi o melhor investimento da minha vida. Minha família, meu trabalho, tudo mudou para melhor.",
-    rating: 5,
-    role: "Formado em 2022"
-  }];
-  return <section className="bg-gray-900 py-[80px]">
+  const testimonials = [
+    {
+      name: "Tauan Jhonny",
+      text: "Esse curso ajudou a transformar minha história.",
+      rating: 5,
+      role: "Aluno FATEMI"
+    },
+    {
+      name: "Oeslen Ribeiro", 
+      text: "Tive a imensa oportunidade de iniciar e concluir o Curso de Teologia Ministerial e Prática, um Curso que impactou a minha vida de uma forma tremenda, algo sobrenatural. A revelação da palavra de Deus ministrada nesse curso é tremenda, tem mudado a vida de muitas pessoas aos arredores do mundo. Recomendo sem sombra de dúvida!",
+      rating: 5,
+      role: "Aluno FATEMI"
+    },
+    {
+      name: "Luana Lopes",
+      text: "Simplesmente o melhor curso de teologia do Sul do Brasil...",
+      rating: 5,
+      role: "Aluna FATEMI"
+    },
+    {
+      name: "Vania Barros",
+      text: "Muito bom mesmo. É uma descoberta do evangelho que já conhecemos, mas numa outra dimensão e profundidade fantástica.",
+      rating: 5,
+      role: "Aluna FATEMI"
+    },
+    {
+      name: "Marilda Martins",
+      text: "É outro nível de compreensão da Palavra de Deus!",
+      rating: 5,
+      role: "Aluna FATEMI"
+    }
+  ];
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5511999999999', '_blank');
+  };
+
+  return (
+    <section className="bg-gray-900 py-[80px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-gray-400">Mais de 10 mil</span> vidas transformadas
+              <span className="text-blue-400">Mais de 10 mil</span> vidas transformadas
             </h2>
             <p className="text-xl text-gray-300 mb-4 font-medium">
               Veja o que acontece quando você decide investir em sua transformação
@@ -37,20 +56,24 @@ const Testimonials = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                <CardContent className="p-8">
+          {/* Grid responsivo para os testemunhos */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <CardContent className="p-8 flex flex-col h-full">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-white fill-current" />)}
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-white fill-current" />
+                    ))}
                   </div>
                   
                   <Quote className="w-8 h-8 text-gray-600 mb-4" />
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed text-lg">
+                  <p className="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
                     <strong className="text-white">"{testimonial.text}"</strong>
                   </p>
                   
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3 mt-auto">
                     <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
                       <span className="text-black font-bold text-lg">
                         {testimonial.name.charAt(0)}
@@ -62,12 +85,23 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
 
-          
+          {/* CTA Button */}
+          <div className="text-center">
+            <button 
+              onClick={handleWhatsAppClick}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              COMECE AGORA
+            </button>
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Testimonials;

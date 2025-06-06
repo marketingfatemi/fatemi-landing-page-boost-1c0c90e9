@@ -1,30 +1,30 @@
 
-import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
+import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const Authority = () => {
   const stats = [
     {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
+      icon: <Users className="w-8 h-8 text-white" />,
       number: "+10 mil",
       label: "alunos formados",
       description: "Vidas transformadas",
       highlight: true
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-400" />,
+      icon: <Globe className="w-8 h-8 text-white" />,
       number: "+11",
       label: "países alcançados",
       description: "Impacto global"
     },
     {
-      icon: <Trophy className="w-8 h-8 text-yellow-400" />,
+      icon: <Trophy className="w-8 h-8 text-white" />,
       number: "28",
       label: "anos de experiência",
       description: "Tradição e excelência"
     },
     {
-      icon: <Clock className="w-8 h-8 text-purple-400" />,
+      icon: <Clock className="w-8 h-8 text-white" />,
       number: "24/7",
       label: "acesso à plataforma",
       description: "Estude quando quiser"
@@ -50,13 +50,13 @@ const Authority = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            {/* Text content */}
-            <div className="space-y-8 order-2 lg:order-1">
+            {/* Text content - Centered on mobile */}
+            <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
               <p className="text-lg text-white leading-relaxed">
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-col lg:flex-row flex-wrap gap-4 mb-8 items-center lg:items-start">
                 <div className="flex items-center gap-2 text-green-400">
                   <CheckCircle className="w-5 h-5" />
                   <span className="text-white">Ensino prático e aplicado</span>
@@ -85,19 +85,19 @@ const Authority = () => {
             </div>
           </div>
 
-          {/* Stats grid */}
+          {/* Stats grid - Blue background with white text */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 border-blue-500/50 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300 group shadow-xl">
+              <Card key={index} className="bg-gradient-to-br from-blue-600 to-blue-700 border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className={`text-3xl font-bold mb-1 ${stat.highlight ? 'text-blue-400' : 'text-white'}`}>
+                  <div className="text-3xl font-bold mb-1 text-white">
                     {stat.number}
                   </div>
                   <div className="text-sm text-white uppercase tracking-wider font-medium mb-1">{stat.label}</div>
-                  <div className="text-xs text-blue-200">{stat.description}</div>
+                  <div className="text-xs text-blue-100">{stat.description}</div>
                 </CardContent>
               </Card>
             ))}

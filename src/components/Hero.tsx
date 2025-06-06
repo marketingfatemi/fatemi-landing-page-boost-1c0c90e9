@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle, Users, Globe, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, Globe } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -8,6 +8,10 @@ const Hero = () => {
     contactSection?.scrollIntoView({
       behavior: 'smooth'
     });
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open('https://wa.me/5511999999999', '_blank');
   };
 
   return (
@@ -24,12 +28,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo */}
+          {/* Logo - Changed to round version */}
           <div className="mb-8 animate-fade-in">
             <img 
               alt="FATEMI Logo" 
               className="w-32 h-auto mx-auto mb-6" 
-              src="/lovable-uploads/6527ed59-3027-4c3c-a95a-695fa44553d7.png" 
+              src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" 
             />
           </div>
 
@@ -49,8 +53,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Trust badges */}
-          <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-400">
+          {/* Trust badges - Hidden on mobile */}
+          <div className="hidden md:flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-blue-400" />
               <span>+10 mil alunos</span>
@@ -65,8 +69,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Value proposition */}
-          <div className="mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          {/* Value proposition - Hidden on mobile */}
+          <div className="mb-10 animate-fade-in hidden md:block" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-6">
               <span className="text-white font-semibold">Mais de 10 mil pessoas já foram transformadas.</span><br />
               Seja capacitado a viver o chamado de Deus para sua vida!
@@ -95,22 +99,24 @@ const Hero = () => {
 
           {/* Modern CTA section */}
           <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+            <div className="flex justify-center items-center mb-8">
+              {/* Desktop CTA */}
               <Button 
-                onClick={scrollToContact} 
+                onClick={handleWhatsAppClick} 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
+                className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
               >
-                Quero conhecer o curso
-                <ArrowRight className="w-5 h-5 ml-2" />
+                QUERO ME INSCREVER
               </Button>
               
-              <button className="flex items-center gap-3 text-white hover:text-blue-400 transition-colors group">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Play className="w-5 h-5 ml-1" />
-                </div>
-                <span className="font-medium">Assista ao vídeo</span>
-              </button>
+              {/* Mobile CTA - Fixed text overflow */}
+              <Button 
+                onClick={handleWhatsAppClick} 
+                size="lg" 
+                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-full text-base shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 whitespace-nowrap"
+              >
+                Quero conhecer a grade do curso
+              </Button>
             </div>
             
             {/* Social proof */}
