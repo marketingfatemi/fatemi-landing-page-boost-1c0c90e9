@@ -1,11 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Book, Users, Clock, Heart, MessageCircle, ArrowRight, Cross, House, BookOpen, Lightbulb, Download } from "lucide-react";
+import { Book, Users, Clock, Heart, Cross, House, BookOpen, Lightbulb, Download } from "lucide-react";
 
 const WhatYouLearn = () => {
   const modules = [{
-    icon: <Book className="w-5 h-5 md:w-6 md:h-6" />,
+    icon: <BookOpen className="w-5 h-5 md:w-6 md:h-6" />,
     title: "Verbo e a Fé",
     description: "Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias."
   }, {
@@ -30,11 +30,13 @@ const WhatYouLearn = () => {
     description: "Desenvolva habilidades para liderar e impactar sua comunidade de forma real."
   }];
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511999999999?text=Olá! Quero me inscrever no curso de Teologia da FATEMI', '_blank');
+  };
+
+  const downloadGrade = () => {
+    // This would typically trigger a PDF download
+    console.log('Download grade PDF');
   };
 
   return (
@@ -50,12 +52,11 @@ const WhatYouLearn = () => {
             </p>
             
             <Button 
-              onClick={scrollToContact} 
+              onClick={openWhatsApp} 
               size="lg" 
               className="w-full md:w-auto bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full text-sm md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-8"
             >
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              COMECE A TRANSFORMAÇÃO: INSCREVA-SE!
+              QUERO ME INSCREVER
             </Button>
           </div>
 
@@ -81,7 +82,7 @@ const WhatYouLearn = () => {
           {/* CTA */}
           <div className="text-center space-y-4 md:space-y-6 px-4">
             <Button 
-              onClick={scrollToContact} 
+              onClick={downloadGrade} 
               size="lg" 
               className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 md:py-6 px-8 md:px-12 rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4"
             >

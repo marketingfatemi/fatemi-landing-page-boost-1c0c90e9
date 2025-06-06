@@ -1,5 +1,8 @@
+
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Star, Quote } from "lucide-react";
+
 const Testimonials = () => {
   const testimonials = [{
     name: "Maria Silva",
@@ -22,12 +25,18 @@ const Testimonials = () => {
     rating: 5,
     role: "Formado em 2022"
   }];
-  return <section className="bg-gray-900 py-[80px]">
+
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511999999999?text=Olá! Quero começar agora no curso de Teologia da FATEMI', '_blank');
+  };
+
+  return (
+    <section className="bg-gray-900 py-[80px]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-gray-400">Mais de 10 mil</span> vidas transformadas
+              <span className="text-blue-400">Mais de 10 mil</span> vidas transformadas
             </h2>
             <p className="text-xl text-gray-300 mb-4 font-medium">
               Veja o que acontece quando você decide investir em sua transformação
@@ -37,11 +46,14 @@ const Testimonials = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-white fill-current" />)}
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-white fill-current" />
+                    ))}
                   </div>
                   
                   <Quote className="w-8 h-8 text-gray-600 mb-4" />
@@ -62,12 +74,23 @@ const Testimonials = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
 
-          
+          <div className="text-center">
+            <Button 
+              onClick={openWhatsApp}
+              size="lg" 
+              className="w-full md:w-auto bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              COMECE AGORA
+            </Button>
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Testimonials;

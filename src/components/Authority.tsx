@@ -1,7 +1,6 @@
 
-import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
+import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const Authority = () => {
   const stats = [
@@ -31,13 +30,6 @@ const Authority = () => {
       description: "Estude quando quiser"
     }
   ];
-
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
@@ -90,23 +82,11 @@ const Authority = () => {
                   <span className="text-white text-sm md:text-base">Certificação reconhecida</span>
                 </div>
               </div>
-
-              {/* CTA Button */}
-              <div className="pt-4">
-                <Button 
-                  onClick={scrollToContact}
-                  size="lg" 
-                  className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full text-sm md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  DESBLOQUEIE SEU POTENCIAL: SAIBA MAIS!
-                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
-                </Button>
-              </div>
             </div>
           </div>
 
           {/* Stats grid - enhanced for mobile */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, index) => (
               <Card key={index} className="bg-gradient-to-br from-blue-900/40 to-gray-900/80 border-blue-500/30 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300 group shadow-xl">
                 <CardContent className="p-4 md:p-6 text-center">
@@ -121,18 +101,6 @@ const Authority = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          {/* Additional CTA section */}
-          <div className="text-center px-4">
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              className="w-full md:w-auto bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-full text-sm md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Falar com consultor agora
-            </Button>
           </div>
         </div>
       </div>

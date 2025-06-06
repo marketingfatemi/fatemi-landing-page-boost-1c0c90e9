@@ -1,13 +1,10 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle, Users, Globe, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, Globe } from "lucide-react";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o curso de Teologia da FATEMI', '_blank');
   };
 
   return (
@@ -86,21 +83,12 @@ const Hero = () => {
           {/* Primary CTA - mobile optimized */}
           <div className="animate-fade-in mb-6" style={{ animationDelay: '0.4s' }}>
             <Button 
-              onClick={scrollToContact} 
+              onClick={openWhatsApp} 
               size="lg" 
               className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 md:px-8 rounded-full text-base md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 mb-4"
             >
-              INSCREVA-SE AGORA E TRANSFORME SUA VIDA!
-              <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
+              QUERO ME INSCREVER
             </Button>
-            
-            {/* Secondary CTA */}
-            <button className="flex items-center justify-center gap-3 text-white hover:text-blue-400 transition-colors group mx-auto">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <Play className="w-4 h-4 md:w-5 md:h-5 ml-1" />
-              </div>
-              <span className="font-medium text-sm md:text-base">Assista à Apresentação</span>
-            </button>
           </div>
           
           {/* Social proof */}

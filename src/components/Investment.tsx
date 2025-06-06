@@ -1,13 +1,10 @@
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, CreditCard, Zap, Shield, ArrowRight, MessageCircle } from "lucide-react";
+import { CheckCircle, CreditCard, Zap, Shield, ArrowRight } from "lucide-react";
 
 const Investment = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511999999999?text=Olá! Quero garantir minha vaga no curso de Teologia da FATEMI', '_blank');
   };
 
   return (
@@ -87,11 +84,11 @@ const Investment = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  onClick={scrollToContact} 
+                  onClick={openWhatsApp} 
                   size="lg" 
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 md:py-6 px-8 md:px-12 rounded-full text-lg md:text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4"
                 >
-                  GARANTA SUA VAGA COM ACESSO IMEDIATO!
+                  GARANTIR MINHA VAGA
                 </Button>
 
                 {/* Security badge */}
@@ -106,14 +103,13 @@ const Investment = () => {
           {/* Additional CTA section */}
           <div className="bg-gradient-to-r from-blue-600/20 to-blue-600/20 border border-blue-600/30 rounded-xl p-4 md:p-6 max-w-2xl mx-auto">
             <div className="flex items-center justify-center gap-2 text-blue-400 mb-3 md:mb-4">
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
               <span className="font-semibold text-base md:text-lg">Transforme sua vida hoje mesmo</span>
             </div>
             <p className="text-gray-300 text-xs md:text-sm mb-3 md:mb-4">
-              Mais de 10 mil pessoas já foram capacitadas através do nosso curso. Seja o próximo!
+              <span className="text-blue-400 font-semibold">Mais de 10 mil</span> pessoas já foram capacitadas através do nosso curso. Seja o próximo!
             </p>
             <Button 
-              onClick={scrollToContact} 
+              onClick={openWhatsApp} 
               size="lg" 
               className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-6 md:px-8 rounded-full text-sm md:text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
             >

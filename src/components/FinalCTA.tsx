@@ -1,13 +1,10 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, CheckCircle, Star, Shield } from "lucide-react";
+import { CheckCircle, Star, Shield } from "lucide-react";
 
 const FinalCTA = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5511999999999?text=Olá! Quero ser aluno da FATEMI', '_blank');
   };
 
   return (
@@ -71,7 +68,7 @@ const FinalCTA = () => {
               <span className="text-white">Acesso liberado imediatamente</span>
             </div>
             <div className="flex items-center gap-2 text-green-400">
-              <MessageCircle className="w-3 h-3 md:w-4 md:h-4" />
+              <CheckCircle className="w-3 h-3 md:w-4 md:h-4" />
               <span className="text-white">Atendimento personalizado</span>
             </div>
           </div>
@@ -79,12 +76,11 @@ const FinalCTA = () => {
           {/* CTA Button */}
           <div className="mb-4 md:mb-6 px-4">
             <Button 
-              onClick={scrollToContact}
+              onClick={openWhatsApp}
               size="lg" 
               className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 md:py-6 px-8 md:px-12 rounded-full text-lg md:text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
             >
-              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Quero ser aluno da FATEMI
+              QUERO SER ALUNO
             </Button>
           </div>
 
