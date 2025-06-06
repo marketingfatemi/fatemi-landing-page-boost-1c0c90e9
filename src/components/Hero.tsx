@@ -11,11 +11,22 @@ const Hero = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/lovable-uploads/245bccdc-38d5-4f53-9024-417ffd86ad3f.png" 
+          alt="FATEMI Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-blue-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50"></div>
+      </div>
+      
       {/* Modern background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
@@ -28,12 +39,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo - Changed to round version */}
+          {/* Logo - Updated to use the new logo */}
           <div className="mb-8 animate-fade-in">
             <img 
               alt="FATEMI Logo" 
               className="w-32 h-auto mx-auto mb-6" 
-              src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" 
+              src="/lovable-uploads/c97688e6-8206-44ee-ba76-ef342962b8a2.png" 
             />
           </div>
 
@@ -111,9 +122,9 @@ const Hero = () => {
               
               {/* Mobile CTA - Fixed text overflow */}
               <Button 
-                onClick={handleWhatsAppClick} 
+                onClick={() => window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso%20de%20Teologia%20da%20FATEMI!%20Estou%20interessado%20nele!', '_blank')}
                 size="lg" 
-                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-full text-base shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 whitespace-nowrap"
+                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] text-center leading-tight"
               >
                 Quero conhecer a grade do curso
               </Button>

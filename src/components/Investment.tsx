@@ -1,125 +1,145 @@
 
+import { Card, CardContent } from "@/components/ui/card";
+import { CheckCircle, Star, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, CreditCard, Zap, Shield, Users } from "lucide-react";
 
 const Investment = () => {
+  const benefits = [
+    "Certificado de Conclusão Reconhecido",
+    "Acesso Vitalício ao Conteúdo",
+    "Material Didático Completo",
+    "Suporte dos Professores",
+    "Flexibilidade Total de Horários",
+    "Comunidade Exclusiva de Alunos"
+  ];
+
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+    <section className="py-24 bg-black relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 py-0 px-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto">
           {/* Section header */}
-          <div className="mb-12">
-            <div className="inline-block bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4 px-[21px] py-[12px]">
-              Investimento
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+              Seu Investimento
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 py-[8px]">
-              Sua transformação começa <span className="text-green-400">hoje</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Uma oportunidade única de <span className="text-blue-400">transformação</span>
             </h2>
-            <p className="text-xl text-white font-medium">
-              Investir em sua formação ministerial nunca foi tão acessível
-            </p>
           </div>
 
-          {/* Pricing card */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/50 rounded-2xl p-8 relative overflow-hidden">
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green-600/5 to-blue-600/5 rounded-2xl"></div>
-              
-              <div className="relative z-10">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-green-600/20 border border-green-600/30 rounded-full px-4 py-2 mb-6">
-                  <Zap className="w-4 h-4 text-green-400" />
-                  <span className="text-green-400 font-medium">Oferta Especial</span>
-                </div>
-
-                {/* Price */}
-                <div className="mb-8">
-                  <div className="text-2xl text-blue-200 mb-2">Parcele em até</div>
-                  <div className="text-6xl md:text-7xl font-bold text-white mb-2">
-                    24x de <span className="text-green-400">R$ 197</span>
-                  </div>
-                  <div className="text-blue-200">
-                    ou <span className="text-white font-semibold">R$ 4.728</span> à vista
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="grid md:grid-cols-2 gap-4 mb-8">
-                  <div className="flex items-center gap-3 text-left">
-                    <div className="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                    </div>
-                    <span className="text-white">Sem comprometer seu limite total</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-left">
-                    <div className="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
-                      <CreditCard className="w-4 h-4 text-green-400" />
-                    </div>
-                    <span className="text-white">Aprovação imediata</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-left">
-                    <div className="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-4 h-4 text-green-400" />
-                    </div>
-                    <span className="text-white">Acesso liberado na hora</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-left">
-                    <div className="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-4 h-4 text-green-400" />
-                    </div>
-                    <span className="text-white">Sem burocracia</span>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <Button 
-                  onClick={handleWhatsAppClick} 
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4"
-                >
-                  GARANTIR MINHA VAGA
-                </Button>
-
-                {/* Security badge */}
-                <div className="flex items-center justify-center gap-2 mt-6 text-sm text-blue-200">
-                  <Shield className="w-4 h-4" />
-                  <span>Pagamento 100% seguro e protegido</span>
-                </div>
+          {/* Main pricing card */}
+          <Card className="bg-gradient-to-br from-gray-900 to-black border-2 border-blue-500/30 shadow-2xl mb-12 relative overflow-hidden">
+            {/* Popular badge */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                MAIS ESCOLHIDO
               </div>
             </div>
-          </div>
+            
+            <CardContent className="p-8 md:p-12">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left side - Pricing */}
+                <div className="text-center lg:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    Curso Completo de Teologia Ministerial
+                  </h3>
+                  
+                  <div className="mb-6">
+                    <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                      <span className="text-gray-400 line-through text-xl">R$ 2.497</span>
+                      <span className="bg-red-600 text-white px-2 py-1 rounded text-sm font-bold">-60%</span>
+                    </div>
+                    <div className="text-5xl font-bold text-white mb-2">R$ 997</div>
+                    <div className="text-blue-400 text-lg">ou 12x de R$ 97</div>
+                  </div>
 
-          {/* Updated section - Fixed button positioning */}
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-600/30 rounded-xl p-6 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-blue-400 mb-4">
-              <Users className="w-5 h-5" />
-              <span className="font-semibold text-lg">
-                <span className="text-blue-400">Mais de 10 mil</span> vidas transformadas
-              </span>
-            </div>
-            <p className="text-white text-sm mb-4">
-              Não perca a oportunidade de transformar sua vida. Seja o próximo!
+                  <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
+                    <Clock className="w-5 h-5 text-yellow-400" />
+                    <span className="text-yellow-400 font-medium">Oferta por tempo limitado!</span>
+                  </div>
+
+                  <div className="space-y-4 mb-8">
+                    <Button 
+                      onClick={handleWhatsAppClick}
+                      size="lg" 
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+                    >
+                      GARANTIR MINHA VAGA
+                    </Button>
+                    
+                    <Button 
+                      onClick={handleWhatsAppClick}
+                      size="lg" 
+                      className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+                    >
+                      QUERO ME INSCREVER AGORA!
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center justify-center lg:justify-start gap-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                    <span className="text-gray-400 text-sm ml-2">4.9/5 (1.247 avaliações)</span>
+                  </div>
+                </div>
+
+                {/* Right side - Benefits */}
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-6">O que está incluso:</h4>
+                  <ul className="space-y-4">
+                    {benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-300">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-8 p-6 bg-blue-900/20 rounded-lg border border-blue-500/30">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-white font-bold">Garantia de 7 dias</span>
+                    </div>
+                    <p className="text-gray-300 text-sm">
+                      Se não ficar satisfeito, devolvemos 100% do seu dinheiro
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Testimonials highlight - "Mais de 10 mil vidas transformadas" */}
+          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-blue-400">Mais de 10 mil</span> vidas transformadas
+            </h3>
+            <p className="text-xl text-gray-300 mb-6">
+              Faça parte desta comunidade de líderes e transforme seu ministério hoje mesmo!
             </p>
-            <div className="w-full">
-              <Button 
-                onClick={handleWhatsAppClick} 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                QUERO ME INSCREVER AGORA!
-              </Button>
-            </div>
+            <Button 
+              onClick={handleWhatsAppClick}
+              size="lg" 
+              className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              QUERO ME INSCREVER AGORA!
+            </Button>
           </div>
         </div>
       </div>
