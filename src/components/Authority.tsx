@@ -1,7 +1,6 @@
 
 import { Users, Star, Trophy, Clock, Globe, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const Authority = () => {
   const stats = [
@@ -32,13 +31,6 @@ const Authority = () => {
     }
   ];
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  };
-
   return (
     <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
       {/* Background pattern */}
@@ -60,7 +52,7 @@ const Authority = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text content */}
             <div className="space-y-8 order-2 lg:order-1">
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-white leading-relaxed">
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
               
@@ -78,18 +70,6 @@ const Authority = () => {
                   <span className="text-white">Certificação reconhecida</span>
                 </div>
               </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col gap-4 pt-4">
-                <Button 
-                  onClick={scrollToContact}
-                  size="lg" 
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-                >
-                  Quero conhecer este curso
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </div>
             </div>
 
             {/* Temple Image */}
@@ -106,9 +86,9 @@ const Authority = () => {
           </div>
 
           {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <Card key={index} className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-gray-600/50 backdrop-blur-sm hover:border-blue-500/30 transition-all duration-300 group shadow-xl">
+              <Card key={index} className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 border-blue-500/50 backdrop-blur-sm hover:border-blue-400/50 transition-all duration-300 group shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -116,23 +96,11 @@ const Authority = () => {
                   <div className={`text-3xl font-bold mb-1 ${stat.highlight ? 'text-blue-400' : 'text-white'}`}>
                     {stat.number}
                   </div>
-                  <div className="text-sm text-gray-300 uppercase tracking-wider font-medium mb-1">{stat.label}</div>
-                  <div className="text-xs text-gray-400">{stat.description}</div>
+                  <div className="text-sm text-white uppercase tracking-wider font-medium mb-1">{stat.label}</div>
+                  <div className="text-xs text-blue-200">{stat.description}</div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          {/* Additional CTA section */}
-          <div className="text-center">
-            <Button 
-              onClick={scrollToContact}
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Falar com consultor agora
-            </Button>
           </div>
         </div>
       </div>
