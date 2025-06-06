@@ -1,18 +1,16 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Globe } from "lucide-react";
-
 const Hero = () => {
   const openWhatsApp = () => {
     window.open('https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre o curso de Teologia da FATEMI', '_blank');
   };
-
-  return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center relative overflow-hidden">
       {/* Modern background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{
+        animationDelay: '2s'
+      }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-600/5 to-blue-600/5 rounded-full blur-3xl"></div>
       </div>
       
@@ -23,11 +21,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div className="mb-6 animate-fade-in">
-            <img 
-              alt="FATEMI Logo" 
-              className="w-24 md:w-32 h-auto mx-auto mb-4" 
-              src="/lovable-uploads/6527ed59-3027-4c3c-a95a-695fa44553d7.png" 
-            />
+            <img alt="FATEMI Logo" className="w-24 md:w-32 h-auto mx-auto mb-4" src="/lovable-uploads/6527ed59-3027-4c3c-a95a-695fa44553d7.png" />
           </div>
 
           {/* Main headline - condensed for mobile */}
@@ -76,17 +70,15 @@ const Hero = () => {
             </div>
             <div className="flex flex-col items-center gap-1 text-green-400">
               <CheckCircle className="w-4 h-4" />
-              <span className="text-white text-center">Acesso Vitalício</span>
+              <span className="text-white text-center">Suporte Total ao Aluno</span>
             </div>
           </div>
 
           {/* Primary CTA - mobile optimized */}
-          <div className="animate-fade-in mb-6" style={{ animationDelay: '0.4s' }}>
-            <Button 
-              onClick={openWhatsApp} 
-              size="lg" 
-              className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 md:px-8 rounded-full text-base md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 mb-4"
-            >
+          <div className="animate-fade-in mb-6" style={{
+          animationDelay: '0.4s'
+        }}>
+            <Button onClick={openWhatsApp} size="lg" className="w-full md:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 md:px-8 rounded-full text-base md:text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 mb-4">
               QUERO ME INSCREVER
             </Button>
           </div>
@@ -97,8 +89,6 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
