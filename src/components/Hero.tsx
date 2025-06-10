@@ -39,12 +39,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo - Updated to use the new logo */}
+          {/* Logo - Round logo */}
           <div className="mb-8 animate-fade-in">
             <img 
               alt="FATEMI Logo" 
-              className="w-32 h-auto mx-auto mb-6" 
-              src="/lovable-uploads/c97688e6-8206-44ee-ba76-ef342962b8a2.png" 
+              className="w-32 h-32 mx-auto mb-6 rounded-full" 
+              src="/lovable-uploads/51ab4e1f-4919-443e-a354-5075b8b71ec8.png" 
             />
           </div>
 
