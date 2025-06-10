@@ -11,11 +11,29 @@ const Hero = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
+  };
+
+  const handleGradeClick = () => {
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso%20de%20Teologia%20da%20FATEMI!%20Estou%20interessado%20nele!', '_blank');
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png')`
+          }}
+        />
+        {/* Dark overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/85 to-black/90"></div>
+        {/* Blue accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-purple-900/20"></div>
+      </div>
+      
       {/* Modern background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
@@ -28,12 +46,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          {/* Logo - Changed to round version */}
+          {/* Logo - Nova logo redonda */}
           <div className="mb-8 animate-fade-in">
             <img 
               alt="FATEMI Logo" 
               className="w-32 h-auto mx-auto mb-6" 
-              src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" 
+              src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" 
             />
           </div>
 
@@ -111,9 +129,9 @@ const Hero = () => {
               
               {/* Mobile CTA - Fixed text overflow */}
               <Button 
-                onClick={handleWhatsAppClick} 
+                onClick={handleGradeClick} 
                 size="lg" 
-                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-full text-base shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 whitespace-nowrap"
+                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] whitespace-normal text-center leading-tight"
               >
                 Quero conhecer a grade do curso
               </Button>
