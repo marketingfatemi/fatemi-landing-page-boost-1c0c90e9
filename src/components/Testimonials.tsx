@@ -1,13 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const Testimonials = () => {
   const testimonials = [
@@ -44,7 +37,7 @@ const Testimonials = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
+    window.open('https://wa.me/5511999999999', '_blank');
   };
 
   return (
@@ -63,51 +56,37 @@ const Testimonials = () => {
             </p>
           </div>
 
-          {/* Carousel for testimonials */}
-          <div className="mb-12">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                    <Card className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                      <CardContent className="p-8 flex flex-col h-full">
-                        <div className="flex mb-4">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-5 h-5 text-white fill-current" />
-                          ))}
-                        </div>
-                        
-                        <Quote className="w-8 h-8 text-gray-600 mb-4" />
-                        
-                        <p className="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
-                          <strong className="text-white">"{testimonial.text}"</strong>
-                        </p>
-                        
-                        <div className="flex items-center gap-3 mt-auto">
-                          <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
-                            <span className="text-black font-bold text-lg">
-                              {testimonial.name.charAt(0)}
-                            </span>
-                          </div>
-                          <div>
-                            <div className="font-bold text-white">{testimonial.name}</div>
-                            <div className="text-sm text-gray-400">{testimonial.role}</div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden lg:flex" />
-              <CarouselNext className="hidden lg:flex" />
-            </Carousel>
+          {/* Grid responsivo para os testemunhos */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="bg-black border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                <CardContent className="p-8 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-white fill-current" />
+                    ))}
+                  </div>
+                  
+                  <Quote className="w-8 h-8 text-gray-600 mb-4" />
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+                    <strong className="text-white">"{testimonial.text}"</strong>
+                  </p>
+                  
+                  <div className="flex items-center gap-3 mt-auto">
+                    <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+                      <span className="text-black font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="font-bold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
 
           {/* CTA Button */}

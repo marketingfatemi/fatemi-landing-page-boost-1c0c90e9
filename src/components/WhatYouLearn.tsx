@@ -1,159 +1,89 @@
-
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Book, Users, Clock, Heart, MessageCircle, ArrowRight, Cross, House, BookOpen, Lightbulb } from "lucide-react";
 const WhatYouLearn = () => {
-  const modules = [
-    {
-      title: "Teologia Sistemática",
-      topics: ["Doutrina de Deus", "Cristologia", "Pneumatologia", "Soteriologia", "Escatologia"]
-    },
-    {
-      title: "Hermenêutica Bíblica",
-      topics: ["Princípios de Interpretação", "Exegese", "Contexto Histórico", "Aplicação Prática"]
-    },
-    {
-      title: "História da Igreja",
-      topics: ["Igreja Primitiva", "Idade Média", "Reforma Protestante", "Igreja Contemporânea"]
-    },
-    {
-      title: "Homilética",
-      topics: ["Preparação de Sermões", "Técnicas de Pregação", "Comunicação Eficaz", "Oratória Sagrada"]
-    },
-    {
-      title: "Aconselhamento Pastoral",
-      topics: ["Princípios Bíblicos", "Psicologia Pastoral", "Casos Práticos", "Ética Ministerial"]
-    },
-    {
-      title: "Liderança Cristã",
-      topics: ["Gestão Eclesiástica", "Desenvolvimento de Equipes", "Visão e Missão", "Crescimento da Igreja"]
-    }
-  ];
-
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
+  const modules = [{
+    icon: <BookOpen className="w-6 h-6" />,
+    title: "Verbo e a Fé",
+    description: "Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias."
+  }, {
+    icon: <Cross className="w-6 h-6" />,
+    title: "Fundamentos de Cristo",
+    description: "Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida."
+  }, {
+    icon: <House className="w-6 h-6" />,
+    title: "Segredo dos Tabernáculos",
+    description: "Descubra como Cristo está presente desde o Antigo Testamento até hoje."
+  }, {
+    icon: <Lightbulb className="w-6 h-6" />,
+    title: "Prática da Palavra",
+    description: "Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia."
+  }, {
+    icon: <Users className="w-6 h-6" />,
+    title: "Panorama da Lei e da Graça",
+    description: "Estude detalhadamente o Antigo e o Novo Testamento"
+  }, {
+    icon: <Clock className="w-6 h-6" />,
+    title: "Liderança Transformacional",
+    description: "Desenvolva habilidades para liderar e impactar sua comunidade de forma real."
+  }];
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('final-cta');
+    contactSection?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  const handleDownloadClick = () => {
-    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso%20de%20Teologia%20da%20FATEMI!%20Estou%20interessado%20nele!', '_blank');
-  };
-
-  return (
-    <section className="py-24 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl"></div>
-      </div>
-      
-      {/* Grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          {/* Section header */}
+  return <section className="bg-black overflow-hidden py-[68px]">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
-              Grade Curricular
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              O que você vai <span className="text-blue-400">aprender</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              O que você <span className="text-blue-400">aprenderá</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Um currículo completo e estruturado para formar líderes cristãos capacitados e preparados para o ministério.
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
             </p>
             
-            {/* Top CTA */}
-            <Button 
-              onClick={handleWhatsAppClick}
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12"
-            >
-              QUERO ME INSCREVER
+            <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Quero me inscrever agora
             </Button>
           </div>
 
-          {/* Modules grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {modules.map((module, index) => (
-              <Card key={index} className="bg-gray-800/50 border-gray-700 backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300 group">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
-                      {index + 1}
+          {/* Modules Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {modules.map((module, index) => <Card key={index} className="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <CardHeader className="pb-4">
+                  <div className="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                    <div className="text-white">
+                      {module.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {module.title}
-                    </h3>
                   </div>
-                  
-                  <ul className="space-y-3">
-                    {module.topics.map((topic, topicIndex) => (
-                      <li key={topicIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-300 leading-relaxed">{topic}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <CardTitle className="text-xl text-white">{module.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-400 leading-relaxed">{module.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
-          {/* Additional benefits */}
-          <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl p-8 mb-16 border border-blue-500/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">Além disso, você também terá:</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-bold text-white mb-2">Material Didático</h4>
-                <p className="text-gray-300 text-sm">Apostilas e livros digitais inclusos</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-bold text-white mb-2">Suporte Online</h4>
-                <p className="text-gray-300 text-sm">Tire suas dúvidas diretamente com os professores</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-bold text-white mb-2">Certificado</h4>
-                <p className="text-gray-300 text-sm">Diploma reconhecido nacionalmente</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-bold text-white mb-2">Acesso Vitalício</h4>
-                <p className="text-gray-300 text-sm">Revise o conteúdo sempre que precisar</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom CTA */}
-          <div className="text-center">
-            <Button 
-              onClick={handleDownloadClick}
-              size="lg" 
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-4"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              BAIXE A GRADE COMPLETA (PDF)
+          {/* CTA */}
+          <div className="text-center space-y-6">
+            <Button onClick={scrollToContact} size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto">
+              Quero ver a Grade Curricular Completa
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <p className="text-sm text-gray-400">
-              Conheça todos os detalhes do nosso currículo
+            
+            <div className="mt-6">
+              
+            </div>
+            
+            <p className="text-gray-400 mt-4">
+              Descubra todos os módulos que vão transformar sua vida
             </p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhatYouLearn;
