@@ -1,4 +1,3 @@
-
 import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 const Authority = () => {
@@ -59,7 +58,7 @@ const Authority = () => {
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <CheckCircle className="w-5 h-5" />
-                  <span className="text-white">Formação completa</span>
+                  <span className="text-white">Formação ministerial</span>
                 </div>
               </div>
             </div>
