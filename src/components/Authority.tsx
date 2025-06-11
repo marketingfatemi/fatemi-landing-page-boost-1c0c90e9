@@ -46,7 +46,7 @@ const Authority = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text content - Centered on mobile */}
             <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
-              <p className="text-lg text-white leading-relaxed">
+              <p className="text-lg text-white leading-relaxed text-justify">
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
               
