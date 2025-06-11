@@ -61,10 +61,10 @@ const WhatYouLearn = () => {
               <Button 
                 onClick={handleWhatsAppClick} 
                 size="lg" 
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto break-words"
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
               >
                 <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-                <span className="text-center">Quero me inscrever agora</span>
+                <span className="text-center break-words">Quero me inscrever agora</span>
               </Button>
             </div>
           </div>
@@ -93,9 +93,9 @@ const WhatYouLearn = () => {
             <Button 
               onClick={handleGradeClick} 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-8 sm:px-12 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto break-words"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto"
             >
-              <span className="text-center">Quero ver a Grade Curricular Completa</span>
+              <span className="text-center break-words max-w-full">Ver Grade Curricular Completa</span>
               <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
             </Button>
             

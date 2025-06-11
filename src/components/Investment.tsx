@@ -89,9 +89,9 @@ const Investment = () => {
                 <Button 
                   onClick={handleWhatsAppClick}
                   size="lg" 
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-8 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6 break-words"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-8 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6"
                 >
-                  QUERO GARANTIR MINHA VAGA
+                  <span className="text-center break-words">QUERO GARANTIR MINHA VAGA</span>
                 </Button>
 
                 {/* Security badge */}
