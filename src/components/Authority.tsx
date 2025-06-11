@@ -35,7 +35,10 @@ const Authority = () => {
               Nossa História
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-blue-400">28 anos</span> formando líderes<br />
+              <span className="text-blue-400">28 anos</span> 
+              <br className="md:hidden" />
+              formando líderes
+              <br />
               através do <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">ensino prático da Palavra</span>
             </h2>
           </div>
