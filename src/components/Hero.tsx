@@ -1,24 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Globe } from "lucide-react";
+
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
+
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20em%20conhecer%20o%20curso%20de%20teologia%20da%20FATEMI!', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!', '_blank');
   };
+
   const handleGradeClick = () => {
-    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso%20de%20Teologia%20da%20FATEMI!%20Estou%20interessado%20nele!', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso!', '_blank');
   };
-  return <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
+
+  return (
+    <section className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `url('/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png')`
-      }} />
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{
+            backgroundImage: `url('/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png')`
+          }} 
+        />
         {/* Dark overlay with gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/85 to-black/90"></div>
         {/* Blue accent overlay */}
@@ -28,9 +34,7 @@ const Hero = () => {
       {/* Modern background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style={{
-        animationDelay: '2s'
-      }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-full blur-3xl"></div>
       </div>
       
@@ -41,7 +45,11 @@ const Hero = () => {
         <div className="max-w-6xl mx-auto text-center">
           {/* Logo - Nova logo redonda */}
           <div className="mb-8 animate-fade-in">
-            <img alt="FATEMI Logo" className="w-32 h-auto mx-auto mb-6" src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" />
+            <img 
+              alt="FATEMI Logo" 
+              className="w-32 h-auto mx-auto mb-6" 
+              src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" 
+            />
           </div>
 
           {/* Main headline with modern typography */}
@@ -77,9 +85,7 @@ const Hero = () => {
           </div>
 
           {/* Value proposition - Hidden on mobile */}
-          <div className="mb-10 animate-fade-in hidden md:block" style={{
-          animationDelay: '0.2s'
-        }}>
+          <div className="mb-10 animate-fade-in hidden md:block" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-6">
               <span className="text-white font-semibold">Mais de 10 mil pessoas já foram transformadas.</span><br />
               Seja capacitado a viver o chamado de Deus para sua vida!
@@ -107,15 +113,23 @@ const Hero = () => {
           </div>
 
           {/* Modern CTA section */}
-          <div className="animate-fade-in" style={{
-          animationDelay: '0.4s'
-        }}>
+          <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="flex justify-center items-center mb-8">
               {/* Desktop CTA */}
-              <Button onClick={handleWhatsAppClick} size="lg" className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20">QUERO CONHECER O CURSO</Button>
+              <Button 
+                onClick={handleWhatsAppClick} 
+                size="lg" 
+                className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
+              >
+                QUERO CONHECER O CURSO
+              </Button>
               
               {/* Mobile CTA - Fixed text overflow */}
-              <Button onClick={handleGradeClick} size="lg" className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] whitespace-normal text-center leading-tight">
+              <Button 
+                onClick={handleGradeClick} 
+                size="lg" 
+                className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] whitespace-normal text-center leading-tight"
+              >
                 Quero conhecer a grade do curso
               </Button>
             </div>
@@ -127,6 +141,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, CreditCard, Zap, Shield, Users } from "lucide-react";
+
 const Investment = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!', '_blank');
   };
-  return <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+
+  return (
+    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 py-0 px-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
@@ -79,7 +82,13 @@ const Investment = () => {
                 </div>
 
                 {/* CTA Button */}
-                
+                <Button 
+                  onClick={handleWhatsAppClick}
+                  size="lg" 
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-8 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6"
+                >
+                  QUERO GARANTIR MINHA VAGA
+                </Button>
 
                 {/* Security badge */}
                 <div className="flex items-center justify-center gap-2 mt-6 text-sm text-blue-200">
@@ -89,11 +98,10 @@ const Investment = () => {
               </div>
             </div>
           </div>
-
-          {/* Updated section - Fixed button positioning */}
-          
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Investment;
