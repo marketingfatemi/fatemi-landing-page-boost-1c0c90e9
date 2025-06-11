@@ -1,14 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { CheckCircle, CreditCard, Zap, Shield, Users } from "lucide-react";
-
 const Investment = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5511999999999', '_blank');
   };
-
-  return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+  return <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 py-0 px-0">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
@@ -83,13 +79,7 @@ const Investment = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Button 
-                  onClick={handleWhatsAppClick} 
-                  size="lg" 
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-green-500/20 mb-4"
-                >
-                  GARANTIR MINHA VAGA
-                </Button>
+                
 
                 {/* Security badge */}
                 <div className="flex items-center justify-center gap-2 mt-6 text-sm text-blue-200">
@@ -101,30 +91,9 @@ const Investment = () => {
           </div>
 
           {/* Updated section - Fixed button positioning */}
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-600/30 rounded-xl p-6 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-blue-400 mb-4">
-              <Users className="w-5 h-5" />
-              <span className="font-semibold text-lg">
-                <span className="text-blue-400">Mais de 10 mil</span> vidas transformadas
-              </span>
-            </div>
-            <p className="text-white text-sm mb-4">
-              Não perca a oportunidade de transformar sua vida. Seja o próximo!
-            </p>
-            <div className="w-full">
-              <Button 
-                onClick={handleWhatsAppClick} 
-                size="lg" 
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300"
-              >
-                QUERO ME INSCREVER AGORA!
-              </Button>
-            </div>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Investment;
