@@ -52,14 +52,16 @@ const Formation = () => {
               Estude quando quiser e onde quiser
             </p>
             
-            <Button 
-              onClick={handleWhatsAppClick} 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12 w-full sm:w-auto"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Começar minha formação
-            </Button>
+            <div className="px-4">
+              <Button 
+                onClick={handleWhatsAppClick} 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12 w-full sm:w-auto break-words"
+              >
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                <span className="text-center">Começar minha formação</span>
+              </Button>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -87,13 +89,13 @@ const Formation = () => {
                 <strong className="text-white">Tudo pensado para acelerar seu crescimento.</strong>
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
                 <Button 
                   onClick={handleWhatsAppClick} 
                   size="lg" 
-                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto break-words"
                 >
-                  Quero começar hoje
+                  <span className="text-center">Quero começar hoje</span>
                 </Button>
               </div>
             </div>

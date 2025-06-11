@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Star, Book, Play } from "lucide-react";
@@ -71,13 +72,13 @@ const ForWho = () => {
             </p>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-12 px-4">
             <Button 
               onClick={handleWhatsAppClick}
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto break-words"
             >
-              Quero ser aluno FATEMI
+              <span className="text-center">Quero ser aluno FATEMI</span>
             </Button>
           </div>
         </div>

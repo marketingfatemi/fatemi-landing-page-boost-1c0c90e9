@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { MessageCircle, CheckCircle, Star, Shield } from "lucide-react";
 
@@ -24,7 +25,7 @@ const FinalCTA = () => {
             <div className="relative inline-block">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
               <img 
-                src="/lovable-uploads/51ab4e1f-4919-443e-a354-5075b8b71ec8.png" 
+                src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" 
                 alt="FATEMI Logo" 
                 className="w-32 h-32 mx-auto relative z-10" 
               />
@@ -50,10 +51,6 @@ const FinalCTA = () => {
               <Star className="w-4 h-4" />
               <span className="text-white">28 anos de experiência</span>
             </div>
-            <div className="flex items-center gap-2 text-blue-400">
-              <Shield className="w-4 h-4" />
-              <span className="text-white">Certificação reconhecida</span>
-            </div>
             <div className="flex items-center gap-2 text-purple-400">
               <CheckCircle className="w-4 h-4" />
               <span className="text-white">+10 mil alunos formados</span>
@@ -73,21 +70,21 @@ const FinalCTA = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="mb-6">
+          <div className="mb-6 px-4">
             <Button 
               onClick={handleWhatsAppClick}
               size="lg" 
-              className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-500/20 w-full sm:w-auto"
+              className="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-6 px-6 sm:px-12 rounded-full text-lg sm:text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-500/20 w-full sm:w-auto break-words"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Quero ser aluno da FATEMI
+              <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+              <span className="text-center">Quero ser aluno da FATEMI</span>
             </Button>
           </div>
 
           {/* Value proposition */}
           <p className="text-sm text-gray-400">
             <span className="text-yellow-400 font-semibold">✓ Sem compromisso</span> • 
-            <span className="text-blue-400 font-semibold"> ✓ Certificação reconhecida</span>
+            <span className="text-blue-400 font-semibold"> ✓ Formação completa</span>
           </p>
         </div>
       </div>

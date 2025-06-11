@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Book, Users, Clock, Heart, MessageCircle, ArrowRight, Cross, House, BookOpen, Lightbulb } from "lucide-react";
@@ -56,14 +57,16 @@ const WhatYouLearn = () => {
               Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
             </p>
             
-            <Button 
-              onClick={handleWhatsAppClick} 
-              size="lg" 
-              className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Quero me inscrever agora
-            </Button>
+            <div className="px-4">
+              <Button 
+                onClick={handleWhatsAppClick} 
+                size="lg" 
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto break-words"
+              >
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                <span className="text-center">Quero me inscrever agora</span>
+              </Button>
+            </div>
           </div>
 
           {/* Modules Grid */}
@@ -86,14 +89,14 @@ const WhatYouLearn = () => {
           </div>
 
           {/* CTA */}
-          <div className="text-center space-y-6">
+          <div className="text-center space-y-6 px-4">
             <Button 
               onClick={handleGradeClick} 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-8 sm:px-12 rounded-full text-lg sm:text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto break-words"
             >
-              Quero ver a Grade Curricular Completa
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <span className="text-center">Quero ver a Grade Curricular Completa</span>
+              <ArrowRight className="w-5 h-5 ml-2 flex-shrink-0" />
             </Button>
             
             <p className="text-gray-400 mt-4">
