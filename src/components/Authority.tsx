@@ -1,3 +1,4 @@
+
 import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 const Authority = () => {
@@ -35,11 +36,7 @@ const Authority = () => {
               Nossa História
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-blue-400">28 anos</span>
-              <br className="md:hidden" />
-              <span className="hidden md:inline"> </span> 
-              formando líderes
-              <br />
+              <span className="text-blue-400">28 anos</span> formando líderes<br />
               através do <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">ensino prático da Palavra</span>
             </h2>
           </div>
@@ -47,7 +44,7 @@ const Authority = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Text content - Centered on mobile */}
             <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
-              <p className="text-lg text-white leading-relaxed text-justify">
+              <p className="text-lg text-white leading-relaxed">
                 Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
               </p>
               
@@ -62,7 +59,7 @@ const Authority = () => {
                 </div>
                 <div className="flex items-center gap-2 text-green-400">
                   <CheckCircle className="w-5 h-5" />
-                  <span className="text-white">Formação ministerial</span>
+                  <span className="text-white">Formação completa</span>
                 </div>
               </div>
             </div>
