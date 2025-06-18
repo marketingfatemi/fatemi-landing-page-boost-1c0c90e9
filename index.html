@@ -279,6 +279,67 @@
             color: #10b981;
             font-weight: bold;
         }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 33.333%;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-slide {
+                min-width: 100%;
+            }
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .carousel-prev {
+            left: -50px;
+        }
+
+        .carousel-next {
+            right: -50px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
         
         .mb-8 { margin-bottom: 32px; }
         .mb-6 { margin-bottom: 24px; }
@@ -394,7 +455,7 @@
                 <div class="card">
                     <div style="display: flex; gap: 24px; align-items: flex-start;">
                         <div style="background: #1e40af; padding: 16px; border-radius: 50%; border: 1px solid #3b82f6;">
-                            📖
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                         </div>
                         <div>
                             <p style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px;">
@@ -408,7 +469,7 @@
                 <div class="card">
                     <div style="display: flex; gap: 24px; align-items: flex-start;">
                         <div style="background: #1e40af; padding: 16px; border-radius: 50%; border: 1px solid #3b82f6;">
-                            ⭐
+                            <svg class="icon" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                         </div>
                         <div>
                             <p style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px;">
@@ -422,7 +483,7 @@
                 <div class="card">
                     <div style="display: flex; gap: 24px; align-items: flex-start;">
                         <div style="background: #1e40af; padding: 16px; border-radius: 50%; border: 1px solid #3b82f6;">
-                            👥
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 21-3-3m1-3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
                         </div>
                         <div>
                             <p style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px;">
@@ -436,7 +497,7 @@
                 <div class="card">
                     <div style="display: flex; gap: 24px; align-items: flex-start;">
                         <div style="background: #1e40af; padding: 16px; border-radius: 50%; border: 1px solid #3b82f6;">
-                            ▶️
+                            <svg class="icon" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
                         </div>
                         <div>
                             <p style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px;">
@@ -479,42 +540,63 @@
                 </a>
             </div>
 
-            <div class="grid grid-3 mt-8">
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" alt="Pio Carvalho">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Pio Carvalho</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+            <div class="carousel-container mt-8">
+                <div class="carousel-track" id="teachersCarousel">
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" alt="Pio Carvalho">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Pio Carvalho</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" alt="Romulo Carvalho">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Romulo Carvalho</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" alt="Rafael Mincewicz">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Rafael Mincewicz</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" alt="Plácido Casarini">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Plácido Casarini</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" alt="Tom Ros">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Tom Ros</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="card teacher-card">
+                            <img src="/lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" alt="Rose Carvalho">
+                            <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Rose Carvalho</h3>
+                            <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" alt="Romulo Carvalho">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Romulo Carvalho</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
-                </div>
-                
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" alt="Rafael Mincewicz">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Rafael Mincewicz</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
-                </div>
-                
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" alt="Plácido Casarini">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Plácido Casarini</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
-                </div>
-                
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" alt="Tom Ros">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Tom Ros</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
-                </div>
-                
-                <div class="card teacher-card">
-                    <img src="/lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" alt="Rose Carvalho">
-                    <h3 style="font-size: 1.2rem; font-weight: bold; color: white; margin-bottom: 12px;">Rose Carvalho</h3>
-                    <p style="color: #bfdbfe; font-size: 14px;">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
-                </div>
+                <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
             </div>
         </div>
     </section>
@@ -538,7 +620,7 @@
             <div class="grid grid-3">
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        ⭐
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Certificado de Conclusão</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Não reconhecido pelo MEC</p>
@@ -546,7 +628,7 @@
                 
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        🕐
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Flexibilidade Total</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Até 2 anos para concluir no seu ritmo</p>
@@ -554,7 +636,7 @@
                 
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        ▶️
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><polygon points="5,3 19,12 5,21"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Estude Onde e Quando Quiser</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Plataforma disponível 24/7</p>
@@ -562,7 +644,7 @@
                 
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        📖
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Material Completo Incluso</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Tudo digital e sempre atualizado</p>
@@ -570,7 +652,7 @@
                 
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        👥
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 21-3-3m1-3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Suporte Pedagógico</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Professores disponíveis para suas dúvidas</p>
@@ -578,7 +660,7 @@
                 
                 <div class="card">
                     <div style="background: #374151; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 1px solid #4b5563;">
-                        ✅
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 32px; height: 32px;"><path d="M20 6 9 17l-5-5"/></svg>
                     </div>
                     <h3 style="font-size: 1.1rem; font-weight: bold; color: white; margin-bottom: 8px; text-align: center;">Avaliações Formativas</h3>
                     <p style="color: #9ca3af; font-size: 14px; text-align: center;">Avalie seu conhecimento e fixe o conteúdo</p>
@@ -623,7 +705,7 @@
             <div class="grid grid-3">
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        📖
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Verbo e a Fé</h3>
                     <p style="color: #9ca3af;">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
@@ -631,7 +713,7 @@
                 
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        ✝️
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M19.65 8 12 2 4.35 8a1 1 0 0 0-.35.76v11.48A2.76 2.76 0 0 0 6.76 23h10.48A2.76 2.76 0 0 0 20 20.24V8.76a1 1 0 0 0-.35-.76z"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Fundamentos de Cristo</h3>
                     <p style="color: #9ca3af;">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
@@ -639,7 +721,7 @@
                 
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        🏠
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Segredo dos Tabernáculos</h3>
                     <p style="color: #9ca3af;">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
@@ -647,7 +729,7 @@
                 
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        💡
+                        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Prática da Palavra</h3>
                     <p style="color: #9ca3af;">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
@@ -655,7 +737,7 @@
                 
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        👥
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m22 21-3-3m1-3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Panorama da Lei e da Graça</h3>
                     <p style="color: #9ca3af;">Estude detalhadamente o Antigo e o Novo Testamento</p>
@@ -663,7 +745,7 @@
                 
                 <div class="card">
                     <div style="background: #000; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; border: 1px solid #4b5563;">
-                        🕐
+                        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
                     </div>
                     <h3 style="font-size: 1.2rem; color: white; margin-bottom: 12px;">Liderança Transformacional</h3>
                     <p style="color: #9ca3af;">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
@@ -702,7 +784,7 @@
                     
                     <div style="position: relative; z-index: 10;">
                         <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); border-radius: 50px; padding: 8px 16px; margin-bottom: 24px;">
-                            ⚡
+                            <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
                             <span style="color: #22c55e; font-weight: 500;">Oferta Especial</span>
                         </div>
 
@@ -722,25 +804,25 @@
                         <div class="grid grid-2" style="margin-bottom: 32px;">
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center;">
-                                    ✓
+                                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M20 6 9 17l-5-5"/></svg>
                                 </div>
                                 <span style="color: white;">Sem comprometer seu limite total</span>
                             </div>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center;">
-                                    💳
+                                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
                                 </div>
                                 <span style="color: white;">Aprovação imediata</span>
                             </div>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center;">
-                                    ⚡
+                                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
                                 </div>
                                 <span style="color: white;">Acesso liberado na hora</span>
                             </div>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(34,197,94,0.2); border: 1px solid rgba(34,197,94,0.3); display: flex; align-items: center; justify-content: center;">
-                                    🛡️
+                                    <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                                 </div>
                                 <span style="color: white;">Sem burocracia</span>
                             </div>
@@ -751,7 +833,7 @@
                         </a>
 
                         <div style="display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px; color: #bfdbfe;">
-                            🛡️
+                            <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             <span>Pagamento 100% seguro e protegido</span>
                         </div>
                     </div>
@@ -856,31 +938,32 @@
                     </p>
                 </div>
 
-                <div style="display: flex; flex-wrap: justify-center; gap: 24px; margin-bottom: 32px; font-size: 14px;">
+                <div style="display: flex; flex-wrap: justify-content: center; gap: 24px; margin-bottom: 32px; font-size: 14px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="color: #fbbf24;">⭐</span>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #fbbf24;"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                         <span style="color: white;">28 anos de experiência</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="color: #a855f7;">✓</span>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #a855f7;"><path d="M20 6 9 17l-5-5"/></svg>
                         <span style="color: white;">+10 mil alunos formados</span>
                     </div>
                 </div>
 
-                <div style="display: flex; flex-wrap; justify-center; gap: 24px; margin-bottom: 32px; font-size: 14px;">
+                <div style="display: flex; flex-wrap; justify-content: center; gap: 24px; margin-bottom: 32px; font-size: 14px;">
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="color: #fbbf24;">✓</span>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #fbbf24;"><path d="M20 6 9 17l-5-5"/></svg>
                         <span style="color: white;">Acesso liberado imediatamente</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
-                        <span style="color: #fbbf24;">💬</span>
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #fbbf24;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                         <span style="color: white;">Atendimento personalizado</span>
                     </div>
                 </div>
 
                 <div style="margin-bottom: 24px;">
                     <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-yellow" style="padding: 24px 48px; font-size: 1.2rem; border: 2px solid rgba(251,191,36,0.2);">
-                        💬 Quero ser aluno da FATEMI
+                        <svg class="icon" viewBox="0 0 24 24" style="width: 20px; height: 20px; display: inline; margin-right: 8px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        Quero ser aluno da FATEMI
                     </a>
                 </div>
 
@@ -893,6 +976,32 @@
     </section>
 
     <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const slidesPerView = window.innerWidth <= 768 ? 1 : 3;
+        const maxSlides = totalSlides - slidesPerView;
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            
+            if (currentSlide > maxSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = maxSlides;
+            }
+            
+            const track = document.getElementById('teachersCarousel');
+            const translateX = -(currentSlide * (100 / slidesPerView));
+            track.style.transform = `translateX(${translateX}%)`;
+        }
+
+        // Auto-play carousel
+        setInterval(() => {
+            moveCarousel(1);
+        }, 3000);
+
         // Simple scroll animations
         window.addEventListener('scroll', function() {
             const cards = document.querySelectorAll('.card');
