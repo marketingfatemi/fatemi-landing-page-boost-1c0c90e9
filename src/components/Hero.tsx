@@ -55,7 +55,7 @@ const Hero = () => {
           {/* Main headline with modern typography */}
           <div className="mb-8 animate-fade-in">
             <div className="text-lg md:text-xl font-light text-gray-300 mb-4 tracking-wide">
-              O maior
+              O melhor
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
