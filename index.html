@@ -4,851 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FATEMI - Curso de Teologia Ministerial</title>
-    <meta name="description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência.">
+    <title>FATEMI - Faculdade de Teologia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .embla {
+            overflow: hidden;
         }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #ffffff;
-            background-color: #000000;
+        .embla__container {
+            display: flex;
         }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+        .embla__slide {
+            flex: 0 0 33.333%;
+            min-width: 0;
+            padding: 0 8px;
         }
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            text-decoration: none;
-            border-radius: 9999px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
+        @media (max-width: 1024px) {
+            .embla__slide {
+                flex: 0 0 50%;
+            }
         }
-        
-        .btn:hover {
-            background: linear-gradient(135deg, #1d4ed8, #1e40af);
-            transform: scale(1.05);
-        }
-        
-        .btn-green {
-            background: linear-gradient(135deg, #059669, #047857);
-        }
-        
-        .btn-green:hover {
-            background: linear-gradient(135deg, #047857, #065f46);
-        }
-        
-        .btn-yellow {
-            background: linear-gradient(135deg, #d97706, #b45309);
-        }
-        
-        .btn-yellow:hover {
-            background: linear-gradient(135deg, #b45309, #92400e);
-        }
-        
-        .grid {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        .grid-4 {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        
         @media (max-width: 768px) {
-            .grid-2, .grid-3, .grid-4 {
-                grid-template-columns: 1fr;
+            .embla__slide {
+                flex: 0 0 100%;
             }
         }
-        
-        .card {
-            background: #111827;
-            border: 1px solid #374151;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mb-12 { margin-bottom: 3rem; }
-        .mb-16 { margin-bottom: 4rem; }
-        
-        .py-24 { padding: 6rem 0; }
-        .py-32 { padding: 8rem 0; }
-        
-        .text-blue-400 { color: #60a5fa; }
-        .text-green-400 { color: #34d399; }
-        .text-yellow-400 { color: #fbbf24; }
-        .text-gray-300 { color: #d1d5db; }
-        .text-gray-400 { color: #9ca3af; }
-        
-        .bg-blue-950 { background-color: #172554; }
-        .bg-gray-900 { background-color: #111827; }
-        .bg-black { background-color: #000000; }
-        
-        .hidden { display: none; }
-        
-        @media (min-width: 768px) {
-            .md\\:block { display: block; }
-            .md\\:flex { display: flex; }
-            .md\\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-            .md\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-        }
-        
-        @media (min-width: 1024px) {
-            .lg\\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-            .lg\\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-        }
-        
-        /* Hero Styles */
-        .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background-image: url('/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(17,24,39,0.85), rgba(0,0,0,0.9));
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(30,58,138,0.3), transparent, rgba(88,28,135,0.2));
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: bold;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #ffffff, #dbeafe, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Carousel Styles */
-        .carousel {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        
-        .carousel-slide {
-            min-width: 100%;
-            display: flex;
-            gap: 1rem;
-        }
-        
-        @media (min-width: 768px) {
-            .carousel-slide {
-                min-width: 50%;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .carousel-slide {
-                min-width: 33.333%;
-            }
-        }
-        
-        .carousel-nav {
+        .carousel-button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: white;
-            border-radius: 50%;
             width: 40px;
             height: 40px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            z-index: 10;
         }
-        
-        .carousel-nav:hover {
-            background: rgba(255,255,255,0.2);
+        .carousel-button:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
-        
         .carousel-prev {
             left: -20px;
         }
-        
         .carousel-next {
             right: -20px;
         }
-        
-        .teacher-card {
-            background: #111827;
-            border: 1px solid #374151;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-        
-        .teacher-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .teacher-image {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        
-        .teacher-info {
-            padding: 1.5rem;
-        }
-        
-        .icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        
-        /* Testimonials carousel */
-        .testimonials-carousel {
-            display: flex;
-            gap: 1rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 1rem;
-        }
-        
-        .testimonial-card {
-            min-width: 300px;
-            scroll-snap-align: start;
-            background: #000000;
-            border: 1px solid #374151;
-            border-radius: 0.5rem;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        @media (min-width: 768px) {
-            .testimonial-card {
-                min-width: calc(50% - 0.5rem);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .testimonial-card {
-                min-width: calc(33.333% - 0.66rem);
-            }
-        }
-        
-        .stars {
-            display: flex;
-            gap: 0.25rem;
-            margin-bottom: 1rem;
-        }
-        
-        .star {
-            width: 1.25rem;
-            height: 1.25rem;
-            fill: currentColor;
-            color: white;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .btn {
-                padding: 0.75rem 1rem;
-                font-size: 0.875rem;
-                max-width: 280px;
-                white-space: normal;
-                line-height: 1.2;
-            }
-            
-            .container {
-                padding: 0 0.5rem;
-            }
-            
-            .py-24 { padding: 3rem 0; }
-            .py-32 { padding: 4rem 0; }
-        }
     </style>
 </head>
-<body>
+<body class="bg-black text-white">
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="mb-8">
-                <img alt="FATEMI Logo" class="w-32 h-auto mx-auto mb-6" src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" style="width: 8rem; height: auto; margin: 0 auto 1.5rem;">
-            </div>
-
-            <div class="mb-8">
-                <div style="font-size: 1.125rem; font-weight: 300; color: #d1d5db; margin-bottom: 1rem; letter-spacing: 0.025em;">
-                    O melhor
-                </div>
-                <h1>
-                    Curso Livre de<br>
-                    Teologia Ministerial
-                </h1>
-                <div style="font-size: 1.5rem; font-weight: 500; color: #60a5fa; margin-bottom: 1.5rem;">
-                    do Brasil!
-                </div>
-            </div>
-
-            <!-- Trust badges - Hidden on mobile -->
-            <div class="hidden md:flex" style="flex-wrap: wrap; justify-content: center; align-items: center; gap: 1.5rem; margin-bottom: 2rem; font-size: 0.875rem; color: #9ca3af;">
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg class="icon" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                    </svg>
-                    <span>+10 mil alunos</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg class="icon" style="color: #60a5fa;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <span>+11 países</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg class="icon" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <span>28 anos de experiência</span>
-                </div>
-            </div>
-
-            <!-- Value proposition - Hidden on mobile -->
-            <div class="mb-10 hidden md:block">
-                <p style="font-size: 1.25rem; color: #d1d5db; line-height: 1.6; max-width: 64rem; margin: 0 auto 1.5rem;">
-                    <span style="color: white; font-weight: 600;">Mais de 10 mil pessoas já foram transformadas.</span><br>
-                    Seja capacitado a viver o chamado de Deus para sua vida!
-                </p>
-                
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.875rem; color: #9ca3af; margin-bottom: 2rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <svg class="icon" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Certificado de Conclusão</span>
+    <section class="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden flex items-center">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0">
+            <img src="/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png" alt="Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left content -->
+                    <div class="space-y-8">
+                        <!-- Badge -->
+                        <div class="inline-block bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium px-4 py-2">
+                            Curso Superior em Teologia
+                        </div>
+                        
+                        <!-- Main headline -->
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            Transforme sua vida através da <span class="text-blue-400">Palavra de Deus</span>
+                        </h1>
+                        
+                        <!-- Subheadline -->
+                        <p class="text-xl text-blue-100 leading-relaxed">
+                            Curso superior em Teologia reconhecido pelo MEC. Estude de forma flexível e torne-se um líder preparado para impactar vidas através do ensino bíblico.
+                        </p>
+                        
+                        <!-- Features list -->
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                </div>
+                                <span class="text-white">Reconhecido pelo MEC</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                </div>
+                                <span class="text-white">100% online e flexível</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                </div>
+                                <span class="text-white">Professores especialistas</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-400"></i>
+                                </div>
+                                <span class="text-white">Material didático completo</span>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <button onclick="openWhatsApp()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                            QUERO COMEÇAR HOJE
+                        </button>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <svg class="icon" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>Professores Especializados</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <svg class="icon" style="color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>100% Digital</span>
+                    
+                    <!-- Right content - Logo -->
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-3xl"></div>
+                            <img src="/lovable-uploads/2712699f-7055-4b26-b665-4bb3944364fd.png" alt="FATEMI Logo" class="w-80 h-80 relative z-10">
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- CTA Buttons -->
-            <div class="text-center">
-                <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn hidden md:inline-flex" style="border: 2px solid rgba(59, 130, 246, 0.2);">
-                    QUERO CONHECER O CURSO
-                </a>
-                
-                <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso!" target="_blank" class="btn md:hidden" style="max-width: 280px; white-space: normal; text-align: center; line-height: 1.2; padding: 0.75rem 1rem; font-size: 0.875rem; border: 2px solid rgba(59, 130, 246, 0.2);">
-                    Quero conhecer a grade do curso
-                </a>
+    <!-- Para Quem Section -->
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
+                        Para Quem É Este Curso
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Este curso é ideal para <span class="text-blue-400">você que deseja</span>
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="heart" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Servir a Deus</h3>
+                        <p class="text-blue-200">Dedicar sua vida ao serviço cristão e ao ministério da Palavra com excelência e preparação.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Liderar com Propósito</h3>
+                        <p class="text-blue-200">Desenvolver habilidades de liderança cristã para impactar positivamente sua comunidade.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="book-open" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Aprofundar Conhecimento</h3>
+                        <p class="text-blue-200">Estudar profundamente as Escrituras e a tradição cristã com rigor acadêmico.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="graduation-cap" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Crescer Profissionalmente</h3>
+                        <p class="text-blue-200">Obter uma formação superior reconhecida que abre portas no mercado de trabalho.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="compass" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Encontrar Seu Chamado</h3>
+                        <p class="text-blue-200">Descobrir e desenvolver seus dons ministeriais através de orientação especializada.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm">
+                        <div class="w-16 h-16 bg-blue-600/20 border border-blue-600/30 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="globe" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Impactar o Mundo</h3>
+                        <p class="text-blue-200">Preparar-se para missões e evangelização, levando esperança a todos os lugares.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button onclick="openWhatsApp()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO FAZER PARTE
+                    </button>
+                </div>
             </div>
-            
-            <p style="font-size: 0.875rem; color: #6b7280; margin-top: 1rem;">
-                Junte-se a milhares de estudantes que já transformaram suas vidas
-            </p>
         </div>
     </section>
 
     <!-- Authority Section -->
-    <section class="py-24" style="background: linear-gradient(to bottom, #000000, #111827); position: relative; overflow: hidden;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(rgba(59,130,246,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         
-        <div class="container" style="position: relative; z-index: 10;">
-            <div style="max-width: 1280px; margin: 0 auto;">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
-                    <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 9999px; color: #60a5fa; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem;">
+                    <div class="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
                         Nossa História
                     </div>
-                    <h2 style="font-size: clamp(2rem, 4vw, 3.5rem); font-weight: bold; color: white; margin-bottom: 1.5rem; line-height: 1.1;">
-                        <span class="text-blue-400">28 anos</span> formando líderes<br>
-                        através do <span style="background: linear-gradient(to right, white, #dbeafe, white); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ensino prático da Palavra</span>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <span class="text-blue-400">28 anos</span> formando líderes<br />
+                        através do <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">ensino prático da Palavra</span>
                     </h2>
                 </div>
 
-                <div class="grid md:grid-cols-2" style="gap: 4rem; align-items: center; margin-bottom: 4rem;">
-                    <div style="order: 2; text-align: center;">
-                        <div style="order: 1;">
-                            <p style="font-size: 1.125rem; color: white; line-height: 1.6; margin-bottom: 2rem;">
-                                Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
-                            </p>
-                            
-                            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; align-items: center;">
-                                <div style="display: flex; align-items: center; gap: 0.5rem; color: #34d399;">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                    <span style="color: white;">Ensino prático e aplicado</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 0.5rem; color: #34d399;">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                    <span style="color: white;">Professores especializados</span>
-                                </div>
-                                <div style="display: flex; align-items: center; gap: 0.5rem; color: #34d399;">
-                                    <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                    <span style="color: white;">Formação completa</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="order: 1; display: flex; align-items: center; justify-content: center;">
-                        <div style="position: relative; width: 100%; max-width: 28rem; margin: 0 auto;">
-                            <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(37, 99, 235, 0.2), rgba(147, 51, 234, 0.2)); border-radius: 0.5rem; filter: blur(2rem);"></div>
-                            <img src="/lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" alt="Templo FATEMI" style="width: 100%; position: relative; z-index: 10; border-radius: 0.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Stats Grid -->
-                <div class="grid grid-2 lg:grid-cols-4">
-                    <div class="card" style="background: linear-gradient(to bottom right, #2563eb, #1d4ed8); border-color: #60a5fa; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                        <div class="text-center">
-                            <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
-                            </div>
-                            <div style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.25rem; color: white;">+10 mil</div>
-                            <div style="font-size: 0.875rem; color: white; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 0.25rem;">alunos formados</div>
-                            <div style="font-size: 0.75rem; color: #dbeafe;">Vidas transformadas</div>
-                        </div>
-                    </div>
-                    
-                    <div class="card" style="background: linear-gradient(to bottom right, #2563eb, #1d4ed8); border-color: #60a5fa; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                        <div class="text-center">
-                            <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.25rem; color: white;">+11</div>
-                            <div style="font-size: 0.875rem; color: white; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 0.25rem;">países alcançados</div>
-                            <div style="font-size: 0.75rem; color: #dbeafe;">Impacto global</div>
-                        </div>
-                    </div>
-                    
-                    <div class="card" style="background: linear-gradient(to bottom right, #2563eb, #1d4ed8); border-color: #60a5fa; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                        <div class="text-center">
-                            <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                                </svg>
-                            </div>
-                            <div style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.25rem; color: white;">28</div>
-                            <div style="font-size: 0.875rem; color: white; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 0.25rem;">anos de experiência</div>
-                            <div style="font-size: 0.75rem; color: #dbeafe;">Tradição e excelência</div>
-                        </div>
-                    </div>
-                    
-                    <div class="card" style="background: linear-gradient(to bottom right, #2563eb, #1d4ed8); border-color: #60a5fa; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
-                        <div class="text-center">
-                            <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div style="font-size: 1.875rem; font-weight: bold; margin-bottom: 0.25rem; color: white;">24/7</div>
-                            <div style="font-size: 0.875rem; color: white; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; margin-bottom: 0.25rem;">acesso à plataforma</div>
-                            <div style="font-size: 0.75rem; color: #dbeafe;">Estude quando quiser</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- For Who Section -->
-    <section class="py-32 bg-blue-950">
-        <div class="container">
-            <div style="max-width: 80rem; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 2rem;">
-                    Este curso é para você que...
-                </h2>
-                
-                <p style="font-size: 1.125rem; color: #bfdbfe; margin-bottom: 3rem;">
-                    Se você se identifica com pelo menos um desses pontos, a FATEMI foi feita para você:
-                </p>
-
-                <div class="grid md:grid-cols-2" style="margin-bottom: 3rem;">
-                    <div class="card" style="background: #000000; border-color: #1d4ed8;">
-                        <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; background: #1e40af; padding: 1rem; border-radius: 9999px; border: 1px solid #2563eb;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                                </svg>
-                            </div>
-                            <div style="text-align: left;">
-                                <p style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem; line-height: 1.6;">
-                                    Deseja crescer no conhecimento da Palavra
-                                </p>
-                                <p style="color: #bfdbfe;">
-                                    Aprofunde seu conhecimento teológico
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #1d4ed8;">
-                        <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; background: #1e40af; padding: 1rem; border-radius: 9999px; border: 1px solid #2563eb;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                                </svg>
-                            </div>
-                            <div style="text-align: left;">
-                                <p style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem; line-height: 1.6;">
-                                    Quer ser capacitado para servir ministerialmente
-                                </p>
-                                <p style="color: #bfdbfe;">
-                                    Buscam preparo sólido para o ministério
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #1d4ed8;">
-                        <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; background: #1e40af; padding: 1rem; border-radius: 9999px; border: 1px solid #2563eb;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
-                            </div>
-                            <div style="text-align: left;">
-                                <p style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem; line-height: 1.6;">
-                                    Busca desenvolver liderança cristã
-                                </p>
-                                <p style="color: #bfdbfe;">
-                                    Baseado em princípios bíblicos aplicados
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #1d4ed8;">
-                        <div style="display: flex; align-items: flex-start; gap: 1.5rem;">
-                            <div style="flex-shrink: 0; background: #1e40af; padding: 1rem; border-radius: 9999px; border: 1px solid #2563eb;">
-                                <svg style="width: 2rem; height: 2rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a3 3 0 000-6h-1m0 6v6m0-6h6m0 0v6m0-6a3 3 0 100-6m0 6h-3"/>
-                                </svg>
-                            </div>
-                            <div style="text-align: left;">
-                                <p style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem; line-height: 1.6;">
-                                    Deseja conhecer mais sobre o chamado de Deus para sua vida
-                                </p>
-                                <p style="color: #bfdbfe;">
-                                    Viva uma vida com propósito
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-bottom: 3rem; background: white; color: black; padding: 2rem; border-radius: 0.5rem;">
-                    <p style="font-size: 1.25rem; font-weight: 500;">
-                        <strong>Se você respondeu "SIM" para qualquer um desses pontos...</strong><br>
-                        Você encontrou o curso certo para você!
-                    </p>
-                </div>
-
-                <div style="padding: 0 1rem;">
-                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn" style="padding: 1rem 1.5rem; font-size: 1.125rem; width: 100%; max-width: 20rem; text-align: center; display: inline-block;">
-                        Quero ser aluno FATEMI
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teachers Section -->
-    <section class="py-32 bg-black">
-        <div class="container">
-            <div style="max-width: 1280px; margin: 0 auto;">
-                <div class="text-center mb-16">
-                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 1.5rem;">
-                        Aprenda com os <span class="text-blue-400">melhores professores</span>
-                    </h2>
-                    <p style="font-size: 1.125rem; color: white; max-width: 64rem; margin: 0 auto 2rem; line-height: 1.6;">
-                        Durante o curso, você terá aulas com grandes professores, dedicados ao ensino da Palavra de forma prática. Seja capacitado e inspirado a viver a Verdade em todas as áreas da sua vida! Conheça alguns de seus professores:
-                    </p>
-                    
-                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem;">
-                        QUERO CURSAR TEOLOGIA
-                    </a>
-                </div>
-
-                <div class="carousel">
-                    <div class="carousel-container" id="teacherCarousel">
-                        <!-- Teacher 1 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" alt="Pio Carvalho" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Pio Carvalho</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teacher 2 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" alt="Romulo Carvalho" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Romulo Carvalho</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teacher 3 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" alt="Rafael Mincewicz" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Rafael Mincewicz</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teacher 4 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" alt="Plácido Casarini" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Plácido Casarini</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teacher 5 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" alt="Tom Ros" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Tom Ros</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Teacher 6 -->
-                        <div class="carousel-slide">
-                            <div class="teacher-card">
-                                <img src="/lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" alt="Rose Carvalho" class="teacher-image">
-                                <div class="teacher-info">
-                                    <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 0.75rem;">Rose Carvalho</h3>
-                                    <p style="color: #bfdbfe; font-size: 0.875rem; line-height: 1.6;">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Navigation buttons -->
-                    <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">‹</button>
-                    <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">›</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formation Section -->
-    <section class="bg-gray-900" style="padding: 2.75rem 0;">
-        <div class="container">
-            <div style="max-width: 1280px; margin: 0 auto;">
-                <div class="text-center mb-16">
-                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 1.5rem;">
-                        Sua formação do <span class="text-blue-400">jeito certo</span>
-                    </h2>
-                    <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 2rem; font-weight: 500;">
-                        Estude quando quiser e onde quiser
-                    </p>
-                    
-                    <div style="padding: 0 1rem;">
-                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn" style="padding: 1rem 1.5rem; font-size: 1.125rem; margin-bottom: 3rem; width: 100%; max-width: 20rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                            </svg>
-                            <span style="text-align: center;">Começar minha formação</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Certificado de Conclusão</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Não reconhecido pelo MEC</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Flexibilidade Total</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Até 2 anos para concluir no seu ritmo</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1a3 3 0 000-6h-1m0 6v6m0-6h6m0 0v6m0-6a3 3 0 100-6m0 6h-3"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Estude Onde e Quando Quiser</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Plataforma disponível 24/7</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Material Completo Incluso</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Tudo digital e sempre atualizado</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Suporte Pedagógico</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Professores disponíveis para suas dúvidas</p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="background: #000000; border-color: #374151;">
-                        <div class="text-center">
-                            <div style="background: #1f2937; width: 4rem; height: 4rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 0.5rem;">Avaliações Formativas</h3>
-                            <p style="color: #9ca3af; font-size: 0.875rem;">Avalie seu conhecimento e fixe o conteúdo</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="background: #000000; border-radius: 0.5rem; padding: 2rem; border: 1px solid #374151; margin-bottom: 2rem;">
-                    <div style="max-width: 64rem; margin: 0 auto; text-align: center;">
-                        <h3 style="font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 1rem;">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p style="font-size: 1.125rem; color: #d1d5db; line-height: 1.6; margin-bottom: 1.5rem;">
-                            <strong style="color: white;">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong style="color: white;">Tudo pensado para acelerar seu crescimento.</strong>
+                <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                    <div class="space-y-8 order-2 lg:order-1 text-center lg:text-left">
+                        <p class="text-lg text-white leading-relaxed">
+                            Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
                         </p>
                         
-                        <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; padding: 0 1rem;">
-                            <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn" style="padding: 1rem 1.5rem; font-size: 1.125rem; width: 100%; max-width: 20rem; text-align: center; display: inline-block;">
-                                Quero começar hoje
-                            </a>
+                        <div class="flex flex-col lg:flex-row flex-wrap gap-4 mb-8 items-center lg:items-start">
+                            <div class="flex items-center gap-2 text-green-400">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span class="text-white">Ensino prático e aplicado</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-green-400">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span class="text-white">Professores especializados</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-green-400">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                <span class="text-white">Formação completa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center order-1 lg:order-2">
+                        <div class="relative w-full max-w-md mx-auto">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-2xl"></div>
+                            <img src="/lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" alt="Templo FATEMI" class="w-full relative z-10 rounded-lg shadow-2xl" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">+10 mil</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">alunos formados</div>
+                            <div class="text-xs text-blue-100">Vidas transformadas</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="globe" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">+11</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">países alcançados</div>
+                            <div class="text-xs text-blue-100">Impacto global</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="trophy" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">28</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">anos de experiência</div>
+                            <div class="text-xs text-blue-100">Tradição e excelência</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="clock" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">24/7</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">acesso à plataforma</div>
+                            <div class="text-xs text-blue-100">Estude quando quiser</div>
                         </div>
                     </div>
                 </div>
@@ -857,229 +305,405 @@
     </section>
 
     <!-- What You Learn Section -->
-    <section class="bg-black" style="overflow: hidden; padding: 4.25rem 0;">
-        <div class="container">
-            <div style="max-width: 1280px; margin: 0 auto;">
+    <section class="py-24 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 1.5rem;">
-                        O que você <span class="text-blue-400">aprenderá</span>
+                    <div class="inline-block px-4 py-2 bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4">
+                        Conteúdo do Curso
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        O que você vai <span class="text-green-400">aprender</span>
                     </h2>
-                    <p style="font-size: 1.125rem; color: #d1d5db; max-width: 64rem; margin: 0 auto 2rem; line-height: 1.6;">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
+                    <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                        Um currículo completo e estruturado para formar líderes cristãos preparados para os desafios do ministério moderno
                     </p>
-                    
-                    <div style="padding: 0 1rem;">
-                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-green" style="padding: 1rem 1.5rem; font-size: 1.125rem; width: 100%; max-width: 20rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                            <svg style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                            </svg>
-                            <span style="text-align: center;">Quero me inscrever agora</span>
-                        </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="book-open" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Exegese Bíblica</h3>
+                        <p class="text-blue-200 leading-relaxed">Métodos avançados de interpretação das Escrituras, hermenêutica e análise textual para compreender profundamente a Palavra de Deus.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="users" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Liderança Cristã</h3>
+                        <p class="text-blue-200 leading-relaxed">Princípios bíblicos de liderança, gestão ministerial, desenvolvimento de equipes e formação de discípulos.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="scroll" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">História da Igreja</h3>
+                        <p class="text-blue-200 leading-relaxed">Desde os primeiros cristãos até os movimentos contemporâneos, compreenda a evolução da fé cristã através dos séculos.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="heart" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Aconselhamento Pastoral</h3>
+                        <p class="text-blue-200 leading-relaxed">Técnicas e princípios bíblicos para o cuidado pastoral, apoio emocional e espiritual das pessoas.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="mic" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Homilética</h3>
+                        <p class="text-blue-200 leading-relaxed">Arte de pregar, estruturação de sermões, comunicação eficaz e técnicas de oratória para o ministério da Palavra.</p>
+                    </div>
+
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:border-green-500/50 transition-all duration-300 backdrop-blur-sm group">
+                        <div class="w-16 h-16 bg-green-600/20 border border-green-600/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="globe" class="w-8 h-8 text-green-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Missões</h3>
+                        <p class="text-blue-200 leading-relaxed">Estratégias missionárias, evangelização transcultural, plantação de igrejas e expansão do Reino de Deus.</p>
                     </div>
                 </div>
 
-                <!-- Modules Grid -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                                </svg>
+                <div class="text-center mt-12">
+                    <button onclick="openWhatsApp()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO COMEÇAR MEUS ESTUDOS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="py-32 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Aprenda com os <span class="text-blue-400">melhores professores</span>
+                    </h2>
+                    <p class="text-lg text-white max-w-4xl mx-auto leading-relaxed mb-8">
+                        Durante o curso, você terá aulas com grandes professores, dedicados ao ensino da Palavra de forma prática. Seja capacitado e inspirado a viver a Verdade em todas as áreas da sua vida! Conheça alguns de seus professores:
+                    </p>
+                    
+                    <button onclick="openWhatsApp()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO CURSAR TEOLOGIA
+                    </button>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="embla" id="teachersCarousel">
+                        <div class="embla__container" id="teachersContainer">
+                            <!-- Pio Carvalho -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" alt="Pio Carvalho" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Pio Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Verbo e a Fé</h3>
+                            
+                            <!-- Romulo Carvalho -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" alt="Romulo Carvalho" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Romulo Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Rafael Mincewicz -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" alt="Rafael Mincewicz" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Rafael Mincewicz</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Plácido Casarini -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" alt="Plácido Casarini" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Plácido Casarini</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tom Ros -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" alt="Tom Ros" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Tom Ros</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Rose Carvalho -->
+                            <div class="embla__slide">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="/lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" alt="Rose Carvalho" class="w-full h-full object-cover" />
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Rose Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <button class="carousel-button carousel-prev" id="prevBtn">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button class="carousel-button carousel-next" id="nextBtn">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block px-4 py-2 bg-purple-600/10 border border-purple-600/20 rounded-full text-purple-400 text-sm font-medium mb-4">
+                        Estrutura do Curso
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Uma formação <span class="text-purple-400">completa e flexível</span>
+                    </h2>
+                    <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                        Desenvolvido para se adaptar à sua rotina, oferecendo qualidade acadêmica e praticidade no aprendizado
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-8">
+                        <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-purple-600/20 border border-purple-600/30 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="calendar" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">Duração Flexível</h3>
+                                    <p class="text-blue-200 leading-relaxed">4 anos acadêmicos com possibilidade de conclusão antecipada. Estude no seu ritmo, sem pressa.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-purple-600/20 border border-purple-600/30 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="monitor" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">100% Online</h3>
+                                    <p class="text-blue-200 leading-relaxed">Acesse suas aulas de qualquer lugar, a qualquer hora. Plataforma moderna e intuitiva para seu aprendizado.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-purple-600/20 border border-purple-600/30 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+                                    <i data-lucide="award" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white mb-2">Diploma Reconhecido</h3>
+                                    <p class="text-blue-200 leading-relaxed">Certificação oficial reconhecida pelo MEC, validando sua formação em território nacional.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Fundamentos de Cristo</h3>
-                        </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
+                    <div class="lg:pl-8">
+                        <div class="bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
+                            <h3 class="text-2xl font-bold text-white mb-6 text-center">Método de Ensino</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 bg-green-600/20 border border-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="play-circle" class="w-4 h-4 text-green-400"></i>
+                                    </div>
+                                    <span class="text-white">Videoaulas de alta qualidade</span>
+                                </div>
 
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 bg-green-600/20 border border-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="book-open" class="w-4 h-4 text-green-400"></i>
+                                    </div>
+                                    <span class="text-white">Material didático exclusivo</span>
+                                </div>
 
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Prática da Palavra</h3>
-                        </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 bg-green-600/20 border border-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="users" class="w-4 h-4 text-green-400"></i>
+                                    </div>
+                                    <span class="text-white">Acompanhamento tutorial</span>
+                                </div>
 
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                                </svg>
-                            </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 bg-green-600/20 border border-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="clipboard-check" class="w-4 h-4 text-green-400"></i>
+                                    </div>
+                                    <span class="text-white">Avaliações práticas</span>
+                                </div>
 
-                    <div class="card" style="background: #111827; border-color: #374151;">
-                        <div style="padding-bottom: 1rem;">
-                            <div style="background: #000000; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #4b5563;">
-                                <svg style="width: 1.5rem; height: 1.5rem; color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 bg-green-600/20 border border-green-600/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="headphones" class="w-4 h-4 text-green-400"></i>
+                                    </div>
+                                    <span class="text-white">Suporte acadêmico completo</span>
+                                </div>
                             </div>
-                            <h3 style="font-size: 1.25rem; color: white; font-weight: bold; margin-bottom: 1rem;">Liderança Transformacional</h3>
-                        </div>
-                        <div>
-                            <p style="color: #9ca3af; line-height: 1.6;">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- CTA -->
-                <div class="text-center" style="padding: 0 1rem;">
-                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso!" target="_blank" class="btn" style="padding: 1rem 1.5rem; font-size: 1.125rem; margin-bottom: 1rem; width: 100%; max-width: 20rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <span style="text-align: center;">Ver Grade Curricular Completa</span>
-                        <svg style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                    
-                    <p style="color: #9ca3af; margin-top: 1rem;">
-                        Descubra todos os módulos que vão transformar sua vida
-                    </p>
+                <div class="text-center">
+                    <button onclick="openWhatsApp()" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO SABER MAIS SOBRE O CURSO
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Investment Section -->
-    <section class="py-24" style="background: linear-gradient(to bottom right, #111827, #000000, #111827); position: relative; overflow: hidden;">
-        <!-- Background elements -->
-        <div style="position: absolute; inset: 0;">
-            <div style="position: absolute; top: 25%; right: 25%; width: 24rem; height: 24rem; background: rgba(5, 150, 105, 0.1); border-radius: 9999px; filter: blur(3rem);"></div>
-            <div style="position: absolute; bottom: 25%; left: 25%; width: 20rem; height: 20rem; background: rgba(37, 99, 235, 0.1); border-radius: 9999px; filter: blur(3rem);"></div>
+    <section class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
         </div>
         
-        <div class="container" style="position: relative; z-index: 10;">
-            <div style="max-width: 80rem; margin: 0 auto; text-align: center;">
-                <!-- Section header -->
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-5xl mx-auto text-center">
                 <div class="mb-12">
-                    <div style="display: inline-block; background: rgba(5, 150, 105, 0.1); border: 1px solid rgba(5, 150, 105, 0.2); border-radius: 9999px; color: #34d399; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem; padding: 0.75rem 1.3125rem;">
+                    <div class="inline-block bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4 px-6 py-3">
                         Investimento
                     </div>
-                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 1.5rem; padding: 0.5rem 0;">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
                         Sua transformação começa <span class="text-green-400">hoje</span>
                     </h2>
-                    <p style="font-size: 1.25rem; color: white; font-weight: 500;">
+                    <p class="text-xl text-white font-medium">
                         Investir em sua formação ministerial nunca foi tão acessível
                     </p>
                 </div>
 
-                <!-- Pricing card -->
-                <div style="max-width: 32rem; margin: 0 auto 3rem;">
-                    <div style="background: linear-gradient(to bottom right, #111827, #000000); border: 1px solid rgba(55, 65, 81, 0.5); border-radius: 1rem; padding: 2rem; position: relative; overflow: hidden;">
-                        <!-- Glow effect -->
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(5, 150, 105, 0.05), rgba(37, 99, 235, 0.05)); border-radius: 1rem;"></div>
+                <div class="max-w-2xl mx-auto mb-12">
+                    <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700/50 rounded-2xl p-8 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-600/5 to-blue-600/5 rounded-2xl"></div>
                         
-                        <div style="position: relative; z-index: 10;">
-                            <!-- Badge -->
-                            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); border-radius: 9999px; padding: 0.5rem 1rem; margin-bottom: 1.5rem;">
-                                <svg style="width: 1rem; height: 1rem; color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                </svg>
-                                <span style="color: #34d399; font-weight: 500;">Oferta Especial</span>
+                        <div class="relative z-10">
+                            <div class="inline-flex items-center gap-2 bg-green-600/20 border border-green-600/30 rounded-full px-4 py-2 mb-6">
+                                <i data-lucide="zap" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-green-400 font-medium">Oferta Especial</span>
                             </div>
 
-                            <!-- Price -->
                             <div class="mb-8">
-                                <div style="font-size: 1.5rem; color: #bfdbfe; margin-bottom: 0.5rem;">Parcele em até</div>
-                                <div style="font-size: clamp(3rem, 8vw, 4rem); font-weight: bold; color: white; margin-bottom: 0.5rem;">
+                                <div class="text-2xl text-blue-200 mb-2">Parcele em até</div>
+                                <div class="text-6xl md:text-7xl font-bold text-white mb-2">
                                     24x de <span class="text-green-400">R$ 197</span>
                                 </div>
-                                <div style="color: #bfdbfe;">
-                                    ou <span style="color: white; font-weight: 600;">R$ 4.728</span> à vista
+                                <div class="text-blue-200">
+                                    ou <span class="text-white font-semibold">R$ 4.728</span> à vista
                                 </div>
-                                <div style="color: #bfdbfe; font-size: 1.125rem; margin-top: 0.25rem;">
+                                <div class="text-blue-200 text-lg mt-1">
                                     no cartão de crédito
                                 </div>
                             </div>
 
-                            <!-- Features -->
-                            <div class="grid md:grid-cols-2 mb-8">
-                                <div style="display: flex; align-items: center; gap: 0.75rem; text-align: left;">
-                                    <div style="width: 2rem; height: 2rem; border-radius: 9999px; background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                        <svg style="width: 1rem; height: 1rem; color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
+                            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-center gap-3 text-left">
+                                    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
                                     </div>
-                                    <span style="color: white;">Sem comprometer seu limite total</span>
+                                    <span class="text-white">Sem comprometer seu limite total</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 0.75rem; text-align: left;">
-                                    <div style="width: 2rem; height: 2rem; border-radius: 9999px; background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                        <svg style="width: 1rem; height: 1rem; color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                                        </svg>
+                                <div class="flex items-center gap-3 text-left">
+                                    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="credit-card" class="w-4 h-4 text-green-400"></i>
                                     </div>
-                                    <span style="color: white;">Aprovação imediata</span>
+                                    <span class="text-white">Aprovação imediata</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 0.75rem; text-align: left;">
-                                    <div style="width: 2rem; height: 2rem; border-radius: 9999px; background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                        <svg style="width: 1rem; height: 1rem; color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                        </svg>
+                                <div class="flex items-center gap-3 text-left">
+                                    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="zap" class="w-4 h-4 text-green-400"></i>
                                     </div>
-                                    <span style="color: white;">Acesso liberado na hora</span>
+                                    <span class="text-white">Acesso liberado na hora</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 0.75rem; text-align: left;">
-                                    <div style="width: 2rem; height: 2rem; border-radius: 9999px; background: rgba(5, 150, 105, 0.2); border: 1px solid rgba(5, 150, 105, 0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                        <svg style="width: 1rem; height: 1rem; color: #34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                        </svg>
+                                <div class="flex items-center gap-3 text-left">
+                                    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+                                        <i data-lucide="shield" class="w-4 h-4 text-green-400"></i>
                                     </div>
-                                    <span style="color: white;">Sem burocracia</span>
+                                    <span class="text-white">Sem burocracia</span>
                                 </div>
                             </div>
 
-                            <!-- CTA Button -->
-                            <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-green" style="width: 100%; padding: 1.5rem 2rem; border-radius: 9999px; font-size: 1.25rem; margin-bottom: 1.5rem; display: block; text-align: center;">
+                            <button onclick="openWhatsApp()" class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-8 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6">
                                 QUERO GARANTIR MINHA VAGA
-                            </a>
+                            </button>
 
-                            <!-- Security badge -->
-                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; font-size: 0.875rem; color: #bfdbfe;">
-                                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
+                            <div class="flex items-center justify-center gap-2 mt-6 text-sm text-blue-200">
+                                <i data-lucide="shield" class="w-4 h-4"></i>
                                 <span>Pagamento 100% seguro e protegido</span>
                             </div>
                         </div>
@@ -1090,307 +714,226 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-gray-900" style="padding: 5rem 0;">
-        <div class="container">
-            <div style="max-width: 1280px; margin: 0 auto;">
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: bold; color: white; margin-bottom: 1.5rem;">
-                        <span class="text-blue-400">Mais de 10 mil</span> vidas transformadas
+                    <div class="inline-block px-4 py-2 bg-yellow-600/10 border border-yellow-600/20 rounded-full text-yellow-400 text-sm font-medium mb-4">
+                        Depoimentos
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Vidas <span class="text-yellow-400">transformadas</span> pela FATEMI
                     </h2>
-                    <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 1rem; font-weight: 500;">
-                        Veja o que acontece quando você decide investir em sua transformação
-                    </p>
-                    <p style="font-size: 1.125rem; color: #9ca3af;">
-                        Estas são apenas algumas das <strong style="color: white;">milhares de histórias reais</strong> de quem ousou mudar
+                    <p class="text-xl text-blue-200 max-w-3xl mx-auto">
+                        Histórias reais de pessoas que encontraram seu propósito e vocação através de nossa formação
                     </p>
                 </div>
 
-                <!-- Testimonials Carousel -->
-                <div class="testimonials-carousel mb-12">
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-yellow-500/50 transition-all duration-300">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         </div>
-                        
-                        <svg style="width: 2rem; height: 2rem; color: #4b5563; margin-bottom: 1rem;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                        </svg>
-                        
-                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.125rem; flex-grow: 1;">
-                            <strong style="color: white;">"Esse curso ajudou a transformar minha história."</strong>
+                        <p class="text-white mb-6 leading-relaxed">
+                            "A FATEMI mudou completamente minha perspectiva ministerial. O curso me deu as ferramentas necessárias para liderar com sabedoria e amor."
                         </p>
-                        
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: auto;">
-                            <div style="background: white; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: black; font-weight: bold; font-size: 1.125rem;">T</span>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">MC</span>
                             </div>
                             <div>
-                                <div style="font-weight: bold; color: white;">Tauan Jhonny</div>
-                                <div style="font-size: 0.875rem; color: #9ca3af;">Aluno FATEMI</div>
+                                <div class="text-white font-medium">Maria Clara</div>
+                                <div class="text-blue-300 text-sm">Pastora, São Paulo</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-yellow-500/50 transition-all duration-300">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         </div>
-                        
-                        <svg style="width: 2rem; height: 2rem; color: #4b5563; margin-bottom: 1rem;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                        </svg>
-                        
-                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.125rem; flex-grow: 1;">
-                            <strong style="color: white;">"Tive a imensa oportunidade de iniciar e concluir o Curso de Teologia Ministerial e Prática, um Curso que impactou a minha vida de uma forma tremenda, algo sobrenatural. A revelação da palavra de Deus ministrada nesse curso é tremenda, tem mudado a vida de muitas pessoas aos arredores do mundo. Recomendo sem sombra de dúvida!"</strong>
+                        <p class="text-white mb-6 leading-relaxed">
+                            "Estudar na FATEMI foi a melhor decisão da minha vida. Hoje sirvo com propósito e conhecimento profundo da Palavra."
                         </p>
-                        
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: auto;">
-                            <div style="background: white; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: black; font-weight: bold; font-size: 1.125rem;">O</span>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">JS</span>
                             </div>
                             <div>
-                                <div style="font-weight: bold; color: white;">Oeslen Ribeiro</div>
-                                <div style="font-size: 0.875rem; color: #9ca3af;">Aluno FATEMI</div>
+                                <div class="text-white font-medium">João Silva</div>
+                                <div class="text-blue-300 text-sm">Missionário, Amazonas</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="testimonial-card">
-                        <div class="stars">
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
-                            <svg class="star" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                            </svg>
+                    <div class="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-yellow-500/50 transition-all duration-300">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-400 fill-current"></i>
                         </div>
-                        
-                        <svg style="width: 2rem; height: 2rem; color: #4b5563; margin-bottom: 1rem;" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                        </svg>
-                        
-                        <p style="color: #d1d5db; margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.125rem; flex-grow: 1;">
-                            <strong style="color: white;">"Simplesmente o melhor curso de teologia do Sul do Brasil..."</strong>
+                        <p class="text-white mb-6 leading-relaxed">
+                            "O ensino prático da FATEMI me preparou para enfrentar os desafios reais do ministério. Recomendo de coração!"
                         </p>
-                        
-                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-top: auto;">
-                            <div style="background: white; width: 3rem; height: 3rem; border-radius: 9999px; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: black; font-weight: bold; font-size: 1.125rem;">L</span>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold">AS</span>
                             </div>
                             <div>
-                                <div style="font-weight: bold; color: white;">Luana Lopes</div>
-                                <div style="font-size: 0.875rem; color: #9ca3af;">Aluna FATEMI</div>
+                                <div class="text-white font-medium">Ana Santos</div>
+                                <div class="text-blue-300 text-sm">Líder de Jovens, Rio de Janeiro</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- CTA Button -->
                 <div class="text-center">
-                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn" style="padding: 1rem 2rem; font-size: 1.125rem;">
-                        COMECE AGORA
-                    </a>
+                    <button onclick="openWhatsApp()" class="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO FAZER PARTE DESTA HISTÓRIA
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section id="final-cta" style="background: linear-gradient(to bottom right, #000000, #111827, #000000); position: relative; overflow: hidden; padding: 6rem 0;">
-        <!-- Background elements -->
-        <div style="position: absolute; inset: 0;">
-            <div style="position: absolute; top: 5rem; left: 5rem; width: 20rem; height: 20rem; background: rgba(37, 99, 235, 0.1); border-radius: 9999px; filter: blur(3rem); animation: pulse 2s infinite;"></div>
-            <div style="position: absolute; bottom: 5rem; right: 5rem; width: 24rem; height: 24rem; background: rgba(147, 51, 234, 0.1); border-radius: 9999px; filter: blur(3rem); animation: pulse 2s infinite; animation-delay: 1.5s;"></div>
-        </div>
+    <section class="py-24 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
         
-        <!-- Grid pattern -->
-        <div style="position: absolute; inset: 0; background: linear-gradient(rgba(59,130,246,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
-        
-        <div class="container" style="position: relative; z-index: 10;">
-            <div style="max-width: 64rem; margin: 0 auto; text-align: center;">
-                <!-- Logo -->
-                <div class="mb-8">
-                    <div style="position: relative; display: inline-block;">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(37, 99, 235, 0.2), rgba(147, 51, 234, 0.2)); border-radius: 9999px; filter: blur(2rem);"></div>
-                        <img src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" alt="FATEMI Logo" style="width: 8rem; height: 8rem; margin: 0 auto; position: relative; z-index: 10;">
-                    </div>
-                </div>
-
-                <!-- Headline -->
-                <div class="mb-8">
-                    <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(217, 119, 6, 0.1); border: 1px solid rgba(217, 119, 6, 0.2); border-radius: 9999px; color: #fbbf24; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem;">
-                        Transforme Sua Vida
-                    </div>
-                    <h3 style="font-size: clamp(1.875rem, 4vw, 2.25rem); font-weight: bold; color: white; margin-bottom: 1rem;">
-                        Comece sua jornada ministerial hoje!
-                    </h3>
-                    <p style="font-size: 1.125rem; color: #d1d5db;">
-                        Junte-se aos milhares de alunos que já transformaram suas vidas
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-12">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        Sua <span class="text-blue-400">jornada ministerial</span><br />
+                        começa agora
+                    </h2>
+                    <p class="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+                        Não deixe para amanhã o que Deus está chamando você para fazer hoje. Seja parte da próxima geração de líderes cristãos preparados para impactar o mundo.
                     </p>
                 </div>
 
-                <!-- Trust signals -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; font-size: 0.875rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #fbbf24;">
-                        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                        </svg>
-                        <span style="color: white;">28 anos de experiência</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #a855f7;">
-                        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span style="color: white;">+10 mil alunos formados</span>
-                    </div>
-                </div>
-
-                <!-- Benefits -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; font-size: 0.875rem;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #fbbf24;">
-                        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span style="color: white;">Acesso liberado imediatamente</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem; color: #fbbf24;">
-                        <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                        <span style="color: white;">Atendimento personalizado</span>
+                <div class="space-y-6 mb-12">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-8 text-lg">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                <i data-lucide="clock" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <span class="text-white">Início imediato</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <span class="text-white">Certificação reconhecida</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center">
+                                <i data-lucide="heart" class="w-4 h-4 text-green-400"></i>
+                            </div>
+                            <span class="text-white">Transformação garantida</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- CTA Button -->
-                <div class="mb-6" style="padding: 0 1rem;">
-                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-yellow" style="padding: 1.5rem 1.5rem; border-radius: 9999px; font-size: 1.25rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border: 2px solid rgba(245, 158, 11, 0.2); width: 100%; max-width: 20rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                        <svg style="width: 1.25rem; height: 1.25rem; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
-                        <span style="text-align: center;">Quero ser aluno da FATEMI</span>
-                    </a>
+                <div class="space-y-6">
+                    <button onclick="openWhatsApp()" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-12 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO COMEÇAR MINHA JORNADA HOJE
+                    </button>
+                    
+                    <p class="text-blue-300 text-sm">
+                        Tire suas dúvidas pelo WhatsApp - Atendimento personalizado
+                    </p>
                 </div>
-
-                <!-- Value proposition -->
-                <p style="font-size: 0.875rem; color: #9ca3af;">
-                    <span style="color: #fbbf24; font-weight: 600;">✓ Sem compromisso</span> • 
-                    <span style="color: #60a5fa; font-weight: 600;">✓ Formação completa</span>
-                </p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <img src="/lovable-uploads/2712699f-7055-4b26-b665-4bb3944364fd.png" alt="FATEMI Logo" class="w-24 h-24 mx-auto mb-6">
+                <p class="text-gray-400 mb-4">FATEMI - Faculdade de Teologia Ministerial Internacional</p>
+                <p class="text-gray-500 text-sm">© 2024 FATEMI. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // WhatsApp function
+        function openWhatsApp() {
+            window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!', '_blank');
+        }
+
         // Carousel functionality
         let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
+        const slides = document.querySelectorAll('.embla__slide');
         const totalSlides = slides.length;
-        
+        const container = document.getElementById('teachersContainer');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function getVisibleSlides() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+
         function updateCarousel() {
-            const carousel = document.getElementById('teacherCarousel');
-            const slideWidth = slides[0].offsetWidth;
-            carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            const visibleSlides = getVisibleSlides();
+            const slideWidth = 100 / visibleSlides;
+            const translateX = -(currentSlide * slideWidth);
+            container.style.transform = `translateX(${translateX}%)`;
         }
-        
-        function moveCarousel(direction) {
-            currentSlide += direction;
-            
-            if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            } else if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
+
+        function nextSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = totalSlides - visibleSlides;
+            currentSlide = (currentSlide + 1) > maxSlide ? 0 : currentSlide + 1;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = totalSlides - visibleSlides;
+            currentSlide = (currentSlide - 1) < 0 ? maxSlide : currentSlide - 1;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play
+        setInterval(nextSlide, 3000);
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            const visibleSlides = getVisibleSlides();
+            const maxSlide = totalSlides - visibleSlides;
+            if (currentSlide > maxSlide) {
+                currentSlide = maxSlide;
             }
-            
-            updateCarousel();
-        }
-        
-        // Auto-play carousel
-        setInterval(() => {
-            moveCarousel(1);
-        }, 3000);
-        
-        // Update carousel on window resize
-        window.addEventListener('resize', updateCarousel);
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-        
-        // Add animation classes on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all cards and sections
-        document.querySelectorAll('.card, section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-        
-        // Initial setup
-        document.addEventListener('DOMContentLoaded', function() {
-            // Make hero visible immediately
-            document.querySelector('.hero').style.opacity = '1';
-            document.querySelector('.hero').style.transform = 'translateY(0)';
-            
             updateCarousel();
         });
+
+        // Initialize carousel
+        updateCarousel();
     </script>
 </body>
 </html>
