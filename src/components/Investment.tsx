@@ -8,11 +8,19 @@ const Investment = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 py-0 px-0">
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
+    <section className="py-24 relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{
+            backgroundImage: `url('/lovable-uploads/2b1f2cdf-e1c8-478f-9b9b-9b8137125dc7.png')`
+          }} 
+        />
+        {/* Dark overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/85 to-black/90"></div>
+        {/* Blue accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-purple-900/20"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

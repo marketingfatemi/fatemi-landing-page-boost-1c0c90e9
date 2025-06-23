@@ -1,30 +1,52 @@
 
 import { Users, Star, Trophy, Clock, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+
 const Authority = () => {
-  const stats = [{
-    icon: <Users className="w-8 h-8 text-white" />,
-    number: "+10 mil",
-    label: "alunos formados",
-    description: "Vidas transformadas",
-    highlight: true
-  }, {
-    icon: <Globe className="w-8 h-8 text-white" />,
-    number: "+11",
-    label: "países alcançados",
-    description: "Impacto global"
-  }, {
-    icon: <Trophy className="w-8 h-8 text-white" />,
-    number: "28",
-    label: "anos de experiência",
-    description: "Tradição e excelência"
-  }, {
-    icon: <Clock className="w-8 h-8 text-white" />,
-    number: "24/7",
-    label: "acesso à plataforma",
-    description: "Estude quando quiser"
-  }];
-  return <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+  const stats = [
+    {
+      icon: <Users className="w-8 h-8 text-white" />,
+      number: "+10 mil",
+      label: "alunos formados",
+      description: "Vidas transformadas",
+      highlight: true
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-white" />,
+      number: "+11",
+      label: "países alcançados",
+      description: "Impacto global"
+    },
+    {
+      icon: <Trophy className="w-8 h-8 text-white" />,
+      number: "28",
+      label: "anos de experiência",
+      description: "Tradição e excelência"
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-white" />,
+      number: "24/7",
+      label: "acesso à plataforma",
+      description: "Estude quando quiser"
+    }
+  ];
+
+  return (
+    <section className="py-24 relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+          style={{
+            backgroundImage: `url('/lovable-uploads/d5275ed3-b09b-4687-bd74-7f41beea15ed.png')`
+          }} 
+        />
+        {/* Dark overlay with gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/85 to-black/90"></div>
+        {/* Blue accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-purple-900/20"></div>
+      </div>
+      
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px] py-0"></div>
       
@@ -75,7 +97,8 @@ const Authority = () => {
 
           {/* Stats grid - Blue background with white text */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, index) => <Card key={index} className="bg-gradient-to-br from-blue-600 to-blue-700 border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl">
+            {stats.map((stat, index) => (
+              <Card key={index} className="bg-gradient-to-br from-blue-600 to-blue-700 border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl">
                 <CardContent className="p-6 text-center">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -86,10 +109,13 @@ const Authority = () => {
                   <div className="text-sm text-white uppercase tracking-wider font-medium mb-1">{stat.label}</div>
                   <div className="text-xs text-blue-100">{stat.description}</div>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Authority;

@@ -1,26 +1,1179 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fatemi-landing-page-boost</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FATEMI - Curso de Teologia Ministerial</title>
+  <meta name="description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! +10 mil alunos formados, 28 anos de experiência." />
+  <meta name="author" content="FATEMI" />
 
-    <meta property="og:title" content="fatemi-landing-page-boost" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M4T257RG');</script>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <meta property="og:title" content="FATEMI - Curso de Teologia Ministerial" />
+  <meta property="og:description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! +10 mil alunos formados, 28 anos de experiência." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@lovable_dev" />
+  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(55,65,81,0.85), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(30,58,138,0.3), transparent, rgba(88,28,135,0.2));
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      max-width: 1200px;
+      padding: 2rem;
+    }
+
+    .authority {
+      padding: 6rem 0;
+      background-image: url('lovable-uploads/d5275ed3-b09b-4687-bd74-7f41beea15ed.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .authority::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(55,65,81,0.85), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    .authority::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(30,58,138,0.3), transparent, rgba(88,28,135,0.2));
+      z-index: 2;
+    }
+
+    .teachers {
+      padding: 8rem 0;
+      background-image: url('lovable-uploads/4c886da4-8ea8-4acb-aac6-e5bfa97f73d8.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .teachers::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(55,65,81,0.85), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    .teachers::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(30,58,138,0.3), transparent, rgba(88,28,135,0.2));
+      z-index: 2;
+    }
+
+    .investment {
+      padding: 6rem 0;
+      background-image: url('lovable-uploads/2b1f2cdf-e1c8-478f-9b9b-9b8137125dc7.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .investment::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(55,65,81,0.85), rgba(0,0,0,0.9));
+      z-index: 1;
+    }
+
+    .investment::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom right, rgba(30,58,138,0.3), transparent, rgba(88,28,135,0.2));
+      z-index: 2;
+    }
+
+    .section-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .for-who {
+      padding: 8rem 0;
+      background: #1e3a8a;
+    }
+
+    .formation {
+      padding: 4rem 0;
+      background: #111827;
+    }
+
+    .what-you-learn {
+      padding: 6rem 0;
+      background: #000;
+    }
+
+    .testimonials {
+      padding: 8rem 0;
+      background: #111827;
+    }
+
+    .final-cta {
+      padding: 6rem 0;
+      background: linear-gradient(to bottom right, #000, #111827, #000);
+    }
+
+    .logo {
+      width: 8rem;
+      height: auto;
+      margin: 0 auto 2rem;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #fff, #dbeafe, #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #60a5fa;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+      color: white;
+      text-decoration: none;
+      border-radius: 9999px;
+      font-weight: bold;
+      font-size: 1.125rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      transition: all 0.3s ease;
+      border: 2px solid rgba(37, 99, 235, 0.2);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(to right, #1d4ed8, #1e40af);
+    }
+
+    .btn-green {
+      background: linear-gradient(to right, #16a34a, #15803d);
+    }
+
+    .btn-green:hover {
+      background: linear-gradient(to right, #15803d, #166534);
+    }
+
+    .btn-yellow {
+      background: linear-gradient(to right, #ca8a04, #a16207);
+    }
+
+    .btn-yellow:hover {
+      background: linear-gradient(to right, #a16207, #854d0e);
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #d1d5db;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid #374151;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-blue {
+      background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+      border: 1px solid #60a5fa;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-description {
+      font-size: 0.75rem;
+      color: #dbeafe;
+    }
+
+    .teacher-card {
+      background: #111827;
+      border: 1px solid #374151;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .teacher-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .teacher-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .teacher-info {
+      padding: 1.5rem;
+    }
+
+    .teacher-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .teacher-bio {
+      color: #93c5fd;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-card {
+      background: #000;
+      border: 1px solid #374151;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin: 1rem;
+    }
+
+    .testimonial-text {
+      color: #d1d5db;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .testimonial-avatar {
+      width: 3rem;
+      height: 3rem;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.125rem;
+    }
+
+    .testimonial-info {
+      color: white;
+    }
+
+    .testimonial-name {
+      font-weight: bold;
+    }
+
+    .testimonial-role {
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+
+    .pricing-card {
+      background: linear-gradient(to bottom right, #111827, #000);
+      border: 1px solid rgba(55, 65, 81, 0.5);
+      border-radius: 1rem;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to right, rgba(34, 197, 94, 0.05), rgba(37, 99, 235, 0.05));
+      border-radius: 1rem;
+    }
+
+    .price {
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .price-highlight {
+      color: #22c55e;
+    }
+
+    .price-description {
+      color: #93c5fd;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: white;
+    }
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      color: #22c55e;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    .carousel-container {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .carousel-slide {
+        min-width: 50%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .carousel-slide {
+        min-width: 33.333%;
+      }
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-nav:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .carousel-prev {
+      left: 1rem;
+    }
+
+    .carousel-next {
+      right: 1rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mb-16 { margin-bottom: 4rem; }
+
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mt-12 { margin-top: 3rem; }
+
+    .text-blue { color: #60a5fa; }
+    .text-green { color: #22c55e; }
+    .text-yellow { color: #fbbf24; }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 0 0.5rem;
+      }
+
+      .btn {
+        font-size: 0.875rem;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/gtm.html?id=GTM-M4T257RG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Hero Section -->
+  <section class="hero section">
+    <div class="hero-content">
+      <img src="lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" alt="FATEMI Logo" class="logo">
+      
+      <div class="mb-8">
+        <div style="font-size: 1.125rem; font-weight: 300; color: #d1d5db; margin-bottom: 1rem;">
+          O melhor
+        </div>
+        <h1 class="title">
+          Curso Livre de<br>
+          Teologia Ministerial
+        </h1>
+        <div class="subtitle">
+          do Brasil!
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 1.5rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <strong style="color: white;">Mais de 10 mil pessoas já foram transformadas.</strong><br>
+          Seja capacitado a viver o chamado de Deus para sua vida!
+        </p>
+      </div>
+
+      <div class="mb-8">
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn">
+          QUERO CONHECER O CURSO
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authority Section -->
+  <section class="authority section">
+    <div class="container section-content">
+      <div class="text-center mb-16">
+        <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.2); border-radius: 9999px; color: #60a5fa; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem;">
+          Nossa História
+        </div>
+        <h2 class="section-title">
+          <span class="text-blue">28 anos</span> formando líderes<br>
+          através do ensino prático da Palavra
+        </h2>
+      </div>
+
+      <div class="grid grid-2 mb-16" style="align-items: center;">
+        <div style="text-align: center;">
+          <p style="font-size: 1.125rem; color: white; line-height: 1.6; margin-bottom: 2rem;">
+            Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
+          </p>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" alt="Templo FATEMI" style="width: 100%; max-width: 400px; border-radius: 0.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);">
+        </div>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card card-blue">
+          <div class="stat-number">+10 mil</div>
+          <div class="stat-label">alunos formados</div>
+          <div class="stat-description">Vidas transformadas</div>
+        </div>
+        <div class="card card-blue">
+          <div class="stat-number">+11</div>
+          <div class="stat-label">países alcançados</div>
+          <div class="stat-description">Impacto global</div>
+        </div>
+        <div class="card card-blue">
+          <div class="stat-number">28</div>
+          <div class="stat-label">anos de experiência</div>
+          <div class="stat-description">Tradição e excelência</div>
+        </div>
+        <div class="card card-blue">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">acesso à plataforma</div>
+          <div class="stat-description">Estude quando quiser</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- For Who Section -->
+  <section class="for-who section">
+    <div class="container">
+      <div class="text-center mb-12">
+        <h2 class="section-title">Este curso é para você que...</h2>
+        <p class="section-subtitle">
+          Se você se identifica com pelo menos um desses pontos, a FATEMI foi feita para você:
+        </p>
+      </div>
+
+      <div class="grid grid-2 mb-12">
+        <div class="card">
+          <h3 class="card-title">Deseja crescer no conhecimento da Palavra</h3>
+          <p class="card-text">Aprofunde seu conhecimento teológico</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Quer ser capacitado para servir ministerialmente</h3>
+          <p class="card-text">Buscam preparo sólido para o ministério</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Busca desenvolver liderança cristã</h3>
+          <p class="card-text">Baseado em princípios bíblicos aplicados</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Deseja conhecer mais sobre o chamado de Deus para sua vida</h3>
+          <p class="card-text">Viva uma vida com propósito</p>
+        </div>
+      </div>
+
+      <div style="background: white; color: black; padding: 2rem; border-radius: 0.5rem; text-align: center; margin-bottom: 3rem;">
+        <p style="font-size: 1.25rem; font-weight: 500;">
+          <strong>Se você respondeu "SIM" para qualquer um desses pontos...</strong><br>
+          Você encontrou o curso certo para você!
+        </p>
+      </div>
+
+      <div class="text-center">
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn">
+          Quero ser aluno FATEMI
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section class="teachers section">
+    <div class="container section-content">
+      <div class="text-center mb-16">
+        <h2 class="section-title">
+          Aprenda com os <span class="text-blue">melhores professores</span>
+        </h2>
+        <p class="section-subtitle">
+          Durante o curso, você terá aulas com grandes professores, dedicados ao ensino da Palavra de forma prática. Seja capacitado e inspirado a viver a Verdade em todas as áreas da sua vida! Conheça alguns de seus professores:
+        </p>
+        
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn">
+          QUERO CURSAR TEOLOGIA
+        </a>
+      </div>
+
+      <div class="carousel" id="teachersCarousel">
+        <div class="carousel-container" id="teachersContainer">
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" alt="Pio Carvalho" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Pio Carvalho</h3>
+                <p class="teacher-bio">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" alt="Romulo Carvalho" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Romulo Carvalho</h3>
+                <p class="teacher-bio">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" alt="Rafael Mincewicz" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Rafael Mincewicz</h3>
+                <p class="teacher-bio">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" alt="Plácido Casarini" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Plácido Casarini</h3>
+                <p class="teacher-bio">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" alt="Tom Ros" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Tom Ros</h3>
+                <p class="teacher-bio">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="teacher-card">
+              <img src="lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" alt="Rose Carvalho" class="teacher-image">
+              <div class="teacher-info">
+                <h3 class="teacher-name">Rose Carvalho</h3>
+                <p class="teacher-bio">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel('teachers', -1)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel('teachers', 1)">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formation Section -->
+  <section class="formation section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="section-title">
+          Sua formação do <span class="text-blue">jeito certo</span>
+        </h2>
+        <p class="section-subtitle">
+          Estude quando quiser e onde quiser
+        </p>
+        
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn mb-12">
+          Começar minha formação
+        </a>
+      </div>
+
+      <div class="grid grid-3 mb-12">
+        <div class="card">
+          <h3 class="card-title">Certificado de Conclusão</h3>
+          <p class="card-text">Não reconhecido pelo MEC</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Flexibilidade Total</h3>
+          <p class="card-text">Até 2 anos para concluir no seu ritmo</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Estude Onde e Quando Quiser</h3>
+          <p class="card-text">Plataforma disponível 24/7</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Material Completo Incluso</h3>
+          <p class="card-text">Tudo digital e sempre atualizado</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Suporte Pedagógico</h3>
+          <p class="card-text">Professores disponíveis para suas dúvidas</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Avaliações Formativas</h3>
+          <p class="card-text">Avalie seu conhecimento e fixe o conteúdo</p>
+        </div>
+      </div>
+
+      <div style="background: #000; border-radius: 0.5rem; padding: 2rem; border: 1px solid #374151; margin-bottom: 2rem;">
+        <div class="text-center">
+          <h3 style="font-size: 1.5rem; font-weight: bold; color: white; margin-bottom: 1rem;">
+            Plataforma Completa de Ensino
+          </h3>
+          <p style="font-size: 1.125rem; color: #d1d5db; line-height: 1.6; margin-bottom: 1.5rem;">
+            <strong style="color: white;">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
+            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
+            <strong style="color: white;">Tudo pensado para acelerar seu crescimento.</strong>
+          </p>
+          
+          <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn">
+            Quero começar hoje
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Learn Section -->
+  <section class="what-you-learn section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="section-title">
+          O que você <span class="text-blue">aprenderá</span>
+        </h2>
+        <p class="section-subtitle">
+          Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
+        </p>
+        
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-green">
+          Quero me inscrever agora
+        </a>
+      </div>
+
+      <div class="grid grid-3 mb-12">
+        <div class="card">
+          <h3 class="card-title">Verbo e a Fé</h3>
+          <p class="card-text">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Fundamentos de Cristo</h3>
+          <p class="card-text">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Segredo dos Tabernáculos</h3>
+          <p class="card-text">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Prática da Palavra</h3>
+          <p class="card-text">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Panorama da Lei e da Graça</h3>
+          <p class="card-text">Estude detalhadamente o Antigo e o Novo Testamento</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Liderança Transformacional</h3>
+          <p class="card-text">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso!" target="_blank" class="btn mb-4">
+          Ver Grade Curricular Completa
+        </a>
+        
+        <p style="color: #9ca3af; margin-top: 1rem;">
+          Descubra todos os módulos que vão transformar sua vida
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment Section -->
+  <section class="investment section">
+    <div class="container section-content">
+      <div class="text-center mb-12">
+        <div style="display: inline-block; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 9999px; color: #22c55e; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem; padding: 0.75rem 1.25rem;">
+          Investimento
+        </div>
+        <h2 class="section-title">
+          Sua transformação começa <span class="text-green">hoje</span>
+        </h2>
+        <p style="font-size: 1.25rem; color: white; font-weight: 500;">
+          Investir em sua formação ministerial nunca foi tão acessível
+        </p>
+      </div>
+
+      <div class="pricing-card mb-12">
+        <div style="position: relative; z-index: 10;">
+          <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(34, 197, 94, 0.2); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 9999px; padding: 0.5rem 1rem; margin-bottom: 1.5rem;">
+            <span style="color: #22c55e; font-weight: 500;">⚡ Oferta Especial</span>
+          </div>
+
+          <div class="mb-8">
+            <div style="font-size: 1.5rem; color: #93c5fd; margin-bottom: 0.5rem;">Parcele em até</div>
+            <div class="price">
+              24x de <span class="price-highlight">R$ 197</span>
+            </div>
+            <div class="price-description">
+              ou <strong style="color: white;">R$ 4.728</strong> à vista<br>
+              no cartão de crédito
+            </div>
+          </div>
+
+          <div class="feature-list mb-8">
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Sem comprometer seu limite total</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Aprovação imediata</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Acesso liberado na hora</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Sem burocracia</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-green" style="width: 100%; display: block; text-align: center; margin-bottom: 1.5rem; font-size: 1.25rem; padding: 1.5rem 2rem;">
+            QUERO GARANTIR MINHA VAGA
+          </a>
+
+          <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.875rem; color: #93c5fd;">
+            <span>🛡️</span>
+            <span>Pagamento 100% seguro e protegido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="section-title">
+          <span class="text-blue">Mais de 10 mil</span> vidas transformadas
+        </h2>
+        <p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 1rem; font-weight: 500;">
+          Veja o que acontece quando você decide investir em sua transformação
+        </p>
+        <p style="font-size: 1.125rem; color: #9ca3af;">
+          Estas são apenas algumas das <strong style="color: white;">milhares de histórias reais</strong> de quem ousou mudar
+        </p>
+      </div>
+
+      <div class="carousel mb-12" id="testimonialsCarousel">
+        <div class="carousel-container" id="testimonialsContainer">
+          <div class="carousel-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                <strong style="color: white;">"Esse curso ajudou a transformar minha história."</strong>
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">T</div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Tauan Jhonny</div>
+                  <div class="testimonial-role">Aluno FATEMI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                <strong style="color: white;">"Tive a imensa oportunidade de iniciar e concluir o Curso de Teologia Ministerial e Prática, um Curso que impactou a minha vida de uma forma tremenda, algo sobrenatural. A revelação da palavra de Deus ministrada nesse curso é tremenda, tem mudado a vida de muitas pessoas aos arredores do mundo. Recomendo sem sombra de dúvida!"</strong>
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">O</div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Oeslen Ribeiro</div>
+                  <div class="testimonial-role">Aluno FATEMI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                <strong style="color: white;">"Simplesmente o melhor curso de teologia do Sul do Brasil..."</strong>
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">L</div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Luana Lopes</div>
+                  <div class="testimonial-role">Aluna FATEMI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                <strong style="color: white;">"Muito bom mesmo. É uma descoberta do evangelho que já conhecemos, mas numa outra dimensão e profundidade fantástica."</strong>
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">V</div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vania Barros</div>
+                  <div class="testimonial-role">Aluna FATEMI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                <strong style="color: white;">"É outro nível de compreensão da Palavra de Deus!"</strong>
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">M</div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Marilda Martins</div>
+                  <div class="testimonial-role">Aluna FATEMI</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel('testimonials', -1)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel('testimonials', 1)">›</button>
+      </div>
+
+      <div class="text-center">
+        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn">
+          COMECE AGORA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta section" id="final-cta">
+    <div class="container">
+      <div class="text-center">
+        <div class="mb-8">
+          <img src="lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png" alt="FATEMI Logo" style="width: 8rem; height: 8rem; margin: 0 auto;">
+        </div>
+
+        <div class="mb-8">
+          <div style="display: inline-block; padding: 0.5rem 1rem; background: rgba(202, 138, 4, 0.1); border: 1px solid rgba(202, 138, 4, 0.2); border-radius: 9999px; color: #fbbf24; font-size: 0.875rem; font-weight: 500; margin-bottom: 1rem;">
+            Transforme Sua Vida
+          </div>
+          <h3 style="font-size: 2rem; font-weight: bold; color: white; margin-bottom: 1rem;">
+            Comece sua jornada ministerial hoje!
+          </h3>
+          <p style="font-size: 1.125rem; color: #d1d5db;">
+            Junte-se aos milhares de alunos que já transformaram suas vidas
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <span style="color: #fbbf24;">⭐ 28 anos de experiência</span>
+          <span style="margin: 0 1rem;">•</span>
+          <span style="color: #a855f7;">✓ +10 mil alunos formados</span>
+        </div>
+
+        <div class="mb-6">
+          <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" class="btn btn-yellow" style="font-size: 1.25rem; padding: 1.5rem 3rem;">
+            💬 Quero ser aluno da FATEMI
+          </a>
+        </div>
+
+        <p style="font-size: 0.875rem; color: #9ca3af;">
+          <span style="color: #fbbf24; font-weight: 600;">✓ Sem compromisso</span> • 
+          <span style="color: #60a5fa; font-weight: 600;">✓ Formação completa</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Carousel functionality
+    let currentSlide = {
+      teachers: 0,
+      testimonials: 0
+    };
+
+    function moveCarousel(carouselName, direction) {
+      const container = document.getElementById(carouselName + 'Container');
+      const slides = container.children;
+      const totalSlides = slides.length;
+      
+      currentSlide[carouselName] += direction;
+      
+      if (currentSlide[carouselName] >= totalSlides) {
+        currentSlide[carouselName] = 0;
+      } else if (currentSlide[carouselName] < 0) {
+        currentSlide[carouselName] = totalSlides - 1;
+      }
+      
+      const slideWidth = slides[0].offsetWidth;
+      container.style.transform = `translateX(-${currentSlide[carouselName] * slideWidth}px)`;
+    }
+
+    // Auto-play functionality
+    setInterval(() => {
+      moveCarousel('teachers', 1);
+    }, 3000);
+
+    setInterval(() => {
+      moveCarousel('testimonials', 1);
+    }, 4000);
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
