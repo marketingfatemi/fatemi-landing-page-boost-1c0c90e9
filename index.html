@@ -2,201 +2,216 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4T257RG');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FATEMI - Ganhe Uma Aula Gratuita de Teologia</title>
+    <title>FATEMI - Curso de Teologia Ministerial</title>
+    <meta name="description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
+    <meta name="author" content="FATEMI" />
+    
+    <meta property="og:title" content="FATEMI - Curso de Teologia Ministerial" />
+    <meta property="og:description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
+    <meta property="og:type" content="website" />
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        blue: {
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a'
-                        },
-                        green: {
-                            400: '#4ade80',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d'
-                        },
-                        gray: {
-                            100: '#f3f4f6',
-                            200: '#e5e7eb',
-                            300: '#d1d5db',
-                            400: '#9ca3af',
-                            500: '#6b7280',
-                            700: '#374151',
-                            800: '#1f2937',
-                            900: '#111827'
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'pulse': 'pulse 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
                         }
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        @keyframes fade-in {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
         .animate-fade-in {
-            animation: fade-in 0.6s ease-out;
+            animation: fadeIn 0.6s ease-in-out;
         }
-        
-        .bg-gradient-text {
-            background: linear-gradient(to right, #ffffff, #dbeafe, #ffffff);
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .bg-gradient-to-br {
+            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        }
+        .bg-gradient-to-b {
+            background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+        }
+        .bg-clip-text {
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .form-container {
-            min-height: 600px;
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
+        .text-transparent {
+            color: transparent;
+        }
+        .backdrop-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+        .transform {
+            transform: translateX(var(--tw-translate-x, 0)) translateY(var(--tw-translate-y, 0)) rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1));
+        }
+        .hover\:scale-105:hover {
+            --tw-scale-x: 1.05;
+            --tw-scale-y: 1.05;
+        }
+        .group:hover .group-hover\:scale-110 {
+            --tw-scale-x: 1.1;
+            --tw-scale-y: 1.1;
+        }
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        .duration-300 {
+            transition-duration: 300ms;
         }
     </style>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-black text-white">
+<body class="bg-black text-white min-h-screen">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4T257RG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <!-- Hero Section -->
     <section class="min-h-screen relative flex items-center justify-center overflow-hidden">
         <!-- Background image with overlay -->
         <div class="absolute inset-0">
-            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59.png')"></div>
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('lovable-uploads/97957b3e-dccb-43c6-a446-0ad0b0d2da59')"></div>
+            <!-- Dark overlay with gradient -->
             <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-900/85 to-black/90"></div>
+            <!-- Blue accent overlay -->
             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-transparent to-purple-900/20"></div>
         </div>
         
-        <!-- Background elements -->
+        <!-- Modern background elements -->
         <div class="absolute inset-0">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
             <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-full blur-3xl"></div>
         </div>
         
-        <!-- Grid pattern -->
-        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <!-- Grid pattern overlay -->
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
         
         <div class="container mx-auto px-4 relative z-10 py-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Left side - Content -->
-                    <div class="text-center lg:text-left">
-                        <!-- Logo -->
-                        <div class="mb-8 animate-fade-in">
-                            <img alt="FATEMI Logo" class="w-32 h-auto mx-auto lg:mx-0 mb-6" src="/lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c.png">
-                        </div>
+            <div class="max-w-6xl mx-auto text-center">
+                <!-- Logo -->
+                <div class="mb-8 animate-fade-in">
+                    <img alt="FATEMI Logo" class="w-32 h-auto mx-auto mb-6" src="lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c">
+                </div>
 
-                        <!-- Main headline -->
-                        <div class="mb-8 animate-fade-in">
-                            <div class="text-lg md:text-xl font-light text-gray-300 mb-4 tracking-wide">
-                                Descubra o melhor
-                            </div>
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                                <span class="bg-gradient-text">
-                                    Curso de Teologia<br>
-                                    Ministerial
-                                </span>
-                            </h1>
-                            <div class="text-2xl md:text-3xl font-medium text-green-400 mb-6">
-                                Ganhe uma aula gratuita!
-                            </div>
-                        </div>
+                <!-- Main headline -->
+                <div class="mb-8 animate-fade-in">
+                    <div class="text-lg md:text-xl font-light text-gray-300 mb-4 tracking-wide">
+                        O melhor
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                        <span class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                            Curso Livre de<br>
+                            Teologia Ministerial
+                        </span>
+                    </h1>
+                    <div class="text-xl md:text-2xl lg:text-3xl font-medium text-blue-400 mb-6">
+                        do Brasil!
+                    </div>
+                </div>
 
-                        <!-- Value proposition -->
-                        <div class="mb-8 animate-fade-in">
-                            <p class="text-xl text-gray-300 leading-relaxed mb-6">
-                                <span class="text-white font-semibold">Experimente gratuitamente</span> uma aula do nosso curso que já transformou mais de <span class="text-green-400 font-semibold">10 mil vidas</span> em 28 anos de experiência.
-                            </p>
-                            
-                            <!-- Features list -->
-                            <div class="flex flex-wrap gap-4 text-sm text-gray-400 mb-8">
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Aula Gratuita Completa</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Sem Compromisso</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>Acesso Imediato</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                    </svg>
-                                    <span>28 Anos de Experiência</span>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Trust badges - Hidden on mobile -->
+                <div class="hidden md:flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                        </svg>
+                        <span>+10 mil alunos</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                        </svg>
+                        <span>+11 países</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>28 anos de experiência</span>
+                    </div>
+                </div>
 
-                        <!-- Trust indicators - Hidden on small screens -->
-                        <div class="hidden md:flex flex-wrap justify-center lg:justify-start items-center gap-6 mb-8 text-sm text-gray-400">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                                </svg>
-                                <span>+10 mil alunos</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>+11 países</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>28 anos de experiência</span>
-                            </div>
+                <!-- Value proposition - Hidden on mobile -->
+                <div class="mb-10 animate-fade-in hidden md:block" style="animation-delay: 0.2s;">
+                    <p class="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-6">
+                        <span class="text-white font-semibold">Mais de 10 mil pessoas já foram transformadas.</span><br>
+                        Seja capacitado a viver o chamado de Deus para sua vida!
+                    </p>
+                    
+                    <!-- Modern feature list -->
+                    <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-8">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Certificado de Conclusão</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Professores Especializados</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Certificação Reconhecida</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>100% Digital</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Right side - Form -->
-                    <div class="form-container p-8">
-                        <div class="text-center mb-6">
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                Preencha seus dados e ganhe
-                            </h3>
-                            <p class="text-green-400 text-xl font-semibold">
-                                sua aula gratuita agora!
-                            </p>
-                        </div>
+                <!-- CTA section -->
+                <div class="animate-fade-in" style="animation-delay: 0.4s;">
+                    <div class="flex justify-center items-center mb-8">
+                        <!-- Desktop CTA -->
+                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20">
+                            QUERO CONHECER O CURSO
+                        </a>
                         
-                        <!-- Iframe container -->
-                        <div class="w-full" style="height: 500px;">
-                            <iframe 
-                                frameborder="0" 
-                                scrolling="no" 
-                                src="https://app.ummense.com/form/1f00b069-b7cb-650c-b434-0affe9a01fe9?iframe=1" 
-                                width="100%" 
-                                height="100%"
-                                style="border-radius: 8px;">
-                            </iframe>
-                        </div>
+                        <!-- Mobile CTA -->
+                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] text-center leading-tight">
+                            Quero conhecer a grade do curso
+                        </a>
                     </div>
+                    
+                    <!-- Social proof -->
+                    <p class="text-sm text-gray-500">
+                        Junte-se a milhares de estudantes que já transformaram suas vidas
+                    </p>
                 </div>
             </div>
         </div>
@@ -205,18 +220,18 @@
     <!-- Authority Section -->
     <section class="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <!-- Background pattern -->
-        <div class="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(59,130,246,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.03) 1px, transparent 1px); background-size: 60px 60px;"></div>
         
         <div class="container mx-auto px-4 relative z-10">
             <div class="max-w-7xl mx-auto">
                 <!-- Section header -->
                 <div class="text-center mb-16">
                     <div class="inline-block px-4 py-2 bg-blue-600/10 border border-blue-600/20 rounded-full text-blue-400 text-sm font-medium mb-4">
-                        Por que escolher a FATEMI?
+                        Nossa História
                     </div>
                     <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                         <span class="text-blue-400">28 anos</span> formando líderes<br>
-                        através do <span class="bg-gradient-text">ensino prático da Palavra</span>
+                        através do <span class="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">ensino prático da Palavra</span>
                     </h2>
                 </div>
 
@@ -224,27 +239,27 @@
                     <!-- Text content -->
                     <div class="space-y-8 order-2 lg:order-1 text-center lg:text-left">
                         <p class="text-lg text-white leading-relaxed">
-                            Experimente nossa metodologia única que já transformou mais de 10 mil vidas. Nossa aula gratuita é uma amostra do ensino de excelência que oferecemos há quase três décadas.
+                            Ao longo de 28 anos, a FATEMI tem se dedicado a formar líderes e transformar vidas através de um ensino que vai além da teoria. Nossos módulos são pensados para que você aprenda os princípios bíblicos e como vivenciá-los intensamente todos os dias.
                         </p>
                         
                         <div class="flex flex-col lg:flex-row flex-wrap gap-4 mb-8 items-center lg:items-start">
                             <div class="flex items-center gap-2 text-green-400">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <span class="text-white">Ensino prático e aplicado</span>
                             </div>
                             <div class="flex items-center gap-2 text-green-400">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <span class="text-white">Professores especializados</span>
                             </div>
                             <div class="flex items-center gap-2 text-green-400">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                <span class="text-white">Conteúdo de qualidade</span>
+                                <span class="text-white">Formação completa</span>
                             </div>
                         </div>
                     </div>
@@ -253,55 +268,63 @@
                     <div class="flex items-center justify-center order-1 lg:order-2">
                         <div class="relative w-full max-w-md mx-auto">
                             <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg blur-2xl"></div>
-                            <img src="/lovable-uploads/fa64f8c5-33ef-40a2-b99e-ca09e9852779.png" alt="Templo FATEMI" class="w-full relative z-10 rounded-lg shadow-2xl">
+                            <img src="lovable-uploads/fototemplo" alt="Templo FATEMI" class="w-full relative z-10 rounded-lg shadow-2xl">
                         </div>
                     </div>
                 </div>
 
                 <!-- Stats grid -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm rounded-lg p-6 text-center shadow-xl">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                            </svg>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">+10 mil</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">alunos formados</div>
+                            <div class="text-xs text-blue-100">Vidas transformadas</div>
                         </div>
-                        <div class="text-3xl font-bold mb-1 text-white">+10 mil</div>
-                        <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">alunos formados</div>
-                        <div class="text-xs text-blue-100">Vidas transformadas</div>
                     </div>
                     
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm rounded-lg p-6 text-center shadow-xl">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"></path>
-                            </svg>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+                                </svg>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">+11</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">países alcançados</div>
+                            <div class="text-xs text-blue-100">Impacto global</div>
                         </div>
-                        <div class="text-3xl font-bold mb-1 text-white">+11</div>
-                        <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">países alcançados</div>
-                        <div class="text-xs text-blue-100">Impacto global</div>
                     </div>
                     
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm rounded-lg p-6 text-center shadow-xl">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">28</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">anos de experiência</div>
+                            <div class="text-xs text-blue-100">Tradição e excelência</div>
                         </div>
-                        <div class="text-3xl font-bold mb-1 text-white">28</div>
-                        <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">anos de experiência</div>
-                        <div class="text-xs text-blue-100">Tradição e excelência</div>
                     </div>
                     
-                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm rounded-lg p-6 text-center shadow-xl">
-                        <div class="flex justify-center mb-4">
-                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-                            </svg>
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-700 border border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 group shadow-xl rounded-lg">
+                        <div class="p-6 text-center">
+                            <div class="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="text-3xl font-bold mb-1 text-white">24/7</div>
+                            <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">acesso à plataforma</div>
+                            <div class="text-xs text-blue-100">Estude quando quiser</div>
                         </div>
-                        <div class="text-3xl font-bold mb-1 text-white">24/7</div>
-                        <div class="text-sm text-white uppercase tracking-wider font-medium mb-1">acesso à plataforma</div>
-                        <div class="text-xs text-blue-100">Estude quando quiser</div>
                     </div>
                 </div>
             </div>
@@ -313,82 +336,90 @@
         <div class="container mx-auto px-4">
             <div class="max-w-5xl mx-auto text-center">
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
-                    Esta aula gratuita é para você que...
+                    Este curso é para você que...
                 </h2>
                 
                 <p class="text-lg text-blue-200 mb-12">
-                    Se você se identifica com pelo menos um desses pontos, essa aula foi feita para você:
+                    Se você se identifica com pelo menos um desses pontos, a FATEMI foi feita para você:
                 </p>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-black border-blue-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-lg font-bold text-white mb-2 leading-relaxed">
-                                    Deseja crescer no conhecimento da Palavra
-                                </p>
-                                <p class="text-blue-200">
-                                    Aprofunde seu conhecimento teológico
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-black border-blue-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-lg font-bold text-white mb-2 leading-relaxed">
-                                    Quer ser capacitado para servir ministerialmente
-                                </p>
-                                <p class="text-blue-200">
-                                    Busca preparo sólido para o ministério
-                                </p>
+                    <div class="bg-black border border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8">
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-lg font-bold text-white mb-2 leading-relaxed">
+                                        Deseja crescer no conhecimento da Palavra
+                                    </p>
+                                    <p class="text-blue-200">
+                                        Aprofunde seu conhecimento teológico
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-black border-blue-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-                                </svg>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-lg font-bold text-white mb-2 leading-relaxed">
-                                    Busca desenvolver liderança cristã
-                                </p>
-                                <p class="text-blue-200">
-                                    Baseado em princípios bíblicos aplicados
-                                </p>
+                    <div class="bg-black border border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8">
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-lg font-bold text-white mb-2 leading-relaxed">
+                                        Quer ser capacitado para servir ministerialmente
+                                    </p>
+                                    <p class="text-blue-200">
+                                        Buscam preparo sólido para o ministério
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-black border-blue-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="flex items-start gap-6">
-                            <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
-                                </svg>
+                    <div class="bg-black border border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8">
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-lg font-bold text-white mb-2 leading-relaxed">
+                                        Busca desenvolver liderança cristã
+                                    </p>
+                                    <p class="text-blue-200">
+                                        Baseado em princípios bíblicos aplicados
+                                    </p>
+                                </div>
                             </div>
-                            <div class="text-left">
-                                <p class="text-lg font-bold text-white mb-2 leading-relaxed">
-                                    Deseja conhecer mais sobre o chamado de Deus para sua vida
-                                </p>
-                                <p class="text-blue-200">
-                                    Viva uma vida com propósito
-                                </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-black border border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8">
+                            <div class="flex items-start gap-6">
+                                <div class="flex-shrink-0 bg-blue-800 p-4 rounded-full border border-blue-600">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h6m4-10.172V6.828a4 4 0 00-1.172-2.828L16 2H8L5.172 4.828A4 4 0 004 7.656V20a2 2 0 002 2h12a2 2 0 002-2V7.656a4 4 0 00-1.172-2.828z"></path>
+                                    </svg>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-lg font-bold text-white mb-2 leading-relaxed">
+                                        Deseja conhecer mais sobre o chamado de Deus para sua vida
+                                    </p>
+                                    <p class="text-blue-200">
+                                        Viva uma vida com propósito
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -396,9 +427,15 @@
 
                 <div class="mt-12 bg-white text-black p-8 rounded-lg">
                     <p class="text-xl font-medium">
-                        <strong>Se você respondeu "SIM" para qualquer um desses pontos...</strong><br />
-                        Nossa aula gratuita é perfeita para você!
+                        <strong>Se você respondeu "SIM" para qualquer um desses pontos...</strong><br>
+                        Você encontrou o curso certo para você!
                     </p>
+                </div>
+
+                <div class="mt-12 px-4">
+                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                        <span class="text-center">Quero ser aluno FATEMI</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -415,143 +452,137 @@
                     <p class="text-lg text-white max-w-4xl mx-auto leading-relaxed mb-8">
                         Durante o curso, você terá aulas com grandes professores, dedicados ao ensino da Palavra de forma prática. Seja capacitado e inspirado a viver a Verdade em todas as áreas da sua vida! Conheça alguns de seus professores:
                     </p>
+                    
+                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        QUERO CURSAR TEOLOGIA
+                    </a>
                 </div>
 
                 <div class="relative max-w-4xl mx-auto">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Professor 1 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1.png" 
-                                        alt="Pio Carvalho" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Pio Carvalho</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+                    <div class="overflow-hidden">
+                        <div class="flex transition-transform duration-300 ease-in-out" id="carousel">
+                            <!-- Teacher 1 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/1016dca9-cbac-4903-9d05-6b5a9a75e8c1" alt="Pio Carvalho" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Pio Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Doutor (Honoris Causa) em Teologia, especialista em liderança e administração. Pastor, escritor e palestrante. Presidente do Colegiado Ministerial Abba.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Professor 2 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05.png" 
-                                        alt="Romulo Carvalho" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Romulo Carvalho</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
+                            <!-- Teacher 2 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/871dd152-a8de-4acc-8e75-20e20ac9ed05" alt="Romulo Carvalho" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Romulo Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e Engenharia Florestal, com estudos em liderança pastoral e teologia do Novo Testamento, pastor presidente da Comunhão Cristã Abba e escritor.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Professor 3 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b.png" 
-                                        alt="Rafael Mincewicz" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Rafael Mincewicz</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
+                            <!-- Teacher 3 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/668ed03b-0488-490f-a7ca-ce2728f47b0b" alt="Rafael Mincewicz" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Rafael Mincewicz</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em História, Teologia e Filosofia, especialista em História Cultural e diretor acadêmico da FATEMI.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Professor 4 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed.png" 
-                                        alt="Plácido Casarini" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Plácido Casarini</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
+                            <!-- Teacher 4 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/a4010332-ba77-49cb-b706-402266b366ed" alt="Plácido Casarini" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Plácido Casarini</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia, capelão educacional e pastor da Comunhão Cristã Abba Fazenda do Rio Grande.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Professor 5 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1.png" 
-                                        alt="Tom Ros" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Tom Ros</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
+                            <!-- Teacher 5 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/66f3d17c-41f1-4dad-82cc-ad7a6fdfe5a1" alt="Tom Ros" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Tom Ros</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Teologia e mestre em administração. Grande experiência na área de evangelização e no ensino da palavra.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Professor 6 -->
-                        <div class="bg-gray-900 border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg border">
-                            <div class="p-0 flex flex-col h-full">
-                                <!-- Photo -->
-                                <div class="aspect-square overflow-hidden">
-                                    <img 
-                                        src="/lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3.png" 
-                                        alt="Rose Carvalho" 
-                                        class="w-full h-full object-cover" 
-                                    />
-                                </div>
-                                
-                                <div class="p-6 flex-1 flex flex-col">
-                                    <h3 class="text-xl font-bold text-white mb-3">Rose Carvalho</h3>
-                                    <div class="flex-1">
-                                        <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
+                            <!-- Teacher 6 -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-2">
+                                <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden h-full rounded-lg">
+                                    <div class="p-0 flex flex-col h-full">
+                                        <div class="aspect-square overflow-hidden">
+                                            <img src="lovable-uploads/433fa7a6-8137-4a38-a567-3e46d2b492c3" alt="Rose Carvalho" class="w-full h-full object-cover">
+                                        </div>
+                                        <div class="p-6 flex-1 flex flex-col">
+                                            <h3 class="text-xl font-bold text-white mb-3">Rose Carvalho</h3>
+                                            <div class="flex-1">
+                                                <p class="text-blue-200 text-sm leading-relaxed">Bacharel em Pedagogia e Teologia. Coordenadora de projetos sociais como o Operação Vida que atua em diversas localidades do Brasil.</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 border border-white/20 text-white hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 border border-white/20 text-white hover:bg-white/20 w-10 h-10 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Formation Section -->
-    <section class="bg-gray-900 py-20">
+    <section class="bg-gray-900 py-11">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
@@ -561,14 +592,23 @@
                     <p class="text-xl text-gray-300 mb-8 font-medium">
                         Estude quando quiser e onde quiser
                     </p>
+                    
+                    <div class="px-4">
+                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 mb-12 w-full sm:w-auto">
+                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            <span class="text-center">Começar minha formação</span>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Certificado de Conclusão</h3>
@@ -576,11 +616,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Flexibilidade Total</h3>
@@ -588,11 +628,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h6m4-10.172V6.828a4 4 0 00-1.172-2.828L16 2H8L5.172 4.828A4 4 0 004 7.656V20a2 2 0 002 2h12a2 2 0 002-2V7.656a4 4 0 00-1.172-2.828z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Estude Onde e Quando Quiser</h3>
@@ -600,11 +640,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Material Completo Incluso</h3>
@@ -612,11 +652,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Suporte Pedagógico</h3>
@@ -624,11 +664,11 @@
                         </div>
                     </div>
 
-                    <div class="bg-black border-gray-700 rounded-lg p-8 border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                        <div class="text-center">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="p-8 text-center">
                             <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-lg font-bold text-white mb-2">Avaliações Formativas</h3>
@@ -642,11 +682,17 @@
                         <h3 class="text-2xl font-bold text-white mb-4">
                             Plataforma Completa de Ensino
                         </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed">
+                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
                             <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
                             baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
                             <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
                         </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
+                            <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                                <span class="text-center">Quero começar hoje</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -654,282 +700,531 @@
     </section>
 
     <!-- What You Learn Section -->
-    <section class="bg-black py-24">
+    <section class="bg-black overflow-hidden py-17">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você vai <span class="text-blue-400">aprender</span>
+                        O que você <span class="text-blue-400">aprenderá</span>
                     </h2>
-                    <p class="text-xl text-gray-300">
-                        Currículo completo e prático para sua formação ministerial
+                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
                     </p>
+                    
+                    <div class="px-4">
+                        <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            <span class="text-center">Quero me inscrever agora</span>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <div class="space-y-6">
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">📖 Teologia Sistemática</h3>
-                            <p class="text-gray-300">Estudo organizado das doutrinas fundamentais da fé cristã</p>
+                <!-- Modules Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
                         </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">📜 Hermenêutica Bíblica</h3>
-                            <p class="text-gray-300">Métodos corretos de interpretação das Escrituras</p>
-                        </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">⛪ História da Igreja</h3>
-                            <p class="text-gray-300">Desenvolvimento do cristianismo através dos séculos</p>
-                        </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">🎤 Homilética</h3>
-                            <p class="text-gray-300">Arte e técnica da pregação eficaz</p>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
                         </div>
                     </div>
 
-                    <div class="space-y-6">
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">👥 Liderança Cristã</h3>
-                            <p class="text-gray-300">Princípios bíblicos para liderança efetiva</p>
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
                         </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">🕊️ Pneumatologia</h3>
-                            <p class="text-gray-300">Doutrina do Espírito Santo e seus dons</p>
-                        </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">🌍 Missões</h3>
-                            <p class="text-gray-300">Estratégias para evangelização e plantação de igrejas</p>
-                        </div>
-                        
-                        <div class="bg-gray-900 p-6 rounded-lg border border-gray-700">
-                            <h3 class="text-xl font-bold text-white mb-3">💝 Aconselhamento Pastoral</h3>
-                            <p class="text-gray-300">Técnicas para cuidado pastoral e aconselhamento</p>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
                         </div>
                     </div>
+
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
+                        <div class="pb-4 p-6">
+                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center space-y-6 px-4">
+                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-4 w-full sm:w-auto">
+                        <span class="text-center">Ver Grade Curricular Completa</span>
+                        <svg class="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    
+                    <p class="text-gray-400 mt-4">
+                        Descubra todos os módulos que vão transformar sua vida
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Investment Section -->
-    <section class="bg-gradient-to-br from-gray-900 via-black to-gray-900 py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                    Investimento no seu <span class="text-green-400">futuro ministerial</span>
-                </h2>
-                
-                <div class="bg-black border border-gray-700 rounded-2xl p-8 mb-8">
-                    <div class="mb-6">
-                        <div class="text-gray-400 line-through text-2xl mb-2">De R$ 2.497,00</div>
-                        <div class="text-5xl font-bold text-green-400 mb-2">R$ 997,00</div>
-                        <div class="text-gray-300">ou 12x de R$ 97,00</div>
-                    </div>
-                    
-                    <div class="bg-green-600/10 border border-green-600/20 rounded-lg p-4 mb-6">
-                        <p class="text-green-400 font-semibold">
-                            🎁 Oferta especial: Economize R$ 1.500,00
-                        </p>
-                    </div>
-                    
-                    <div class="space-y-3 text-left">
-                        <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-white">Curso completo de Teologia Ministerial</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-white">Material didático completo</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-white">Certificado de conclusão</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-white">Suporte pedagógico especializado</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span class="text-white">Acesso vitalício à plataforma</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="bg-gray-900 py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que nossos <span class="text-blue-400">alunos dizem</span>
-                    </h2>
-                    <p class="text-xl text-gray-300">
-                        Vidas transformadas através do ensino da Palavra
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-black border border-gray-700 rounded-lg p-6">
-                        <div class="flex mb-4">
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            "A FATEMI transformou minha vida ministerial. O conhecimento adquirido me capacitou para servir com excelência."
-                        </p>
-                        <div>
-                            <p class="text-white font-semibold">Pastor João</p>
-                            <p class="text-gray-400 text-sm">Formado em 2019</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-black border border-gray-700 rounded-lg p-6">
-                        <div class="flex mb-4">
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            "Curso excelente! A metodologia é prática e os professores são muito experientes. Recomendo!"
-                        </p>
-                        <div>
-                            <p class="text-white font-semibold">Maria Silva</p>
-                            <p class="text-gray-400 text-sm">Formada em 2020</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-black border border-gray-700 rounded-lg p-6">
-                        <div class="flex mb-4">
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                            </svg>
-                        </div>
-                        <p class="text-gray-300 mb-4">
-                            "Flexibilidade total para estudar. Consegui conciliar com meu trabalho perfeitamente."
-                        </p>
-                        <div>
-                            <p class="text-white font-semibold">Carlos Santos</p>
-                            <p class="text-gray-400 text-sm">Formado em 2021</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
     <section class="py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <!-- Background elements -->
         <div class="absolute inset-0">
             <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
             <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
         </div>
         
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto text-center">
+            <div class="max-w-5xl mx-auto text-center">
+                <!-- Section header -->
                 <div class="mb-12">
-                    <div class="inline-block bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4 px-6 py-3">
-                        Última Chance
+                    <div class="inline-block bg-green-600/10 border border-green-600/20 rounded-full text-green-400 text-sm font-medium mb-4 px-5 py-3">
+                        Investimento
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        Não perca essa <span class="text-green-400">oportunidade única</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 py-2">
+                        Sua transformação começa <span class="text-green-400">hoje</span>
                     </h2>
-                    <p class="text-xl text-white leading-relaxed mb-8">
-                        Milhares de pessoas já experimentaram nossa aula gratuita e decidiram transformar suas vidas através do estudo da Palavra. 
-                        <span class="text-green-400 font-semibold">Seja a próxima!</span>
+                    <p class="text-xl text-white font-medium">
+                        Investir em sua formação ministerial nunca foi tão acessível
                     </p>
                 </div>
 
-                <!-- Call to action pointing to form -->
-                <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700/50 rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold text-white mb-4">
-                        👆 Preencha o formulário acima e receba sua aula gratuita agora mesmo!
-                    </h3>
-                    <div class="flex justify-center items-center gap-4 text-sm text-gray-400">
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+               <!-- Pricing card -->
+<div class="max-w-2xl mx-auto mb-12">
+  <div class="bg-gradient-to-br from-gray-900 to-black border border-gray-700/50 rounded-2xl p-8 relative overflow-hidden">
+    <!-- Glow effect -->
+    <div class="absolute inset-0 bg-gradient-to-r from-green-600/5 to-blue-600/5 rounded-2xl"></div>
+
+    <div class="relative z-10">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-green-600/20 border border-green-600/30 rounded-full px-4 py-2 mb-6">
+        <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <span class="text-green-400 font-medium">Oferta Especial</span>
+      </div>
+
+      <!-- Price -->
+      <div class="mb-8 text-center">
+  <div class="text-2xl text-blue-200 mb-2">Parcele em até</div>
+  <div class="inline-flex flex-col items-center justify-center">
+    <span class="text-base text-white mb-1">24x de</span>
+    <span class="text-6xl md:text-7xl font-bold text-green-400">R$ 197</span>
+  </div>
+  <div class="text-blue-200 mt-4">
+    ou <span class="text-white font-semibold">R$ 4.728</span> à vista
+  </div>
+  <div class="text-blue-200 text-lg mt-1">
+    no cartão de crédito
+  </div>
+</div>
+
+      <!-- Features -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 justify-items-center">
+  <div class="flex flex-col items-center gap-3 text-center">
+    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+      <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+    </div>
+    <span class="text-white">Sem comprometer seu limite total</span>
+  </div>
+  
+  <div class="flex flex-col items-center gap-3 text-center">
+    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+      <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+      </svg>
+    </div>
+    <span class="text-white">Aprovação imediata</span>
+  </div>
+  
+  <div class="flex flex-col items-center gap-3 text-center">
+    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+      <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
+    </div>
+    <span class="text-white">Acesso liberado na hora</span>
+  </div>
+  
+  <div class="flex flex-col items-center gap-3 text-center">
+    <div class="w-8 h-8 rounded-full bg-green-600/20 border border-green-600/30 flex items-center justify-center flex-shrink-0">
+      <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+      </svg>
+    </div>
+    <span class="text-white">Sem burocracia</span>
+  </div>
+</div>
+
+
+      <!-- CTA Button Corrigido -->
+      <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="w-full block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-6 px-8 rounded-full text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 mb-6 text-center break-words">
+        QUERO GARANTIR MINHA VAGA
+      </a>
+
+      <!-- Security badge -->
+      <div class="flex items-center justify-center gap-2 mt-6 text-sm text-blue-200">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+        </svg>
+        <span>Pagamento 100% seguro e protegido</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="bg-gray-900 py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        <span class="text-blue-400">Mais de 10 mil</span> vidas transformadas
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-4 font-medium">
+                        Veja o que acontece quando você decide investir em sua transformação
+                    </p>
+                    <p class="text-lg text-gray-400">
+                        Estas são apenas algumas das <strong class="text-white">milhares de histórias reais</strong> de quem ousou mudar
+                    </p>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full rounded-lg">
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            
+                            <svg class="w-8 h-8 text-gray-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                             </svg>
-                            <span>100% Gratuito</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Sem Compromisso</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Acesso Imediato</span>
+                            
+                            <p class="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+                                <strong class="text-white">"Esse curso ajudou a transformar minha história."</strong>
+                            </p>
+                            
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+                                    <span class="text-black font-bold text-lg">T</span>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white">Tauan Jhonny</div>
+                                    <div class="text-sm text-gray-400">Aluno FATEMI</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full rounded-lg">
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            
+                            <svg class="w-8 h-8 text-gray-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                            
+                            <p class="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+                                <strong class="text-white">"Tive a imensa oportunidade de iniciar e concluir o Curso de Teologia Ministerial e Prática, um Curso que impactou a minha vida de uma forma tremenda, algo sobrenatural. A revelação da palavra de Deus ministrada nesse curso é tremenda, tem mudado a vida de muitas pessoas aos arredores do mundo. Recomendo sem sombra de dúvida!"</strong>
+                            </p>
+                            
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+                                    <span class="text-black font-bold text-lg">O</span>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white">Oeslen Ribeiro</div>
+                                    <div class="text-sm text-gray-400">Aluno FATEMI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-black border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full rounded-lg">
+                        <div class="p-8 flex flex-col h-full">
+                            <div class="flex mb-4">
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <svg class="w-5 h-5 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            
+                            <svg class="w-8 h-8 text-gray-600 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                            </svg>
+                            
+                            <p class="text-gray-300 mb-6 leading-relaxed text-lg flex-grow">
+                                <strong class="text-white">"Simplesmente o melhor curso de teologia do Sul do Brasil..."</strong>
+                            </p>
+                            
+                            <div class="flex items-center gap-3 mt-auto">
+                                <div class="bg-white w-12 h-12 rounded-full flex items-center justify-center">
+                                    <span class="text-black font-bold text-lg">L</span>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white">Luana Lopes</div>
+                                    <div class="text-sm text-gray-400">Aluna FATEMI</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center">
+                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        COMECE AGORA
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-24">
+        <!-- Background elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <!-- Grid pattern -->
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(59,130,246,.02) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.02) 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Logo -->
+                <div class="mb-8">
+                    <div class="relative inline-block">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-full blur-2xl"></div>
+                        <img src="lovable-uploads/8c4056b9-fcb3-4b64-b4ee-12ce3da9013c" alt="FATEMI Logo" class="w-32 h-32 mx-auto relative z-10">
+                    </div>
+                </div>
+
+                <!-- Headline -->
+                <div class="mb-8">
+                    <div class="inline-block px-4 py-2 bg-yellow-600/10 border border-yellow-600/20 rounded-full text-yellow-400 text-sm font-medium mb-4">
+                        Transforme Sua Vida
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Comece sua jornada ministerial hoje!
+                    </h3>
+                    <p class="text-lg text-gray-300">
+                        Junte-se aos milhares de alunos que já transformaram suas vidas
+                    </p>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+                    <div class="flex items-center gap-2 text-yellow-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                        </svg>
+                        <span class="text-white">28 anos de experiência</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-purple-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-white">+10 mil alunos formados</span>
+                    </div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+                    <div class="flex items-center gap-2 text-yellow-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-white">Acesso liberado imediatamente</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-yellow-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        <span class="text-white">Atendimento personalizado</span>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="mb-6 px-4">
+                    <a href="https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!" target="_blank" rel="noopener noreferrer"  class="bg-gradient-to-r from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 text-white font-bold py-6 px-6 sm:px-12 rounded-full text-lg sm:text-xl shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-yellow-500/20 w-full sm:w-auto">
+                        <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                        <span class="text-center">Quero ser aluno da FATEMI</span>
+                    </a>
+                </div>
+
+                <!-- Value proposition -->
+                <p class="text-sm text-gray-400">
+                    <span class="text-yellow-400 font-semibold">✓ Sem compromisso</span> • 
+                    <span class="text-blue-400 font-semibold"> ✓ Formação completa</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Smooth scrolling for any internal links
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add any additional JavaScript functionality here if needed
-            console.log('FATEMI - Aula Gratuita page loaded successfully');
+        // WhatsApp functions
+        function openWhatsApp() {
+            window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Estou%20interessado%20no%20curso%20de%20Teologia%20da%20FATEMI!', '_blank');
+        }
+
+        function openWhatsAppGrade() {
+            window.open('https://wa.me/5541992059071?text=Ol%C3%A1!%20Quero%20conhecer%20a%20grade%20curricular%20do%20curso!', '_blank');
+        }
+
+        // Teachers Carousel
+        let currentSlide = 0;
+        const carousel = document.getElementById('carousel');
+        const totalSlides = 6;
+        const slidesToShow = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+        const maxSlide = totalSlides - slidesToShow;
+
+        function updateCarousel() {
+            const translateX = -(currentSlide * (100 / slidesToShow));
+            carousel.style.transform = `translateX(${translateX}%)`;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateCarousel();
         });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentSlide = currentSlide <= 0 ? maxSlide : currentSlide - 1;
+            updateCarousel();
+        });
+
+        // Auto-play carousel
+        setInterval(() => {
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateCarousel();
+        }, 2000);
+
+        // Update carousel on resize
+        window.addEventListener('resize', () => {
+            const newSlidesToShow = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+            if (newSlidesToShow !== slidesToShow) {
+                location.reload(); // Simple solution for responsive carousel
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        function scrollToContact() {
+            const contactSection = document.getElementById('final-cta');
+            contactSection?.scrollIntoView({ behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
+
