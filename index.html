@@ -11,11 +11,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FATEMI - Curso de Teologia Ministerial</title>
-    <meta name="description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
+    <meta name="description" content="O melhor Curso de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
     <meta name="author" content="FATEMI" />
     
     <meta property="og:title" content="FATEMI - Curso de Teologia Ministerial" />
-    <meta property="og:description" content="O melhor Curso Livre de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
+    <meta property="og:description" content="O melhor Curso de Teologia Ministerial do Brasil! Mais de 10 mil alunos formados em 28 anos de experiência." />
     <meta property="og:type" content="website" />
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     keyframes: {
                         fadeIn: {
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
                         }
                     }
                 }
@@ -127,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
                         <span class="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                            Curso Livre de<br>
+                            Curso de<br>
                             Teologia Ministerial
                         </span>
                     </h1>
@@ -192,8 +192,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="animate-fade-in" style="animation-delay: 0.4s;">
                     <div class="flex justify-center items-center mb-8">
                         <div class="w-full max-w-md bg-gray-900 text-white p-8 rounded-lg shadow-2xl border border-blue-500/20">
-                            <h3 class="text-2xl font-bold mb-6 text-center">Preencha o formulário para saber mais!</h3>
-                            <form id="contactForm" class="space-y-4">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Quero conhecer o curso!</h3>
+                            <form id="contactForm" action="processa_formulario.php" method="POST" class="space-y-4">
                                 <div>
                                     <label for="name" class="block text-left text-sm font-medium text-gray-200 mb-1">Nome Completo</label>
                                     <input type="text" id="name" name="name" required
@@ -209,13 +209,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <input type="tel" id="phone" name="phone" required
                                            class="mt-1 block w-full px-4 py-2 border border-gray-700 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm bg-gray-800 text-white">
                                 </div>
+                                <!-- Campo oculto para passar o link base do WhatsApp -->
+                                <input type="hidden" name="whatsapp_link" value="https://wa.me/5541992059071">
+                                <!-- Campos ocultos para fbclid e gclid serão adicionados via JavaScript -->
                                 <button type="submit"
                                         class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-lg shadow-xl transform hover:scale-105 transition-all duration-300">
-                                    ENVIAR INFORMAÇÕES
+                                    SOLICITAR CONTATO
                                 </button>
                             </form>
-                            <!-- A mensagem de sucesso não será mais exibida aqui, pois o usuário será redirecionado -->
-                            <!-- <p id="formMessage" class="mt-4 text-center text-sm text-green-400 hidden">Formulário enviado com sucesso!</p> -->
                         </div>
                     </div>
                     
@@ -260,14 +261,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </svg>
                                 <span class="text-white">Ensino prático e aplicado</span>
                             </div>
-                            <div class="flex items-center gap-2 text-green-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <span class="text-white">Professores especializados</span>
                             </div>
-                            <div class="flex items-center gap-2 text-green-400">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="flex items-center gap-2">
+                                <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                                 <span class="text-white">Formação completa</span>
@@ -738,662 +739,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="pb-4 p-6">
                             <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg p-8 border border-gray-700 mb-8">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                            <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                                <span class="text-center">Quero começar hoje</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Learn Section -->
-    <section class="bg-black overflow-hidden py-17">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você <span class="text-blue-400">aprenderá</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
-                    </p>
-                    
-                    <div class="px-4">
-                        <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                            <span class="text-center">Quero me inscrever agora</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Grade de Módulos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg p-8 border border-gray-700 mb-8">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                            <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                                <span class="text-center">Quero começar hoje</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Learn Section -->
-    <section class="bg-black overflow-hidden py-17">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você <span class="text-blue-400">aprenderá</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
-                    </p>
-                    
-                    <div class="px-4">
-                        <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                            <span class="text-center">Quero me inscrever agora</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Grade de Módulos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg p-8 border border-gray-700 mb-8">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                            <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                                <span class="text-center">Quero começar hoje</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Learn Section -->
-    <section class="bg-black overflow-hidden py-17">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você <span class="text-blue-400">aprenderá</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
-                    </p>
-                    
-                    <div class="px-4">
-                        <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                            <span class="text-center">Quero me inscrever agora</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Grade de Módulos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg p-8 border border-gray-700 mb-8">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                            <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                                <span class="text-center">Quero começar hoje</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Learn Section -->
-    <section class="bg-black overflow-hidden py-17">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você <span class="text-blue-400">aprenderá</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
-                    </p>
-                    
-                    <div class="px-4">
-                        <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                            <span class="text-center">Quero me inscrever agora</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Grade de Módulos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra quem você realmente é em Cristo e viva essa nova identidade todos os dias.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Fundamentos de Cristo</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Entenda profundamente a obra de Cristo e como ela transforma cada área da sua vida.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Segredo dos Tabernáculos</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Descubra como Cristo está presente desde o Antigo Testamento até hoje.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Prática da Palavra</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Métodos práticos para estudar a Bíblia e aplicar seus princípios no dia a dia.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Panorama da Lei e da Graça</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Estude detalhadamente o Antigo e o Novo Testamento</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-xl text-white mb-4">Liderança Transformacional</h3>
-                        </div>
-                        <div class="p-6 pt-0">
-                            <p class="text-gray-400 leading-relaxed">Desenvolva habilidades para liderar e impactar sua comunidade de forma real.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black rounded-lg p-8 border border-gray-700 mb-8">
-                    <div class="max-w-4xl mx-auto text-center">
-                        <h3 class="text-2xl font-bold text-white mb-4">
-                            Plataforma Completa de Ensino
-                        </h3>
-                        <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                            <strong class="text-white">Acesso total à nossa plataforma</strong> para assistir aulas gravadas em alta qualidade, 
-                            baixar material de apoio exclusivo e tirar dúvidas diretamente com os professores. 
-                            <strong class="text-white">Tudo pensado para acelerar seu crescimento.</strong>
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center px-4">
-                            <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                                <span class="text-center">Quero começar hoje</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You Learn Section -->
-    <section class="bg-black overflow-hidden py-17">
-        <div class="container mx-auto px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-                        O que você <span class="text-blue-400">aprenderá</span>
-                    </h2>
-                    <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Ao longo de 2 anos de curso, disponibilizamos um currículo completo e transformador, com módulos que abrangem desde os fundamentos da fé até a aplicação prática da Palavra de Deus em todas as áreas da sua vida. São 16 módulos para você estudar. Conheça alguns dos módulos:
-                    </p>
-                    
-                    <div class="px-4">
-                        <a href="#hero-form-section" onclick="scrollToForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 sm:px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-                            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                            </svg>
-                            <span class="text-center">Quero me inscrever agora</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Grade de Módulos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-900 border border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-lg">
-                        <div class="pb-4 p-6">
-                            <div class="bg-black w-12 h-12 rounded-full flex items-center justify-center mb-4 border border-gray-600">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                                 </svg>
                             </div>
                             <h3 class="text-xl text-white mb-4">Verbo e a Fé</h3>
@@ -1883,17 +1229,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         // Função de rolagem suave para o formulário
         function scrollToForm() {
-            const formSection = document.getElementById('hero-form-section');
-            formSection?.scrollIntoView({ behavior: 'smooth' });
+            // Altera o alvo do scroll para o formulário em si
+            const formElement = document.getElementById('contactForm');
+            if (formElement) {
+                formElement.scrollIntoView({ behavior: 'smooth', block: 'center' }); // 'block: "center"' tenta centralizar o elemento na tela
+            }
         }
 
-        // Lógica de envio do formulário
+        // Função para obter parâmetros da URL
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+
+        // Lógica de envio do formulário, rastreamento GTM e redirecionamento condicional
         document.addEventListener('DOMContentLoaded', () => {
+            // --- DEBUG: Log the full query string on page load ---
+            console.log('DEBUG: location.search on DOMContentLoaded:', location.search);
+
             const contactForm = document.getElementById('contactForm');
-            // A mensagem de sucesso não será mais exibida aqui, então 'formMessage' não é mais necessário
-            // const formMessage = document.getElementById('formMessage'); 
 
             if (contactForm) {
+                // Captura os parâmetros da URL
+                const fbclid = getUrlParameter('fbclid');
+                const gclid = getUrlParameter('gclid');
+
+                // --- DEBUG: Log the captured parameters ---
+                console.log('DEBUG: fbclid capturado:', fbclid);
+                console.log('DEBUG: gclid capturado:', gclid);
+
+                // Adiciona campos ocultos ao formulário se os parâmetros existirem
+                if (fbclid) {
+                    const hiddenInput = document.createElement('input');
+                    hiddenInput.type = 'hidden';
+                    hiddenInput.name = 'fbclid';
+                    hiddenInput.value = fbclid;
+                    contactForm.appendChild(hiddenInput);
+                    console.log('fbclid adicionado ao formulário:', fbclid);
+                }
+                if (gclid) {
+                    const hiddenInput = document.createElement('input');
+                    hiddenInput.type = 'hidden';
+                    hiddenInput.name = 'gclid';
+                    hiddenInput.value = gclid;
+                    contactForm.appendChild(hiddenInput);
+                    console.log('gclid adicionado ao formulário:', gclid);
+                }
+
                 contactForm.addEventListener('submit', async (event) => {
                     event.preventDefault(); // Impede o envio padrão do formulário
 
@@ -1901,17 +1285,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const phone = document.getElementById('phone').value;
+                    const whatsappLinkBase = document.querySelector('input[name="whatsapp_link"]').value;
 
-                    // Monta a mensagem para o WhatsApp
-                    const whatsappMessage = encodeURIComponent(`Olá! Meu nome é ${name}, meu e-mail é ${email} e meu telefone é ${phone}. Estou interessado no curso de Teologia da FATEMI!`);
-                    const whatsappLink = `https://wa.me/5541992059071?text=${whatsappMessage}`;
+                    // Cria um objeto FormData para enviar os dados para o PHP
+                    const formData = new FormData();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('phone', phone);
+                    formData.append('whatsapp_link', whatsappLinkBase);
+                    
+                    // Adiciona os parâmetros de clique capturados, se existirem
+                    if (fbclid) {
+                        formData.append('fbclid', fbclid);
+                    }
+                    if (gclid) {
+                        formData.append('gclid', gclid);
+                    }
 
-                    // Redireciona o usuário para o WhatsApp
-                    window.location.href = whatsappLink;
+                    // --- Rastreamento GTM: Envia um evento para o Data Layer ---
+                    if (typeof dataLayer !== 'undefined') {
+                        dataLayer.push({
+                            event: 'form_submit', // Nome do evento personalizado
+                            form_name: 'Contato FATEMI', // Nome descritivo do formulário
+                            user_name: name,
+                            user_email: email,
+                            user_phone: phone,
+                            form_destination: 'WhatsApp' // Para onde o usuário será redirecionado
+                        });
+                        console.log('Evento GTM enviado:', {
+                            event: 'form_submit',
+                            form_name: 'Contato FATEMI',
+                            user_name: name,
+                            user_email: email,
+                            user_phone: phone,
+                            form_destination: 'WhatsApp'
+                        });
+                    } else {
+                        console.warn('dataLayer não encontrado. O GTM pode não estar carregado corretamente.');
+                    }
 
-                    // Opcional: Se você ainda quiser enviar os dados para um backend antes de redirecionar,
-                    // você pode adicionar a lógica de fetch() aqui, antes do window.location.href.
-                    // No entanto, para uma experiência rápida, o redirecionamento imediato é comum.
+                    // Envia os dados para o script PHP usando fetch
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: contactForm.method,
+                            body: formData
+                        });
+
+                        const result = await response.json();
+
+                        if (result.status === 'success' && result.whatsapp_url) {
+                            const whatsappUrl = result.whatsapp_url;
+                            
+                            // Redirecionamento condicional
+                            // Define desktop como largura maior ou igual a 768px (breakpoint comum para tablets/desktops)
+                            if (window.innerWidth >= 768) { 
+                                window.open(whatsappUrl, '_blank'); // Abre em nova guia no desktop
+                                console.log('Redirecionando para WhatsApp em nova guia (desktop):', whatsappUrl);
+                            } else {
+                                window.location.href = whatsappUrl; // Redireciona na mesma guia no mobile
+                                console.log('Redirecionando para WhatsApp na mesma guia (mobile):', whatsappUrl);
+                            }
+                        } else {
+                            console.error('Erro na resposta do PHP:', result.message || 'Resposta inesperada');
+                            // Opcional: Mostrar uma mensagem de erro para o usuário
+                            // alert('Ocorreu um erro ao processar seu pedido. Tente novamente.');
+                        }
+                    } catch (error) {
+                        console.error('Erro ao enviar formulário ou processar resposta:', error);
+                        // Opcional: Mostrar uma mensagem de erro para o usuário
+                        // alert('Ocorreu um erro de conexão. Verifique sua internet e tente novamente.');
+                    }
                 });
             }
         });
