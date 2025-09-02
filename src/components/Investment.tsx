@@ -45,15 +45,13 @@ const Investment = () => {
 
                 {/* Price */}
                 <div className="mb-8">
-                  <div className="text-2xl text-blue-200 mb-2">Parcele em até</div>
-                  <div className="text-6xl md:text-7xl font-bold text-white mb-2">
-                    24x de <span className="text-green-400">R$ 197</span>
+                  <div className="text-sm text-blue-200 mb-3">Apenas</div>
+                  <div className="mb-4 flex items-baseline justify-center gap-2">
+                    <span className="text-6xl md:text-7xl font-bold text-green-400 leading-none">R$ 197</span>
+                    <span className="text-lg text-blue-200">por mês</span>
                   </div>
-                  <div className="text-blue-200">
-                    ou <span className="text-white font-semibold">R$ 4.728</span> à vista
-                  </div>
-                  <div className="text-blue-200 text-lg mt-1">
-                    no cartão de crédito
+                  <div className="text-blue-200 text-lg">
+                    <span className="text-white font-bold text-xl">R$ 4.728</span> (total)
                   </div>
                 </div>
 
