@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, Globe } from "lucide-react";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('final-cta');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToInvestment = () => {
+    const investmentSection = document.getElementById('investment');
+    investmentSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleWhatsAppClick = () => {
@@ -88,7 +88,8 @@ const Hero = () => {
           <div className="mb-10 animate-fade-in hidden md:block" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-4xl mx-auto mb-6">
               <span className="text-white font-semibold">Mais de 10 mil pessoas já foram transformadas.</span><br />
-              Seja capacitado a viver o chamado de Deus para sua vida!
+              Seja capacitado a viver o chamado de Deus para sua vida!<br />
+              <span className="text-blue-300 font-medium">Formação completa, reconhecida e de investimento acessível.</span>
             </p>
             
             {/* Modern feature list */}

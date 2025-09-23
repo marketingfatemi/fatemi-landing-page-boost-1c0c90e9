@@ -8,7 +8,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="final-cta" className="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-24">
+    <section id="formulario" className="bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden py-24">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl animate-pulse"></div>
