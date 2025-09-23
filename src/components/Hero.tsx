@@ -118,7 +118,7 @@ const Hero = () => {
             <div className="flex justify-center items-center mb-8">
               {/* Desktop CTA */}
               <Button 
-                onClick={handleWhatsAppClick} 
+                onClick={scrollToInvestment} 
                 size="lg" 
                 className="hidden md:flex bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20"
               >
@@ -127,7 +127,7 @@ const Hero = () => {
               
               {/* Mobile CTA - Fixed text overflow */}
               <Button 
-                onClick={handleGradeClick} 
+                onClick={scrollToInvestment} 
                 size="lg" 
                 className="md:hidden bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-full text-sm shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-blue-500/20 max-w-[280px] whitespace-normal text-center leading-tight"
               >
